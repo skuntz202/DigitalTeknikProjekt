@@ -1,13 +1,10 @@
-/*
- * DigitalTeknikProjekt.c
- *
- * Created: 6/2/2022 11:30:50 AM
- * Author : marcu
- */ 
-
 #include <avr/io.h>
+#include <stdio.h>
 #include "SPILib.h"
 #include "UART.h"
+
+#define F_CPU 16000000UL
+#include <util/delay.h>
 
 int main(void)
 {
@@ -15,7 +12,8 @@ int main(void)
 	UART_init();
 	char response;
     while(1){
-		response = SPI_transmit('t', 1);
+		//_delay_ms(100);
+		response = SPI_transmit(0xF2, 1);
 		UART_transChar(response);
     }
 }

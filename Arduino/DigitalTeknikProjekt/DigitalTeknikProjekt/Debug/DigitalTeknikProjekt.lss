@@ -19,7 +19,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   7 .debug_abbrev 00000da2  00000000  00000000  0000144c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000571  00000000  00000000  000021ee  2**0
+  8 .debug_line   0000056f  00000000  00000000  000021ee  2**0
                   CONTENTS, READONLY, DEBUGGING
   9 .debug_frame  00000164  00000000  00000000  00002760  2**2
                   CONTENTS, READONLY, DEBUGGING
@@ -193,8 +193,8 @@ Disassembly of section .text:
  122:	6e cf       	rjmp	.-292    	; 0x0 <__vectors>
 
 00000124 <main>:
-#include "SPILib.h"
-#include "UART.h"
+#define F_CPU 16000000UL
+#include <util/delay.h>
 
 int main(void)
 {
@@ -206,9 +206,10 @@ int main(void)
  12a:	61 e0       	ldi	r22, 0x01	; 1
 	char response;
     while(1){
-		response = SPI_transmit('t', 1);
+		//_delay_ms(100);
+		response = SPI_transmit(0xF2, 1);
  12c:	70 e0       	ldi	r23, 0x00	; 0
- 12e:	84 e7       	ldi	r24, 0x74	; 116
+ 12e:	82 ef       	ldi	r24, 0xF2	; 242
  130:	1b d0       	rcall	.+54     	; 0x168 <SPI_transmit>
 		UART_transChar(response);
  132:	50 d0       	rcall	.+160    	; 0x1d4 <UART_transChar>
@@ -224,13 +225,13 @@ int SPI_init(char role){
 	if(role == MASTER){
  138:	81 11       	cpse	r24, r1
  13a:	08 c0       	rjmp	.+16     	; 0x14c <SPI_init+0x16>
-		DDRB = (1<<PB0)|(1<<PB1)|(1<<PB2)|(1<<PB3); //Sets ss-not, MOSI and SCK to be outputs
- 13c:	8f e0       	ldi	r24, 0x0F	; 15
+		DDRB = (1<<PB0)|(1<<PB1)|(1<<PB2); //Sets ss-not, MOSI and SCK to be outputs
+ 13c:	87 e0       	ldi	r24, 0x07	; 7
  13e:	84 b9       	out	0x04, r24	; 4
 		PORTB = 0b00000000;
  140:	15 b8       	out	0x05, r1	; 5
-		SPCR = 0b01011010; //Initiates control register
- 142:	8a e5       	ldi	r24, 0x5A	; 90
+		SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0); //Initiates control register
+ 142:	81 e5       	ldi	r24, 0x51	; 81
  144:	8c bd       	out	0x2c, r24	; 44
 		SPCR = 0b01001000; //Initiates control register
 	}
@@ -242,9 +243,9 @@ int SPI_init(char role){
  148:	90 e0       	ldi	r25, 0x00	; 0
  14a:	08 95       	ret
 	if(role == MASTER){
-		DDRB = (1<<PB0)|(1<<PB1)|(1<<PB2)|(1<<PB3); //Sets ss-not, MOSI and SCK to be outputs
+		DDRB = (1<<PB0)|(1<<PB1)|(1<<PB2); //Sets ss-not, MOSI and SCK to be outputs
 		PORTB = 0b00000000;
-		SPCR = 0b01011010; //Initiates control register
+		SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0); //Initiates control register
 	}
 	else if(role == SLAVE){
  14c:	8f 3f       	cpi	r24, 0xFF	; 255
@@ -287,9 +288,9 @@ char SPI_transmit(char transmitionCode, int toggleRecieve){
  16a:	97 70       	andi	r25, 0x07	; 7
  16c:	97 30       	cpi	r25, 0x07	; 7
  16e:	99 f4       	brne	.+38     	; 0x196 <SPI_transmit+0x2e>
-		PORTB |= 0b00000001;
+		PORTB &= 0b11111110;
  170:	95 b1       	in	r25, 0x05	; 5
- 172:	91 60       	ori	r25, 0x01	; 1
+ 172:	9e 7f       	andi	r25, 0xFE	; 254
  174:	95 b9       	out	0x05, r25	; 5
 		SPDR = transmitionCode;
  176:	8e bd       	out	0x2e, r24	; 46
@@ -297,9 +298,9 @@ char SPI_transmit(char transmitionCode, int toggleRecieve){
  178:	0d b4       	in	r0, 0x2d	; 45
  17a:	07 fe       	sbrs	r0, 7
  17c:	fd cf       	rjmp	.-6      	; 0x178 <SPI_transmit+0x10>
-		PORTB &= 0b11111110;
+		PORTB |= 0b00000001;
  17e:	85 b1       	in	r24, 0x05	; 5
- 180:	8e 7f       	andi	r24, 0xFE	; 254
+ 180:	81 60       	ori	r24, 0x01	; 1
  182:	85 b9       	out	0x05, r24	; 5
 		if(toggleRecieve == 1){
  184:	61 30       	cpi	r22, 0x01	; 1

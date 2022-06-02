@@ -1,10 +1,3 @@
-/*
- * SPILib.c
- *
- * Created: 2/24/2022 2:56:10 PM
- * Author : Marcus Korre
- */ 
-
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "./SPILib.h"
@@ -13,9 +6,9 @@
 int SPI_init(char role){
 	sei();
 	if(role == MASTER){
-		DDRB = (1<<PB0)|(1<<PB1)|(1<<PB2)|(1<<PB3); //Sets ss-not, MOSI and SCK to be outputs
+		DDRB = (1<<PB0)|(1<<PB1)|(1<<PB2); //Sets ss-not, MOSI and SCK to be outputs
 		PORTB = 0b00000000;
-		SPCR = 0b01011010; //Initiates control register
+		SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0); //Initiates control register
 	}
 	else if(role == SLAVE){
 		DDRB = (1<<PB3); //Sets MISO as output
@@ -30,10 +23,10 @@ int SPI_init(char role){
 
 char SPI_transmit(char transmitionCode, int toggleRecieve){
 	if((DDRB & 0b00000111) == 0b00000111){
-		PORTB |= 0b00000001;
+		PORTB &= 0b11111110;
 		SPDR = transmitionCode;
 		while((SPSR & 0b10000000) != 0b10000000){} //Waits for transmition to finish
-		PORTB &= 0b11111110;
+		PORTB |= 0b00000001;
 		if(toggleRecieve == 1){
 			return SPDR;
 		}
