@@ -3,6 +3,7 @@
 #include "SPILib.h"
 #include "UART.h"
 #include "packet.h"
+#include "ADC.h"
 
 #define F_CPU 16000000UL
 #include <util/delay.h>
@@ -13,7 +14,7 @@ int transmitPacket(char* packet){
 		for(int i = 0; i < 3; i++){
 			response = SPI_transmit(packet[i], 1);
 			if(response == 0x03){
-				UART_transStr("Unkown error", 1);
+				UART_transStr("Unknown error", 1);
 				i = 0;
 			}
 			else if(response == 0x02){
@@ -53,11 +54,14 @@ int main(void){
 	UART_init();
 	char* packet = (char*)calloc(3, sizeof(char));
     while(1){
-			if(receiveCompleteFlag){
-				UART_receiveChar();
-				packet_makePacket(AMPLITUDE, 0xFF, packet);
-				transmitPacket(packet);
-				receiveCompleteFlag = 0;
-			}
+		if(receiveCompleteFlag){
+			UART_receiveChar();
+			packet_makePacket(AMPLITUDE, 0xFF, packet);
+			transmitPacket(packet);
+			receiveCompleteFlag = 0;
+		}
+		if(ADCSampleFlag){
+			//Send contents of ADCReadBuffer to computer.
+		}
     }
 }

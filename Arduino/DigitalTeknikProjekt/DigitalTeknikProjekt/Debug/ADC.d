@@ -1,4 +1,4 @@
-SPILib.d SPILib.o: .././SPILib.c \
+ADC.d ADC.o: .././ADC.c \
  e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -11,7 +11,12 @@ SPILib.d SPILib.o: .././SPILib.c \
  e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
  e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
- ../././SPILib.h
+ e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h \
+ e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h \
+ e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
+ e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
+ e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
+ .././ADC.h .././GLOBALS.h
 
 e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -37,4 +42,16 @@ e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
 
 e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
 
-../././SPILib.h:
+e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h:
+
+e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h:
+
+e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h:
+
+e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h:
+
+e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
+
+.././ADC.h:
+
+.././GLOBALS.h:
