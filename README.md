@@ -4,11 +4,12 @@ Data packet:
 
 ADDR;DATA;CRC;ACK
 
-| ADDR |           |      |
-| ---- | --------- | ---- |
-| 0x01 | Shape     |      |
-| 0x02 | Amplitude |      |
-| 0x03 | Frequency |      |
+| ADDR |               |      |
+| ---- | ------------- | ---- |
+| 0x01 | Shape         |      |
+| 0x02 | Amplitude     |      |
+| 0x03 | Frequency     |      |
+| 0x04 | Signal Enable |      |
 
 | DATA      |                      |      |
 | --------- | -------------------- | ---- |
@@ -17,6 +18,8 @@ ADDR;DATA;CRC;ACK
 | 0x03      | Shape(Square wave)   |      |
 | 0x00-0xFF | Amplitude            |      |
 | 0x00-0xFF | Frequency            |      |
+| 0x00      | Signal(Disable)      |      |
+| 0x01      | Signal(Enable)       |      |
 
 | ACK  |                                |      |
 | ---- | ------------------------------ | ---- |

@@ -53,8 +53,11 @@ int main(void){
 	UART_init();
 	char* packet = (char*)calloc(3, sizeof(char));
     while(1){
-		packet_makePacket(AMPLITUDE, 0x3F, packet);
-		transmitPacket(packet);
+			if(receiveCompleteFlag){
+				UART_receiveChar();
+				packet_makePacket(AMPLITUDE, 0xFF, packet);
+				transmitPacket(packet);
+				receiveCompleteFlag = 0;
+			}
     }
 }
-

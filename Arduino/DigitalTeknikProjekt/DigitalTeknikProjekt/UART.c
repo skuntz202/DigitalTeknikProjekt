@@ -7,6 +7,7 @@ char buffer[100];
 char RX = ' ';
 int carriageReturn = 0;
 int receiveComplete = 0;
+int receiveCompleteFlag = 0;
 
 
 void UART_init(){
@@ -35,10 +36,7 @@ void UART_transStr(char* transDataStr, int endLine){
 	}
 }
 
-void UART_receiveChar(){
-	RX = UDR0;
-	buffer[bufferIndex] = RX;
-	bufferIndex += 1;
+void checkCarriageReturn(){
 	if(RX == '\r'){
 		carriageReturn = 1;
 	}
@@ -48,9 +46,16 @@ void UART_receiveChar(){
 	}
 }
 
+void UART_receiveChar(){
+	RX = UDR0;
+	buffer[bufferIndex] = RX;
+	bufferIndex += 1;
+	//checkCarriageReturn();
+}
+
 
 ISR(USART0_RX_vect){
-	UART_receiveChar();
+	receiveCompleteFlag = 1;
 };
 
 ISR(USART0_TX_vect){

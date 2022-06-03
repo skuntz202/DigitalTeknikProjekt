@@ -5,6 +5,7 @@
 
 extern char buffer[100];
 extern int receiveComplete;
+extern int receiveCompleteFlag;
 
 extern void UART_init();
 extern void UART_transChar(char transData);
