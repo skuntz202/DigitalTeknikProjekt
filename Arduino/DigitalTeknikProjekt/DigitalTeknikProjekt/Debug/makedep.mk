@@ -6,6 +6,8 @@ Globals.c
 
 main.c
 
+packet.c
+
 SPILib.c
 
 UART.c

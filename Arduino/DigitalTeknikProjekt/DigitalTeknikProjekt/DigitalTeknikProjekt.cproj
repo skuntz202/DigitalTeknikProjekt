@@ -131,6 +131,12 @@
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="packet.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="packet.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="SPILib.c">
       <SubType>compile</SubType>
     </Compile>
