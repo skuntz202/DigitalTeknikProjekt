@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Three_week_course_F22.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Protokol.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Protokol.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Protokol.xst"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="SigGenSpiControl.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="SigGenSpiControl.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="SigGenSpiControl.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="SigGenSpiControl.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SigGenSpiControl.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="SigGenSpiControl.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="SigGenSpiControl.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="SigGenSpiControl.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="SigGenSpiControl_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="SigGenSpiControl_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SigGenSpiControl_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="SigGenSpiControl_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Simpel_top.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Simpel_top.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Simpel_top.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Simpel_top.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Simpel_top.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Simpel_top_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Simpel_top_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Simpel_top_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="protokol_tb1_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="protokol_tb1_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="protokol_tb2_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="protokol_tb2_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="protokol_tb2_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="protokol_tb2_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1654250349" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1654250349">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654252547" xil_pn:in_ck="2956751315458480547" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1654252547">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Protokol.vhd"/>
+      <outfile xil_pn:name="ShiftReg.vhd"/>
+      <outfile xil_pn:name="Simpel_top.vhd"/>
+      <outfile xil_pn:name="protokol_tb1.vhd"/>
+      <outfile xil_pn:name="protokol_tb2.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1654251309" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4016482362007640033" xil_pn:start_ts="1654251309">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654251309" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1919952472416723357" xil_pn:start_ts="1654251309">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654250349" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6480723127054855778" xil_pn:start_ts="1654250349">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654251309" xil_pn:in_ck="2956751315458480547" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1654251309">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Protokol.vhd"/>
+      <outfile xil_pn:name="ShiftReg.vhd"/>
+      <outfile xil_pn:name="Simpel_top.vhd"/>
+      <outfile xil_pn:name="protokol_tb1.vhd"/>
+      <outfile xil_pn:name="protokol_tb2.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1654251312" xil_pn:in_ck="2956751315458480547" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6131268006244190394" xil_pn:start_ts="1654251309">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="protokol_tb2_beh.prj"/>
+      <outfile xil_pn:name="protokol_tb2_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1654251313" xil_pn:in_ck="-3925948428347509665" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2518380436112751325" xil_pn:start_ts="1654251312">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="protokol_tb2_isim_beh.wdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1654246210" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1654246210">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654246290" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2060783749630714841" xil_pn:start_ts="1654246290">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654246290" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6480723127054855778" xil_pn:start_ts="1654246290">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654246210" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1654246210">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654246290" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="8905307835863662167" xil_pn:start_ts="1654246290">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654246210" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="2988080280822507185" xil_pn:start_ts="1654246210">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654246290" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7682423583591945556" xil_pn:start_ts="1654246290">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1654252605" xil_pn:in_ck="8238428995874809602" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="7667185940518162197" xil_pn:start_ts="1654252597">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name=".lso"/>
+      <outfile xil_pn:name="SigGenSpiControl.lso"/>
+      <outfile xil_pn:name="SigGenSpiControl.ngc"/>
+      <outfile xil_pn:name="SigGenSpiControl.ngr"/>
+      <outfile xil_pn:name="SigGenSpiControl.prj"/>
+      <outfile xil_pn:name="SigGenSpiControl.stx"/>
+      <outfile xil_pn:name="SigGenSpiControl.syr"/>
+      <outfile xil_pn:name="SigGenSpiControl.xst"/>
+      <outfile xil_pn:name="SigGenSpiControl_vhdl.prj"/>
+      <outfile xil_pn:name="SigGenSpiControl_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+  </transforms>
+
+</generated_project>

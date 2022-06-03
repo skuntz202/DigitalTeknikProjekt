@@ -1,0 +1,2 @@
+vhdl work "Protokol.vhd"
+vhdl work "protokol_tb2.vhd"

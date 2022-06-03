@@ -1,0 +1,3 @@
+vhdl work "ShiftReg.vhd"
+vhdl work "Protokol.vhd"
+vhdl work "Simpel_top.vhd"
