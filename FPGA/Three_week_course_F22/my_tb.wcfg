@@ -13,7 +13,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="18" />
    <wvobject fp_name="/protokol_tb2/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -34,6 +34,14 @@
       <obj_property name="ElementShortName">shape[7:0]</obj_property>
       <obj_property name="ObjectShortName">shape[7:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/protokol_tb2/uut/crc_temp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">crc_temp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">crc_temp[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb2/uut/ack" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ack[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ack[7:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/protokol_tb2/ampl" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">ampl[7:0]</obj_property>
       <obj_property name="ObjectShortName">ampl[7:0]</obj_property>
@@ -41,10 +49,6 @@
    <wvobject fp_name="/protokol_tb2/freq" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">freq[7:0]</obj_property>
       <obj_property name="ObjectShortName">freq[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/protokol_tb2/sigen" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">sigen</obj_property>
-      <obj_property name="ObjectShortName">sigen</obj_property>
    </wvobject>
    <wvobject fp_name="/protokol_tb2/clk_period" type="other" db_ref_id="1">
       <obj_property name="ElementShortName">clk_period</obj_property>
@@ -66,12 +70,20 @@
       <obj_property name="ElementShortName">temp_freq[7:0]</obj_property>
       <obj_property name="ObjectShortName">temp_freq[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/protokol_tb2/uut/ack" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">ack[7:0]</obj_property>
-      <obj_property name="ObjectShortName">ack[7:0]</obj_property>
+   <wvobject fp_name="/protokol_tb2/uut/adr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">adr</obj_property>
+      <obj_property name="ObjectShortName">adr</obj_property>
    </wvobject>
-   <wvobject fp_name="/protokol_tb2/uut/crc" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">crc[7:0]</obj_property>
-      <obj_property name="ObjectShortName">crc[7:0]</obj_property>
+   <wvobject fp_name="/protokol_tb2/uut/data" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">data</obj_property>
+      <obj_property name="ObjectShortName">data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb2/uut/crc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">crc</obj_property>
+      <obj_property name="ObjectShortName">crc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb2/sigen" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sigen</obj_property>
+      <obj_property name="ObjectShortName">sigen</obj_property>
    </wvobject>
 </wave_config>

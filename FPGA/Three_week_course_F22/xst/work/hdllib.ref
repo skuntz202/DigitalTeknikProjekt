@@ -1,6 +1,8 @@
-EN protokol NULL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" sub00/vhpl02 1654252601
-EN shiftreg NULL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd" sub00/vhpl00 1654252599
-AR shiftreg behavioral "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd" sub00/vhpl01 1654252600
-AR protokol behavioral "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" sub00/vhpl03 1654252602
-AR siggenspicontrol behavioral "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" sub00/vhpl05 1654252604
-EN siggenspicontrol NULL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" sub00/vhpl04 1654252603
+EN protokol NULL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" sub00/vhpl02 1654259156
+AR test_protokol behavioral "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/test_protokol.vhd" sub00/vhpl07 1654255446
+EN shiftreg NULL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd" sub00/vhpl00 1654259154
+AR shiftreg behavioral "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd" sub00/vhpl01 1654259155
+AR protokol behavioral "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" sub00/vhpl03 1654259157
+AR siggenspicontrol behavioral "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" sub00/vhpl05 1654259159
+EN siggenspicontrol NULL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" sub00/vhpl04 1654259158
+EN test_protokol NULL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/test_protokol.vhd" sub00/vhpl06 1654255445

@@ -1,24 +1,32 @@
-V3 11
-FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" 2022/06/03.12:35:36 P.15xf
-EN work/Protokol 1654252601 \
+V3 14
+FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" 2022/06/03.14:25:51 P.15xf
+EN work/Protokol 1654259156 \
       FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" \
       PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/Protokol/Behavioral 1654252602 \
+AR work/Protokol/Behavioral 1654259157 \
       FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" \
-      EN work/Protokol 1654252601
+      EN work/Protokol 1654259156
 FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd" 2022/06/02.13:20:58 P.15xf
-EN work/ShiftReg 1654252599 \
+EN work/ShiftReg 1654259154 \
       FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd" \
       PB ieee/std_logic_1164 1335251622
-AR work/ShiftReg/Behavioral 1654252600 \
+AR work/ShiftReg/Behavioral 1654259155 \
       FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd" \
-      EN work/ShiftReg 1654252599
-FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" 2022/06/03.11:58:15 P.15xf
-EN work/SigGenSpiControl 1654252603 \
+      EN work/ShiftReg 1654259154
+FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" 2022/06/03.14:25:28 P.15xf
+EN work/SigGenSpiControl 1654259158 \
       FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" \
       PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/SigGenSpiControl/Behavioral 1654252604 \
+AR work/SigGenSpiControl/Behavioral 1654259159 \
       FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" \
-      EN work/SigGenSpiControl 1654252603 CP ShiftReg CP Protokol
+      EN work/SigGenSpiControl 1654259158 CP ShiftReg CP Protokol
+FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/test_protokol.vhd" 2022/06/03.13:23:59 P.15xf
+EN work/test_Protokol 1654255445 \
+      FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/test_protokol.vhd" \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
+      PB ieee/STD_LOGIC_UNSIGNED 1335251625
+AR work/test_Protokol/Behavioral 1654255446 \
+      FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/test_protokol.vhd" \
+      EN work/test_Protokol 1654255445

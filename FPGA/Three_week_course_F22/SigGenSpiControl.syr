@@ -3,13 +3,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: SigGenSpiControl.prj
@@ -107,9 +107,11 @@ Slice Utilization Ratio Delta      : 5
 Compiling vhdl file "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd" in Library work.
 Architecture behavioral of Entity shiftreg is up to date.
 Compiling vhdl file "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" in Library work.
-Architecture behavioral of Entity protokol is up to date.
+Entity <protokol> compiled.
+Entity <protokol> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" in Library work.
-Architecture behavioral of Entity siggenspicontrol is up to date.
+Entity <siggenspicontrol> compiled.
+Entity <siggenspicontrol> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -131,8 +133,6 @@ Analyzing Entity <ShiftReg> in library <work> (Architecture <behavioral>).
 Entity <ShiftReg> analyzed. Unit <ShiftReg> generated.
 
 Analyzing Entity <Protokol> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <SigEN> in unit <Protokol> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <ACK> in unit <Protokol> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
 Entity <Protokol> analyzed. Unit <Protokol> generated.
 
 
@@ -152,13 +152,11 @@ Unit <ShiftReg> synthesized.
 
 Synthesizing Unit <Protokol>.
     Related source file is "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd".
-WARNING:Xst:646 - Signal <CRC> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <ACK> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found finite state machine <FSM_0> for signal <State>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
-    | Transitions        | 17                                             |
-    | Inputs             | 10                                             |
+    | Transitions        | 14                                             |
+    | Inputs             | 5                                              |
     | Outputs            | 5                                              |
     | Clock              | Clk                       (rising_edge)        |
     | Reset              | Reset                     (positive)           |
@@ -170,19 +168,23 @@ WARNING:Xst:646 - Signal <ACK> is assigned but never used. This unconnected sign
     -----------------------------------------------------------------------
     Found 8-bit register for signal <Freq>.
     Found 8-bit register for signal <Shape>.
+    Found 8-bit register for signal <CRC_out>.
+    Found 1-bit register for signal <SigEN>.
     Found 8-bit register for signal <Ampl>.
-    Found 1-bit register for signal <hold_up>.
+    Found 8-bit register for signal <ACK>.
+    Found 1-bit register for signal <Adr>.
+    Found 1-bit register for signal <Crc>.
+    Found 8-bit register for signal <CRC_temp>.
+    Found 1-bit register for signal <Data>.
     Found 8-bit register for signal <prev_SPIdat>.
-    Found 8-bit comparator not equal for signal <State$cmp_ne0001> created at line 60.
-    Found 8-bit comparator not equal for signal <State$cmp_ne0003> created at line 73.
-    Found 8-bit comparator not equal for signal <State$cmp_ne0005> created at line 86.
+    Found 8-bit comparator not equal for signal <State$cmp_ne0000> created at line 78.
     Found 8-bit register for signal <temp_Ampl>.
     Found 8-bit register for signal <temp_freq>.
     Found 8-bit register for signal <temp_Shape>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred  57 D-type flip-flop(s).
-	inferred   3 Comparator(s).
+	inferred  84 D-type flip-flop(s).
+	inferred   1 Comparator(s).
 Unit <Protokol> synthesized.
 
 
@@ -195,11 +197,11 @@ Unit <SigGenSpiControl> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 9
- 1-bit register                                        : 1
- 8-bit register                                        : 8
-# Comparators                                          : 3
- 8-bit comparator not equal                            : 3
+# Registers                                            : 15
+ 1-bit register                                        : 4
+ 8-bit register                                        : 11
+# Comparators                                          : 1
+ 8-bit comparator not equal                            : 1
 
 =========================================================================
 
@@ -224,10 +226,10 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # FSMs                                                 : 1
-# Registers                                            : 65
- Flip-Flops                                            : 65
-# Comparators                                          : 3
- 8-bit comparator not equal                            : 3
+# Registers                                            : 92
+ Flip-Flops                                            : 92
+# Comparators                                          : 1
+ 8-bit comparator not equal                            : 1
 
 =========================================================================
 
@@ -243,7 +245,7 @@ Optimizing unit <Protokol> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block SigGenSpiControl, actual ratio is 5.
+Found area constraint ratio of 100 (+ 5) on block SigGenSpiControl, actual ratio is 6.
 
 Final Macro Processing ...
 
@@ -251,8 +253,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 68
- Flip-Flops                                            : 68
+# Registers                                            : 95
+ Flip-Flops                                            : 95
 
 =========================================================================
 
@@ -278,31 +280,32 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 29
+# IOs                              : 37
 
 Cell Usage :
-# BELS                             : 90
+# BELS                             : 131
 #      GND                         : 1
 #      INV                         : 2
-#      LUT2                        : 5
-#      LUT2_L                      : 1
-#      LUT3                        : 6
-#      LUT3_D                      : 1
-#      LUT4                        : 56
-#      LUT4_D                      : 5
-#      LUT4_L                      : 10
-#      MUXF5                       : 2
+#      LUT2                        : 1
+#      LUT2_D                      : 2
+#      LUT3                        : 5
+#      LUT3_D                      : 2
+#      LUT3_L                      : 3
+#      LUT4                        : 85
+#      LUT4_D                      : 6
+#      LUT4_L                      : 20
+#      MUXF5                       : 3
 #      VCC                         : 1
-# FlipFlops/Latches                : 68
+# FlipFlops/Latches                : 95
 #      FDC                         : 2
 #      FDCE                        : 8
-#      FDE                         : 57
+#      FDE                         : 84
 #      FDP                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 28
+# IO Buffers                       : 36
 #      IBUF                        : 3
-#      OBUF                        : 25
+#      OBUF                        : 33
 =========================================================================
 
 Device utilization summary:
@@ -310,11 +313,11 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                       55  out of    960     5%  
- Number of Slice Flip Flops:             68  out of   1920     3%  
- Number of 4 input LUTs:                 86  out of   1920     4%  
- Number of IOs:                          29
- Number of bonded IOBs:                  29  out of     83    34%  
+ Number of Slices:                       76  out of    960     7%  
+ Number of Slice Flip Flops:             95  out of   1920     4%  
+ Number of 4 input LUTs:                126  out of   1920     6%  
+ Number of IOs:                          37
+ Number of bonded IOBs:                  37  out of     83    44%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -338,7 +341,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-SCK                                | BUFGP                  | 68    |
+SCK                                | BUFGP                  | 95    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -353,9 +356,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 6.475ns (Maximum Frequency: 154.440MHz)
-   Minimum input arrival time before clock: 4.708ns
-   Maximum output required time after clock: 4.283ns
+   Minimum period: 6.816ns (Maximum Frequency: 146.714MHz)
+   Minimum input arrival time before clock: 4.717ns
+   Maximum output required time after clock: 4.310ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -364,34 +367,34 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SCK'
-  Clock period: 6.475ns (frequency: 154.440MHz)
-  Total number of paths / destination ports: 873 / 66
+  Clock period: 6.816ns (frequency: 146.714MHz)
+  Total number of paths / destination ports: 1359 / 93
 -------------------------------------------------------------------------
-Delay:               6.475ns (Levels of Logic = 4)
-  Source:            U1/Reg_val_4 (FF)
-  Destination:       U2/State_FSM_FFd3 (FF)
+Delay:               6.816ns (Levels of Logic = 4)
+  Source:            U1/Reg_val_0 (FF)
+  Destination:       U2/State_FSM_FFd2 (FF)
   Source Clock:      SCK rising
   Destination Clock: SCK rising
 
-  Data Path: U1/Reg_val_4 to U2/State_FSM_FFd3
+  Data Path: U1/Reg_val_0 to U2/State_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            10   0.591   1.057  U1/Reg_val_4 (U1/Reg_val_4)
-     LUT3_D:I0->O          9   0.704   0.824  U2/State_cmp_eq00001_SW0 (N2)
-     LUT4:I3->O            1   0.704   0.455  U2/State_FSM_FFd3-In34 (U2/State_FSM_FFd3-In34)
-     LUT4:I2->O            1   0.704   0.424  U2/State_FSM_FFd3-In45 (U2/State_FSM_FFd3-In45)
-     LUT4:I3->O            1   0.704   0.000  U2/State_FSM_FFd3-In63 (U2/State_FSM_FFd3-In)
-     FDC:D                     0.308          U2/State_FSM_FFd3
+     FDCE:C->Q            19   0.591   1.089  U1/Reg_val_0 (U1/Reg_val_0)
+     LUT4:I3->O            1   0.704   0.424  U2/State_cmp_ne0000146 (U2/State_cmp_ne0000146)
+     LUT4:I3->O           19   0.704   1.164  U2/State_cmp_ne0000164 (U2/State_cmp_ne0000)
+     LUT2_D:I1->O          1   0.704   0.424  U2/State_FSM_FFd2-In21 (U2/ACK_and0000)
+     LUT4:I3->O            1   0.704   0.000  U2/State_FSM_FFd2-In (U2/State_FSM_FFd2-In)
+     FDC:D                     0.308          U2/State_FSM_FFd2
     ----------------------------------------
-    Total                      6.475ns (3.715ns logic, 2.760ns route)
-                                       (57.4% logic, 42.6% route)
+    Total                      6.816ns (3.715ns logic, 3.101ns route)
+                                       (54.5% logic, 45.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SCK'
-  Total number of paths / destination ports: 66 / 66
+  Total number of paths / destination ports: 93 / 93
 -------------------------------------------------------------------------
-Offset:              4.708ns (Levels of Logic = 2)
+Offset:              4.717ns (Levels of Logic = 2)
   Source:            Reset (PAD)
   Destination:       U2/Ampl_7 (FF)
   Destination Clock: SCK rising
@@ -401,42 +404,42 @@ Offset:              4.708ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            12   1.218   0.961  Reset_IBUF (Reset_IBUF)
-     INV:I->O             57   0.704   1.270  U2/Reset_inv1_INV_0 (U2/Reset_inv)
+     INV:I->O             84   0.704   1.279  U2/Reset_inv1_INV_0 (U2/Reset_inv)
      FDE:CE                    0.555          U2/prev_SPIdat_0
     ----------------------------------------
-    Total                      4.708ns (2.477ns logic, 2.231ns route)
-                                       (52.6% logic, 47.4% route)
+    Total                      4.717ns (2.477ns logic, 2.240ns route)
+                                       (52.5% logic, 47.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'SCK'
-  Total number of paths / destination ports: 24 / 24
+  Total number of paths / destination ports: 33 / 33
 -------------------------------------------------------------------------
-Offset:              4.283ns (Levels of Logic = 1)
-  Source:            U2/Freq_7 (FF)
-  Destination:       Freq<7> (PAD)
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            U2/SigEN (FF)
+  Destination:       SigEN (PAD)
   Source Clock:      SCK rising
 
-  Data Path: U2/Freq_7 to Freq<7>
+  Data Path: U2/SigEN to SigEN
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              1   0.591   0.420  U2/Freq_7 (U2/Freq_7)
-     OBUF:I->O                 3.272          Freq_7_OBUF (Freq<7>)
+     FDE:C->Q              2   0.591   0.447  U2/SigEN (U2/SigEN)
+     OBUF:I->O                 3.272          SigEN_OBUF (SigEN)
     ----------------------------------------
-    Total                      4.283ns (3.863ns logic, 0.420ns route)
-                                       (90.2% logic, 9.8% route)
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.39 secs
+Total CPU time to Xst completion: 4.61 secs
  
 --> 
 
-Total memory usage is 4509760 kilobytes
+Total memory usage is 4509808 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

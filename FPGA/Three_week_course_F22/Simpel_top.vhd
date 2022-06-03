@@ -11,6 +11,7 @@ entity SigGenSpiControl is
 			  Shape : out STD_LOGIC_VECTOR(7 downto 0);
 			  Ampl : out STD_LOGIC_VECTOR(7 downto 0);
 			  Freq : out STD_LOGIC_VECTOR(7 downto 0);
+			  CRC : out STD_LOGIC_VECTOR(7 downto 0);
 			  SigEN : out STD_LOGIC);
 end SigGenSpiControl;
 
@@ -34,12 +35,13 @@ Component Protokol is
            Shape : out  STD_LOGIC_VECTOR (7 downto 0);
            Ampl : out  STD_LOGIC_VECTOR (7 downto 0);
            Freq : out  STD_LOGIC_VECTOR (7 downto 0);
+			  CRC_out : out STD_LOGIC_VECTOR (7 downto 0);
            SigEN : out  STD_LOGIC);
 end component Protokol;
 
 begin
 U1: ShiftReg PORT MAP(Clk => SCK, D => Mosi, Reset => Reset, Q => SPIdat_sig, SS_not => SS_not);
-U2: Protokol PORT MAP(Clk => SCK, Reset => Reset, SPIdat => SPIdat_sig, Shape => Shape, Ampl => Ampl, Freq => Freq, SigEN => SigEN);
+U2: Protokol PORT MAP(Clk => SCK, Reset => Reset, SPIdat => SPIdat_sig, Shape => Shape, Ampl => Ampl, Freq => Freq, SigEN => SigEN, CRC_out => CRC);
 
 end Behavioral;
 

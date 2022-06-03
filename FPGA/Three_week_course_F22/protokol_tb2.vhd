@@ -95,33 +95,33 @@ BEGIN
       Reset <= '1';
       wait for Clk_period*2;	
 		Reset <= '0';
-      wait for Clk_period;
+      wait for Clk_period*5;
 		SPIdat <= X"01";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		SPIdat <= X"FF";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		SPidat <= X"2F";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		SPIdat <= X"10";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		SPIdat <= X"02";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		SPIdat <= X"0F";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		SPIdat <= X"F0";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		SPIdat <= X"04";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		SPIdat <= X"05";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		SPIdat <= X"03";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		SPIdat <= X"02";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		SPIdat <= X"04";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		SPIdat <= X"00";
-		wait for Clk_period;
+		wait for Clk_period*5;
 		
 		
 
