@@ -7,7 +7,7 @@ int SPI_init(char role){
 	sei();
 	if(role == MASTER){
 		DDRB = (1<<PB0)|(1<<PB1)|(1<<PB2); //Sets ss-not, MOSI and SCK to be outputs
-		PORTB = 0b00000000;
+		PORTB = 0x00;
 		SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0); //Initiates control register
 	}
 	else if(role == SLAVE){

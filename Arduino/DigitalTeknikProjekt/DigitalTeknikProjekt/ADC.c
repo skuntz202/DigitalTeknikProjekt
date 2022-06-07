@@ -32,7 +32,7 @@ void ADC_init(){
 
 void ADC_storeSample(){
 	adcSample = ADCH;
-	voltage = (float)adcSample*0.013;
+	/*voltage = (float)adcSample*0.013;
 	ADCWriteBuffer[ADCBufferIndex] = adcSample;
 	if(ADCBufferIndex == 999){
 		ADCBufferIndex = 0;
@@ -44,7 +44,7 @@ void ADC_storeSample(){
 		*ADCReadBuffer = *temp;
 	} else{
 		ADCBufferIndex += 1;
-	}
+	}*/
 }
 
 ISR(TIMER0_COMPA_vect){
