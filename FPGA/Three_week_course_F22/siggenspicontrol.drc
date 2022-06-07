@@ -1,0 +1,8 @@
+Release 14.1 Drc P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Tue Jun 07 14:30:49 2022
+
+drc -z SigGenSpiControl.ncd SigGenSpiControl.pcf
+
+DRC detected 0 errors and 0 warnings.

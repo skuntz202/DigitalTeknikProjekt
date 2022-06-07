@@ -10,15 +10,14 @@ entity Protokol is
            Shape : out  STD_LOGIC_VECTOR (7 downto 0);
            Ampl : out  STD_LOGIC_VECTOR (7 downto 0);
            Freq : out  STD_LOGIC_VECTOR (7 downto 0);
-			  CRC_out : out STD_LOGIC_VECTOR (7 downto 0);
-           SigEN : out  STD_LOGIC);
+           Paritet : out  STD_LOGIC);
 end Protokol;
 
 architecture Behavioral of Protokol is
 
 type StateType is (Shape_state, Ampl_state, Freq_state, choose_state, Reset_state);
 signal State: StateType;
-signal temp_Shape, temp_Ampl, temp_freq, ACK, CRC_temp, prev_SPIdat : STD_LOGIC_VECTOR(7 downto 0);
+signal temp_Shape, temp_Ampl, temp_freq, ACK, CRC_temp, prev_SPIdat : STD_LOGIC_VECTOR(7 downto 0):=X"00";
 signal Adr, Data, Crc : STD_LOGIC := '0';
 
 begin
@@ -33,11 +32,6 @@ begin
 			Ampl <= temp_ampl;
 			Freq <= temp_freq;
 			Prev_SPIdat <= SPIdat;
-			CRC_out <= CRC_temp;
-			
-			if ACK = X"00" then
-				SigEN <= '1';
-			end if;
 			
 			case State is
 				when Reset_state =>
@@ -49,7 +43,7 @@ begin
 					CRC <= '0';
 					crc_temp <= X"00";
 					ack <= X"00";
-					sigEN <= '0';
+					Paritet <= '0';
 					State <= choose_state;
 				
 				when choose_State =>
@@ -62,6 +56,8 @@ begin
 						State <= Ampl_state;			
 					elsif SPIdat = X"03" then
 						State <= Freq_state;
+					else 
+						Paritet <= '0';
 					end if;
 				
 				when Shape_state =>
@@ -77,11 +73,13 @@ begin
 					end if;
 					if SPIdat /= Prev_SPIdat and CRC = '1' then
 						ACK <= SPIdat;
+						if CRC_temp + temp_shape = X"FF" then
+							Paritet <= '1';
+						end if;
 						state <= choose_state;
 					end if;
 					
 					
-				
 				when Ampl_state =>
 					if SPIdat /= X"02" and Adr = '1' then
 						temp_Ampl <= SPIdat;
@@ -95,8 +93,12 @@ begin
 					end if;
 					if SPIdat /= Prev_SPIdat and CRC = '1' then
 						ACK <= SPIdat;
+						if CRC_temp + temp_ampl = X"FF" then
+							Paritet <= '1';
+						end if;
 						state <= choose_state;
 					end if;
+				
 				
 				when Freq_state =>
 					if SPIdat /= X"03" and Adr = '1' then
@@ -111,16 +113,15 @@ begin
 					end if;
 					if SPIdat /= Prev_SPIdat and CRC = '1' then
 						ACK <= SPIdat;
+						if CRC_temp + temp_freq = X"FF" then
+							Paritet <= '1';
+						end if;
 						state <= choose_state;
 					end if;
 					
 				end case;	
 		end if;
 	end process;
-	
-	
-	
-
 
 end Behavioral;
 

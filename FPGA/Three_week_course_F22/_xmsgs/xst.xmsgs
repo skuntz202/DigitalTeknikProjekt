@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="Xst" num="769" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">32</arg>: Operator &lt;<arg fmt="%s" index="3">DIVIDE</arg>&gt; must have constant operands or first operand must be power of 2
+</msg>
+
 </messages>
 

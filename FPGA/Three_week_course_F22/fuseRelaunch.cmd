@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/protokol_tb2_isim_beh.exe" -prj "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/protokol_tb2_beh.prj" "work.protokol_tb2" 
+-intstyle "ise" -incremental -o "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc_tb1_isim_beh.exe" -prj "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc_tb1_beh.prj" "work.Freq_calc_tb1" 

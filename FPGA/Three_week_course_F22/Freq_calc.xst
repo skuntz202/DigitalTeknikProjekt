@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/xst"
+elaborate
+-ifn Freq_calc.prj
+-ifmt mixed

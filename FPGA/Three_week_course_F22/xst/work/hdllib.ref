@@ -1,8 +1,16 @@
-EN protokol NULL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" sub00/vhpl02 1654259156
+EN pwm NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd sub00/vhpl10 1654611965
+EN protokol NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd sub00/vhpl02 1654611963
 AR test_protokol behavioral "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/test_protokol.vhd" sub00/vhpl07 1654255446
-EN shiftreg NULL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd" sub00/vhpl00 1654259154
-AR shiftreg behavioral "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd" sub00/vhpl01 1654259155
-AR protokol behavioral "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" sub00/vhpl03 1654259157
-AR siggenspicontrol behavioral "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" sub00/vhpl05 1654259159
-EN siggenspicontrol NULL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" sub00/vhpl04 1654259158
+EN shiftreg NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg.vhd sub00/vhpl00 1654606283
+AR shiftreg behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg.vhd sub00/vhpl01 1654606284
+AR protokol behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd sub00/vhpl03 1654611964
+AR freq_calc behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd sub00/vhpl15 1654611970
+AR pwm behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd sub00/vhpl11 1654611966
+AR behandling behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Behandling.vhd sub00/vhpl09 1654594198
+AR siggenspicontrol behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd sub00/vhpl05 1654611972
+EN siggenspicontrol NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd sub00/vhpl04 1654611971
+EN freq_calc NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd sub00/vhpl14 1654611969
+EN divclk NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd sub00/vhpl12 1654611967
+EN behandling NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Behandling.vhd sub00/vhpl08 1654594197
+AR divclk divclk_arch C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd sub00/vhpl13 1654611968
 EN test_protokol NULL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/test_protokol.vhd" sub00/vhpl06 1654255445
