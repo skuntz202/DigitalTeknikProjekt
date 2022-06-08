@@ -28,6 +28,18 @@ ADDR;DATA;CRC;ACK
 | 0x02 | CRC error                      |      |
 | 0x03 | Unknown error                  |      |
 
+| ERR  | Description      | Type               |
+| ---- | ---------------- | ------------------ |
+| 101  | Unknown error    | SPI Response Error |
+| 102  | CRC error        | SPI Response Error |
+| 103  | ACK error        | SPI Response Error |
+| 104  | Unknown response | SPI Response Error |
+| 105  | No Response      | SPI Response Error |
+
+
+
+
+
 For følgende pakke.
 
 ADDR: 0x02(00000010)
@@ -49,3 +61,4 @@ CRC er en relativ simpel redundancy check, det er ikke nøvendigt at bruge speci
 
 Frequency maxes out at 115.2kHz
 
+ 
