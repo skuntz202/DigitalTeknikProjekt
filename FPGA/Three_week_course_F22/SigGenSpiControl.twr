@@ -2,7 +2,7 @@
 Release 14.1 Trace  (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+E:\Xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
 -n 3 -fastpaths -xml SigGenSpiControl.twx SigGenSpiControl.ncd -o
 SigGenSpiControl.twr SigGenSpiControl.pcf -ucf SigGenSpiControl.ucf
 
@@ -45,10 +45,9 @@ Setup/Hold to clock SCK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-MOSI        |   -0.177(R)|    1.324(R)|SCK_BUFGP         |   0.000|
-Reset       |    5.758(R)|    1.117(R)|SCK_BUFGP         |   0.000|
-SS_not      |    0.816(R)|    1.274(R)|SCK_BUFGP         |   0.000|
-SigEN       |    4.538(R)|    0.517(R)|SCK_BUFGP         |   0.000|
+MOSI        |    0.032(R)|    1.160(R)|SCK_BUFGP         |   0.000|
+Reset       |    5.183(R)|    1.175(R)|SCK_BUFGP         |   0.000|
+SS_not      |    0.834(R)|    1.275(R)|SCK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock SCK to Pad
@@ -56,8 +55,7 @@ Clock SCK to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-Paritet     |    8.372(R)|SCK_BUFGP         |   0.000|
-output      |    8.478(R)|SCK_BUFGP         |   0.000|
+Paritet     |    8.696(R)|SCK_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock SCK
@@ -65,18 +63,18 @@ Clock to Setup on destination clock SCK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-SCK            |    7.076|         |         |         |
+SCK            |   37.526|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Jun 07 14:30:46 2022 
+Analysis completed Thu Jun 09 10:19:19 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4487 MB
+Peak Memory Usage: 4519 MB
 
 
 

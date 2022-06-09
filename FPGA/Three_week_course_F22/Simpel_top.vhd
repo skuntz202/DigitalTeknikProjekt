@@ -46,7 +46,6 @@ end component Protokol;
 
 Component PWM is
     Port ( Clk : in  STD_LOGIC;
-			  TreClk : in STD_LOGIC;
            Reset : in  STD_LOGIC;
            Shape : in  STD_LOGIC_VECTOR (7 downto 0);
            Ampl : in  STD_LOGIC_VECTOR (7 downto 0);
@@ -63,23 +62,24 @@ component DivClk is
        Clk1: out STD_LOGIC);   -- Divided clock1 (1 kHz)
 end component DivClk;
 
-component Freq_calc is
+component Clock_select is
     Port (
 			  Freq : in  STD_LOGIC_VECTOR (7 downto 0);
 			  Clk : in STD_LOGIC;
 			  Reset : in STD_LOGIC;
            Ampl : in  STD_LOGIC_VECTOR (7 downto 0);
+			  Shape : in STD_LOGIC_VECTOR (7 downto 0);
            TimeDiv : out  integer);
-end component Freq_calc;
+end component Clock_select;
 
 begin
 
 
 U1: ShiftReg PORT MAP(Clk => SCK, D => Mosi, Reset => Reset, Q => SPIdat_sig, SS_not => SS_not);
 U2: Protokol PORT MAP(Clk => SCK, Reset => Reset, SPIdat => SPIdat_sig, Shape => Shape_sig, Ampl => Ampl_sig, Freq => Freq_sig, Paritet => Paritet);
-U3: PWM PORT MAP(Clk => SCK, TreClk => Freq_clk, Reset => Reset, Shape => Shape_sig, Ampl => Ampl_sig, Freq => Freq_sig, SigEN => SigEN, PWMout => Output);
+U3: PWM PORT MAP(Clk => Freq_Clk, Reset => Reset, Shape => Shape_sig, Ampl => Ampl_sig, Freq => Freq_sig, SigEN => SigEN, PWMout => Output);
 U4: DivClk PORT MAP(Reset => Reset, Clk => SCK, TimeP => TimePP, Clk1 => Freq_clk);
-U5: Freq_calc PORT MAP(Reset => Reset, Clk => SCK, Ampl => Ampl_sig, Freq => Freq_sig, TimeDiv => TimePP);
+U5: Clock_select PORT MAP(Reset => Reset, Clk => SCK, Ampl => Ampl_sig, Freq => Freq_sig, Shape => Shape_sig, TimeDiv => TimePP);
 
 end Behavioral;
 

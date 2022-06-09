@@ -1,1 +1,6 @@
+work	"DivClk.vhd"
 work	"Freq_calc.vhd"
+work	"PWM.vhd"
+work	"Protokol.vhd"
+work	"ShiftReg.vhd"
+work	"Simpel_top.vhd"

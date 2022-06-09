@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Clock_select_tb1_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="clock_select_tb1" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/clock_select_tb1/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clock_select_tb1/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clock_select_tb1/shape" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">shape[7:0]</obj_property>
+      <obj_property name="ObjectShortName">shape[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clock_select_tb1/freq" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">freq[7:0]</obj_property>
+      <obj_property name="ObjectShortName">freq[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clock_select_tb1/ampl" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ampl[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ampl[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clock_select_tb1/uut/freq_int" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">freq_int</obj_property>
+      <obj_property name="ObjectShortName">freq_int</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clock_select_tb1/uut/ampl_int" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">ampl_int</obj_property>
+      <obj_property name="ObjectShortName">ampl_int</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clock_select_tb1/uut/pulsewidth" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">pulsewidth</obj_property>
+      <obj_property name="ObjectShortName">pulsewidth</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clock_select_tb1/uut/trek" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">trek</obj_property>
+      <obj_property name="ObjectShortName">trek</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clock_select_tb1/timediv" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">timediv</obj_property>
+      <obj_property name="ObjectShortName">timediv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/clock_select_tb1/uut/timed" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">timed</obj_property>
+      <obj_property name="ObjectShortName">timed</obj_property>
+   </wvobject>
+</wave_config>

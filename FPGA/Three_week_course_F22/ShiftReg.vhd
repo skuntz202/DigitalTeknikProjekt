@@ -22,10 +22,12 @@ begin
 			if SS_not = '0' then
 				Reg_val <= Reg_val(6 downto 0) & D;
 			end if;
+			if SS_not = '1' then
+				Q <= Reg_val;
+			end if;
 		end if;
 	end process;
 	
-	Q <= Reg_val;
-
+	
 end Behavioral;
 
