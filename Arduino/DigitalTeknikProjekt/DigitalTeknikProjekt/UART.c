@@ -1,5 +1,9 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include "Globals.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 volatile int transmitComplete = 1;
 volatile int bufferIndex = 0;
@@ -8,6 +12,7 @@ char RX = ' ';
 int carriageReturn = 0;
 int receiveComplete = 0;
 int receiveCompleteFlag = 0;
+int packetReceiveFlag = 0;
 
 
 void UART_init(){
@@ -46,11 +51,23 @@ void checkCarriageReturn(){
 	}
 }
 
-void UART_receiveChar(){
+int UART_receiveChar(){
+	char tempBuffer[2];
 	RX = UDR0;
 	buffer[bufferIndex] = RX;
+	if(bufferIndex == 3){
+		if(buffer[0] == 0x55 && buffer[1] == 0xAA){
+			tempBuffer[0] = buffer[2];
+			tempBuffer[1] = buffer[3];
+			packetLength = atoi(tempBuffer);
+		}
+	}
+	if(bufferIndex == packetLength && packetLength != 0){
+		packetReceiveFlag = 1;
+	}
 	bufferIndex += 1;
 	//checkCarriageReturn();
+	return 1;
 }
 
 

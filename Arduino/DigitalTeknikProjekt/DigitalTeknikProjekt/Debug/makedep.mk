@@ -6,6 +6,8 @@ ADC.c
 
 Globals.c
 
+input.c
+
 main.c
 
 packet.c

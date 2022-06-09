@@ -4,6 +4,8 @@
 #include "UART.h"
 #include "packet.h"
 #include "ADC.h"
+#include "Globals.h"
+#include "input.h"
 
 #define F_CPU 16000000UL
 #include <util/delay.h>
@@ -52,6 +54,7 @@ int transmitPacket(char* packet){
 }
 
 int main(void){
+	Packet receivePacket;
 	SPI_init(MASTER);
 	UART_init();
 	ADC_init();
@@ -60,6 +63,10 @@ int main(void){
 		if(receiveCompleteFlag){
 			UART_receiveChar();
 			receiveCompleteFlag = 0;
+		}
+		if(packetReceiveFlag){
+			receivePacket = input_checkPacket(buffer);
+			packetReceiveFlag = 0;
 		}
 		packet_makePacket(AMPLITUDE, 0x3F, packet);
 		transmitPacket(packet);

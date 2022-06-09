@@ -8,12 +8,13 @@ int SPI_init(char role){
 	if(role == MASTER){
 		DDRB = (1<<PB0)|(1<<PB1)|(1<<PB2); //Sets ss-not, MOSI and SCK to be outputs
 		PORTB = 0x00;
-		SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0); //Initiates control register
+		SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR1); //Initiates control register
+		SPSR = (1<<SPI2X);
 	}
 	else if(role == SLAVE){
 		DDRB = (1<<PB3); //Sets MISO as output
 		PORTB = (1<<PB0); //Sets clock to pull high
-		SPCR = 0b01001000; //Initiates control register
+		SPCR = (1<<SPE); //Initiates control register
 	}
 	else{
 		return 0;
