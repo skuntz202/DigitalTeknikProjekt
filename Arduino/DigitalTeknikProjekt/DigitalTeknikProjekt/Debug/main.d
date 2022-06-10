@@ -15,7 +15,7 @@ main.d main.o: .././main.c \
  e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  .././SPILib.h .././UART.h \
  e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
- .././packet.h .././ADC.h .././Globals.h .././input.h \
+ .././packet.h .././Globals.h .././ADC.h .././input.h \
  e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h
@@ -56,9 +56,9 @@ e:\microchipstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h:
 
 .././packet.h:
 
-.././ADC.h:
-
 .././Globals.h:
+
+.././ADC.h:
 
 .././input.h:
 

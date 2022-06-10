@@ -260,7 +260,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x842
+.text           0x00000000      0x8cc
  *(.vectors)
  .vectors       0x00000000       0xe4 E:/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
                 0x00000000                __vector_default
@@ -392,61 +392,61 @@ END GROUP
                 0x000001c6       0x70 input.o
                 0x000001c6                input_checkPacket
  .text.transmitPacket
-                0x00000236       0xea main.o
+                0x00000236      0x182 main.o
                 0x00000236                transmitPacket
- .text.main     0x00000320       0x58 main.o
-                0x00000320                main
+ .text.main     0x000003b8       0x56 main.o
+                0x000003b8                main
  .text.packet_makePacket
-                0x00000378        0xe packet.o
-                0x00000378                packet_makePacket
+                0x0000040e        0x2 packet.o
+                0x0000040e                packet_makePacket
  .text.SPI_init
-                0x00000386       0x36 SPILib.o
-                0x00000386                SPI_init
+                0x00000410       0x36 SPILib.o
+                0x00000410                SPI_init
  .text.SPI_transmit
-                0x000003bc       0x36 SPILib.o
-                0x000003bc                SPI_transmit
+                0x00000446       0x36 SPILib.o
+                0x00000446                SPI_transmit
  .text.__vector_24
-                0x000003f2       0x14 SPILib.o
-                0x000003f2                __vector_24
+                0x0000047c       0x14 SPILib.o
+                0x0000047c                __vector_24
  .text.UART_init
-                0x00000406       0x22 UART.o
-                0x00000406                UART_init
+                0x00000490       0x22 UART.o
+                0x00000490                UART_init
  .text.UART_transChar
-                0x00000428       0x1a UART.o
-                0x00000428                UART_transChar
+                0x000004b2       0x1a UART.o
+                0x000004b2                UART_transChar
  .text.UART_transStr
-                0x00000442       0x40 UART.o
-                0x00000442                UART_transStr
+                0x000004cc       0x40 UART.o
+                0x000004cc                UART_transStr
  .text.UART_receiveChar
-                0x00000482       0x9e UART.o
-                0x00000482                UART_receiveChar
+                0x0000050c       0x9e UART.o
+                0x0000050c                UART_receiveChar
  .text.__vector_25
-                0x00000520       0x28 UART.o
-                0x00000520                __vector_25
+                0x000005aa       0x28 UART.o
+                0x000005aa                __vector_25
  .text.__vector_27
-                0x00000548       0x28 UART.o
-                0x00000548                __vector_27
+                0x000005d2       0x28 UART.o
+                0x000005d2                __vector_27
  .text.avr-libc
-                0x00000570       0x34 e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(calloc.o)
-                0x00000570                calloc
+                0x000005fa       0x34 e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(calloc.o)
+                0x000005fa                calloc
  .text.avr-libc
-                0x000005a4      0x242 e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(malloc.o)
-                0x000005a4                malloc
-                0x000006d4                free
+                0x0000062e      0x242 e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(malloc.o)
+                0x0000062e                malloc
+                0x0000075e                free
  .text.avr-libc
-                0x000007e6       0x3a e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(atoi.o)
-                0x000007e6                atoi
+                0x00000870       0x3a e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(atoi.o)
+                0x00000870                atoi
  .text.avr-libc
-                0x00000820        0xe e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(memset.o)
-                0x00000820                memset
+                0x000008aa        0xe e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(memset.o)
+                0x000008aa                memset
  .text.avr-libc
-                0x0000082e       0x10 e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(mul10.o)
-                0x0000082e                __mulhi_const_10
-                0x0000083e                . = ALIGN (0x2)
+                0x000008b8       0x10 e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(mul10.o)
+                0x000008b8                __mulhi_const_10
+                0x000008c8                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000083e        0x0 e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
-                0x0000083e                _exit
-                0x0000083e                exit
+ .fini9         0x000008c8        0x0 e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+                0x000008c8                _exit
+                0x000008c8                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -465,11 +465,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000083e        0x4 e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+ .fini0         0x000008c8        0x4 e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000842                _etext = .
+                0x000008cc                _etext = .
 
-.data           0x00800200       0x36 load address 0x00000842
+.data           0x00800200       0x36 load address 0x000008cc
                 0x00800200                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800200        0x6 e:/microchipstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(malloc.o)
@@ -518,8 +518,8 @@ END GROUP
                 0x008002a4                __brkval
                 0x008002a6                __flp
                 0x008002a8                PROVIDE (__bss_end, .)
-                0x00000842                __data_load_start = LOADADDR (.data)
-                0x00000878                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000008cc                __data_load_start = LOADADDR (.data)
+                0x00000902                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008002a8        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -618,73 +618,73 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x170e
+.debug_info     0x00000000     0x18c1
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0xbbc E:/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
  .debug_info    0x00000bbc      0x18a ADC.o
  .debug_info    0x00000d46       0x50 Globals.o
- .debug_info    0x00000d96      0x12a input.o
- .debug_info    0x00000ec0      0x42c main.o
- .debug_info    0x000012ec       0x8b packet.o
- .debug_info    0x00001377       0xf8 SPILib.o
- .debug_info    0x0000146f      0x29f UART.o
+ .debug_info    0x00000d96      0x126 input.o
+ .debug_info    0x00000ebc      0x598 main.o
+ .debug_info    0x00001454       0xd6 packet.o
+ .debug_info    0x0000152a       0xf8 SPILib.o
+ .debug_info    0x00001622      0x29f UART.o
 
-.debug_abbrev   0x00000000     0x1109
+.debug_abbrev   0x00000000     0x111e
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0xb1a E:/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
  .debug_abbrev  0x00000b1a       0xdf ADC.o
  .debug_abbrev  0x00000bf9       0x37 Globals.o
- .debug_abbrev  0x00000c30       0xce input.o
- .debug_abbrev  0x00000cfe      0x165 main.o
- .debug_abbrev  0x00000e63       0x62 packet.o
- .debug_abbrev  0x00000ec5       0x8b SPILib.o
- .debug_abbrev  0x00000f50      0x1b9 UART.o
+ .debug_abbrev  0x00000c30       0xcc input.o
+ .debug_abbrev  0x00000cfc      0x14f main.o
+ .debug_abbrev  0x00000e4b       0x8f packet.o
+ .debug_abbrev  0x00000eda       0x8b SPILib.o
+ .debug_abbrev  0x00000f65      0x1b9 UART.o
 
-.debug_line     0x00000000      0x9e0
+.debug_line     0x00000000      0x9ff
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x1fa E:/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
  .debug_line    0x000001fa      0x123 ADC.o
  .debug_line    0x0000031d       0x2c Globals.o
  .debug_line    0x00000349       0xde input.o
- .debug_line    0x00000427      0x20b main.o
- .debug_line    0x00000632       0x51 packet.o
- .debug_line    0x00000683      0x14a SPILib.o
- .debug_line    0x000007cd      0x213 UART.o
+ .debug_line    0x00000427      0x235 main.o
+ .debug_line    0x0000065c       0x46 packet.o
+ .debug_line    0x000006a2      0x14a SPILib.o
+ .debug_line    0x000007ec      0x213 UART.o
 
-.debug_frame    0x00000000      0x284
+.debug_frame    0x00000000      0x27c
  *(.debug_frame)
  .debug_frame   0x00000000       0xb8 ADC.o
  .debug_frame   0x000000b8       0x34 input.o
- .debug_frame   0x000000ec       0x48 main.o
- .debug_frame   0x00000134       0x24 packet.o
- .debug_frame   0x00000158       0x50 SPILib.o
- .debug_frame   0x000001a8       0xdc UART.o
+ .debug_frame   0x000000ec       0x40 main.o
+ .debug_frame   0x0000012c       0x24 packet.o
+ .debug_frame   0x00000150       0x50 SPILib.o
+ .debug_frame   0x000001a0       0xdc UART.o
 
-.debug_str      0x00000000      0x80e
+.debug_str      0x00000000      0x818
  *(.debug_str)
  .debug_str     0x00000000      0x3e6 E:/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
  .debug_str     0x000003e6      0x1ee ADC.o
                                 0x227 (size before relaxing)
  .debug_str     0x000005d4       0x29 Globals.o
                                 0x13f (size before relaxing)
- .debug_str     0x000005fd       0x4a input.o
-                                0x1d3 (size before relaxing)
- .debug_str     0x00000647       0xca main.o
-                                0x2af (size before relaxing)
- .debug_str     0x00000711       0x18 packet.o
-                                0x147 (size before relaxing)
- .debug_str     0x00000729       0x3d SPILib.o
+ .debug_str     0x000005fd       0x48 input.o
+                                0x1ca (size before relaxing)
+ .debug_str     0x00000645       0xe0 main.o
+                                0x2b5 (size before relaxing)
+ .debug_str     0x00000725        0xe packet.o
+                                0x151 (size before relaxing)
+ .debug_str     0x00000733       0x3d SPILib.o
                                 0x1d8 (size before relaxing)
- .debug_str     0x00000766       0xa8 UART.o
+ .debug_str     0x00000770       0xa8 UART.o
                                 0x2a8 (size before relaxing)
 
-.debug_loc      0x00000000      0x532
+.debug_loc      0x00000000      0x476
  *(.debug_loc)
  .debug_loc     0x00000000       0xfa ADC.o
  .debug_loc     0x000000fa       0x72 input.o
- .debug_loc     0x0000016c      0x131 main.o
- .debug_loc     0x0000029d       0xc8 SPILib.o
- .debug_loc     0x00000365      0x1cd UART.o
+ .debug_loc     0x0000016c       0x75 main.o
+ .debug_loc     0x000001e1       0xc8 SPILib.o
+ .debug_loc     0x000002a9      0x1cd UART.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -704,14 +704,14 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0xc8
+.debug_ranges   0x00000000       0xe0
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x30 ADC.o
  .debug_ranges  0x00000030       0x10 input.o
- .debug_ranges  0x00000040       0x18 main.o
- .debug_ranges  0x00000058       0x10 packet.o
- .debug_ranges  0x00000068       0x20 SPILib.o
- .debug_ranges  0x00000088       0x40 UART.o
+ .debug_ranges  0x00000040       0x30 main.o
+ .debug_ranges  0x00000070       0x10 packet.o
+ .debug_ranges  0x00000080       0x20 SPILib.o
+ .debug_ranges  0x000000a0       0x40 UART.o
 
 .debug_macro
  *(.debug_macro)

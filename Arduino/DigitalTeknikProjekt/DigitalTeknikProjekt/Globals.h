@@ -4,9 +4,16 @@
 extern int packetLength;
 extern int compareValue;
 
-typedef struct packetStruct{
+typedef struct{
 	char type;
 	char* data;
-} Packet;
+} UARTPacket;
+
+typedef struct{
+	char ADDR;
+	char DATA;
+	char CRC;
+	char ACK;
+} SPIPacket;
 
 #endif //GLOBALS_H

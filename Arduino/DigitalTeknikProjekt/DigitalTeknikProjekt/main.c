@@ -10,40 +10,79 @@
 #define F_CPU 16000000UL
 #include <util/delay.h>
 
-int transmitPacket(char* packet){
-	char response;
-	for(int i = 0; i < 3; i++){
-		response = SPI_transmit(packet[i], 1);
-		if(response == 0x03){
-			UART_transStr("ERR: 101", 1);
-			return -1;
-		}
-		else if(response == 0x02){
-			UART_transStr("ERR: 102", 1);
-			return -1;
-		}
-		else if(response == 0x01){
-			UART_transStr("ERR: 103", 1);
-			return -1;
-		}
-		else if(response == 0x00){}else{
-			UART_transStr("ERR: 104", 1);
-			return -1;
-		}
-	}
-	for(int timer = 0; timer < 200; timer++){}
-	//_delay_ms(1);
-	response = SPI_transmit(0x00, 1);
-	if(response == 0x03){
+int transmitPacket(SPIPacket packet){
+	//Transmits address
+	packet.ACK = SPI_transmit(packet.ADDR, 1);
+	if(packet.ACK == 0x03){
 		UART_transStr("ERR: 101", 1);
 		return -1;
 	}
-	else if(response == 0x02){
+	else if(packet.ACK == 0x02){
 		UART_transStr("ERR: 102", 1);
 		return -1;
 	}
-	else if(response == 0x01){return 1;}
-	else if(response == 0x00){
+	else if(packet.ACK == 0x01){
+		UART_transStr("ERR: 103", 1);
+		return -1;
+	}
+	else if(packet.ACK == 0x00){}else{
+		UART_transStr("ERR: 104", 1);
+		return -1;
+	}
+	
+	//Transmits data
+	packet.ACK = SPI_transmit(packet.DATA, 1);
+	if(packet.ACK == 0x03){
+		UART_transStr("ERR: 101", 1);
+		return -1;
+	}
+	else if(packet.ACK == 0x02){
+		UART_transStr("ERR: 102", 1);
+		return -1;
+	}
+	else if(packet.ACK == 0x01){
+		UART_transStr("ERR: 103", 1);
+		return -1;
+	}
+	else if(packet.ACK == 0x00){}else{
+		UART_transStr("ERR: 104", 1);
+		return -1;
+	}
+
+	//Transmits CRC
+	packet.ACK = SPI_transmit(packet.CRC, 1);
+	if(packet.ACK == 0x03){
+		UART_transStr("ERR: 101", 1);
+		return -1;
+	}
+	else if(packet.ACK == 0x02){
+		UART_transStr("ERR: 102", 1);
+		return -1;
+	}
+	else if(packet.ACK == 0x01){
+		UART_transStr("ERR: 103", 1);
+		return -1;
+	}
+	else if(packet.ACK == 0x00){}else{
+		UART_transStr("ERR: 104", 1);
+		return -1;
+	}
+	
+	//Delay
+	for(int timer = 0; timer < 200; timer++){}
+		
+	//Gets ack
+	packet.ACK = SPI_transmit(0x00, 1);
+	if(packet.ACK == 0x03){
+		UART_transStr("ERR: 101", 1);
+		return -1;
+	}
+	else if(packet.ACK == 0x02){
+		UART_transStr("ERR: 102", 1);
+		return -1;
+	}
+	else if(packet.ACK == 0x01){return 1;}
+	else if(packet.ACK == 0x00){
 		UART_transStr("ERR: 105", 1);
 		return -1;
 	} else{
@@ -54,11 +93,11 @@ int transmitPacket(char* packet){
 }
 
 int main(void){
-	Packet receivePacket;
+	UARTPacket receivePacket;
+	SPIPacket sendPacket;
 	SPI_init(MASTER);
 	UART_init();
 	ADC_init();
-	char* packet = (char*)calloc(3, sizeof(char));
     while(1){
 		if(receiveCompleteFlag){
 			UART_receiveChar();
@@ -68,8 +107,8 @@ int main(void){
 			receivePacket = input_checkPacket(buffer);
 			packetReceiveFlag = 0;
 		}
-		packet_makePacket(AMPLITUDE, 0x3F, packet);
-		transmitPacket(packet);
+		packet_makePacket(AMPLITUDE, 0x3F, sendPacket);
+		transmitPacket(sendPacket);
 		UART_transChar(adcSample);
 		if(ADCSampleFlag){
 			//Send contents of ADCReadBuffer to computer.

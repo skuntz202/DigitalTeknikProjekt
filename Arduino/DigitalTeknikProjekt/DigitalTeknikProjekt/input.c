@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-Packet input_checkPacket(char* packet){
-	Packet returnData;
+UARTPacket input_checkPacket(char* packet){
+	UARTPacket returnData;
 	returnData.type = packet[4];
 	if(returnData.type == 0x01){
 		returnData.data = (char*)calloc(2, sizeof(char));

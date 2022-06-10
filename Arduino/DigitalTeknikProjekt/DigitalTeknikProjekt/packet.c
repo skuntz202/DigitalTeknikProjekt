@@ -1,8 +1,8 @@
 #include "packet.h"
 
-void packet_makePacket(char ADDR, char DATA, char* packet){
+void packet_makePacket(char ADDR, char DATA, SPIPacket packet){
 	char CRC = 255 - DATA;
-	packet[0] = ADDR;
-	packet[1] = DATA;
-	packet[2] = CRC;
+	packet.ADDR = ADDR;
+	packet.DATA = DATA;
+	packet.CRC = CRC;
 }
