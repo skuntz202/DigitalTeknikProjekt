@@ -107,7 +107,7 @@ int main(void){
 			receivePacket = input_checkPacket(buffer);
 			packetReceiveFlag = 0;
 		}
-		packet_makePacket(AMPLITUDE, 0x3F, sendPacket);
+		packet_makePacket(AMPLITUDE, 0x3F, &sendPacket);
 		transmitPacket(sendPacket);
 		UART_transChar(adcSample);
 		if(ADCSampleFlag){
