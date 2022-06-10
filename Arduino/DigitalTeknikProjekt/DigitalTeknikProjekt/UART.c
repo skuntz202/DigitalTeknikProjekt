@@ -7,7 +7,7 @@
 
 volatile int transmitComplete = 1;
 volatile int bufferIndex = 0;
-char buffer[100];
+char* buffer;
 char RX = ' ';
 int carriageReturn = 0;
 int receiveComplete = 0;
@@ -16,6 +16,7 @@ int packetReceiveFlag = 0;
 
 
 void UART_init(){
+	buffer = (char*)calloc(100, sizeof(char));
 	sei();
 	int ubrr = 51;
 	UBRR0H = (unsigned char)(ubrr>>8);

@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-extern char buffer[100];
+extern char* buffer;
 extern int receiveComplete;
 extern int receiveCompleteFlag;
 extern int packetReceiveFlag;

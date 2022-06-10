@@ -10,7 +10,7 @@
 #define F_CPU 16000000UL
 #include <util/delay.h>
 
-int transmitPacket(SPIPacket packet){
+int transmitSPIPacket(SPIPacket packet){
 	//Transmits address
 	packet.ACK = SPI_transmit(packet.ADDR, 1);
 	if(packet.ACK == 0x03){
@@ -29,7 +29,7 @@ int transmitPacket(SPIPacket packet){
 		UART_transStr("ERR: 104", 1);
 		return -1;
 	}
-	
+
 	//Transmits data
 	packet.ACK = SPI_transmit(packet.DATA, 1);
 	if(packet.ACK == 0x03){
@@ -67,10 +67,10 @@ int transmitPacket(SPIPacket packet){
 		UART_transStr("ERR: 104", 1);
 		return -1;
 	}
-	
+
 	//Delay
 	for(int timer = 0; timer < 200; timer++){}
-		
+
 	//Gets ack
 	packet.ACK = SPI_transmit(0x00, 1);
 	if(packet.ACK == 0x03){
@@ -92,9 +92,15 @@ int transmitPacket(SPIPacket packet){
 	return 0;
 }
 
+int transmitUARTPacket(UARTPacket packet){
+	if(packet.data){
+
+	}
+}
+
 int main(void){
-	UARTPacket receivePacket;
-	SPIPacket sendPacket;
+	UARTPacket OscPacket;
+	SPIPacket genPacket;
 	SPI_init(MASTER);
 	UART_init();
 	ADC_init();
@@ -104,11 +110,16 @@ int main(void){
 			receiveCompleteFlag = 0;
 		}
 		if(packetReceiveFlag){
-			receivePacket = input_checkPacket(buffer);
+			OscPacket = input_makePacket(buffer);
+			char* temp = buffer;
+			buffer = (char*)calloc(100, sizeof(char));
+			free(temp);
 			packetReceiveFlag = 0;
 		}
-		packet_makePacket(AMPLITUDE, 0x3F, &sendPacket);
-		transmitPacket(sendPacket);
+		packet_makeSPIPacket(AMPLITUDE, 0x3F, &genPacket);
+		transmitSPIPacket(genPacket);
+		packet_makeOSCPacket(AMPLITUDE, 0x3F, &OscPacket);
+		transmitUARTPacket(OscPacket);
 		UART_transChar(adcSample);
 		if(ADCSampleFlag){
 			//Send contents of ADCReadBuffer to computer.

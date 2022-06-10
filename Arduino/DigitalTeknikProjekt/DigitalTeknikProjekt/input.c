@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-UARTPacket input_checkPacket(char* packet){
+UARTPacket input_makePacket(char* packet){
 	UARTPacket returnData;
 	returnData.type = packet[4];
 	if(returnData.type == 0x01){
