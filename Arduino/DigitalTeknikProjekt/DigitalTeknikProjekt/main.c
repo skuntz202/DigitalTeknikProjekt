@@ -96,6 +96,7 @@ int transmitUARTPacket(UARTPacket packet){
 	if(packet.data){
 
 	}
+	return 1;
 }
 
 int main(void){
