@@ -96,16 +96,14 @@ BEGIN
       wait for Clk_period*2;	
 		Reset <= '0';
       wait for Clk_period;
-		SPIdat <= X"01";
-		wait for Clk_period;
-		SPIdat <= X"FF";
-		wait for Clk_period;
-		SPidat <= X"2F";
-		wait for Clk_period;
-		SPIdat <= X"10";
-		wait for Clk_period;
 		SPIdat <= X"02";
 		wait for Clk_period;
+		SPIdat <= X"F2";
+		wait for Clk_period;
+		SPidat <= X"AB";
+		wait for Clk_period;
+		SPIdat <= X"00";
+
 		
 		
       wait;

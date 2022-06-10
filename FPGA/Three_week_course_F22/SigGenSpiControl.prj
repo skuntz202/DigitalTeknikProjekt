@@ -1,3 +1,6 @@
 vhdl work "ShiftReg.vhd"
+vhdl work "PWM.vhd"
 vhdl work "Protokol.vhd"
+vhdl work "Freq_calc.vhd"
+vhdl work "DivClk.vhd"
 vhdl work "Simpel_top.vhd"

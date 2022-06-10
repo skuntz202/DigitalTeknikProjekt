@@ -1,5 +1,5 @@
-set -tmpdir "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/xst"
+set -tmpdir "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/xst"
 elaborate
 -ifn Protokol.prj
 -ifmt mixed

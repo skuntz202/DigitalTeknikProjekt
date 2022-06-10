@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: SigGenSpiControl.prj
 
@@ -104,11 +104,18 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd" in Library work.
+Compiling vhdl file "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg.vhd" in Library work.
 Architecture behavioral of Entity shiftreg is up to date.
-Compiling vhdl file "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" in Library work.
+Compiling vhdl file "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd" in Library work.
 Architecture behavioral of Entity protokol is up to date.
-Compiling vhdl file "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" in Library work.
+Compiling vhdl file "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd" in Library work.
+Entity <pwm> compiled.
+Entity <pwm> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd" in Library work.
+Architecture divclk_arch of Entity divclk is up to date.
+Compiling vhdl file "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd" in Library work.
+Architecture behavioral of Entity clock_select is up to date.
+Compiling vhdl file "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd" in Library work.
 Architecture behavioral of Entity siggenspicontrol is up to date.
 
 =========================================================================
@@ -119,6 +126,12 @@ Analyzing hierarchy for entity <SigGenSpiControl> in library <work> (architectur
 Analyzing hierarchy for entity <ShiftReg> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <Protokol> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <PWM> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DivClk> in library <work> (architecture <divclk_arch>).
+
+Analyzing hierarchy for entity <Clock_select> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
@@ -131,9 +144,21 @@ Analyzing Entity <ShiftReg> in library <work> (Architecture <behavioral>).
 Entity <ShiftReg> analyzed. Unit <ShiftReg> generated.
 
 Analyzing Entity <Protokol> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <SigEN> in unit <Protokol> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <ACK> in unit <Protokol> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
 Entity <Protokol> analyzed. Unit <Protokol> generated.
+
+Analyzing Entity <PWM> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd" line 35: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Shape>, <Ampl_sig>, <up>, <Ampl>
+Entity <PWM> analyzed. Unit <PWM> generated.
+
+Analyzing Entity <DivClk> in library <work> (Architecture <divclk_arch>).
+Entity <DivClk> analyzed. Unit <DivClk> generated.
+
+Analyzing Entity <Clock_select> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <two_fifty_five> in unit <Clock_select> has a constant value of 11111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <ninety_seven> in unit <Clock_select> has a constant value of 01100001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <fifty_k> in unit <Clock_select> has a constant value of 1100001101010000 during circuit operation. The register is replaced by logic.
+Entity <Clock_select> analyzed. Unit <Clock_select> generated.
 
 
 =========================================================================
@@ -143,22 +168,22 @@ Entity <Protokol> analyzed. Unit <Protokol> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <ShiftReg>.
-    Related source file is "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd".
+    Related source file is "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg.vhd".
+    Found 8-bit register for signal <Q>.
     Found 8-bit register for signal <Reg_val>.
     Summary:
-	inferred   8 D-type flip-flop(s).
+	inferred  16 D-type flip-flop(s).
 Unit <ShiftReg> synthesized.
 
 
 Synthesizing Unit <Protokol>.
-    Related source file is "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd".
-WARNING:Xst:646 - Signal <CRC> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Related source file is "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd".
 WARNING:Xst:646 - Signal <ACK> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found finite state machine <FSM_0> for signal <State>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
-    | Transitions        | 17                                             |
-    | Inputs             | 10                                             |
+    | Transitions        | 14                                             |
+    | Inputs             | 5                                              |
     | Outputs            | 5                                              |
     | Clock              | Clk                       (rising_edge)        |
     | Reset              | Reset                     (positive)           |
@@ -168,38 +193,209 @@ WARNING:Xst:646 - Signal <ACK> is assigned but never used. This unconnected sign
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
+    Found 1-bit register for signal <Paritet>.
     Found 8-bit register for signal <Freq>.
     Found 8-bit register for signal <Shape>.
     Found 8-bit register for signal <Ampl>.
-    Found 1-bit register for signal <hold_up>.
+    Found 1-bit register for signal <Adr>.
+    Found 1-bit register for signal <Crc>.
+    Found 8-bit register for signal <CRC_temp>.
+    Found 1-bit register for signal <Data>.
+    Found 1-bit register for signal <Final>.
+    Found 8-bit adder for signal <Paritet$addsub0000> created at line 86.
+    Found 8-bit adder for signal <Paritet$addsub0001> created at line 110.
+    Found 8-bit adder for signal <Paritet$addsub0002> created at line 135.
     Found 8-bit register for signal <prev_SPIdat>.
-    Found 8-bit comparator not equal for signal <State$cmp_ne0001> created at line 60.
-    Found 8-bit comparator not equal for signal <State$cmp_ne0003> created at line 73.
-    Found 8-bit comparator not equal for signal <State$cmp_ne0005> created at line 86.
+    Found 8-bit comparator not equal for signal <State$cmp_ne0000> created at line 90.
     Found 8-bit register for signal <temp_Ampl>.
     Found 8-bit register for signal <temp_freq>.
     Found 8-bit register for signal <temp_Shape>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred  57 D-type flip-flop(s).
-	inferred   3 Comparator(s).
+	inferred  69 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
 Unit <Protokol> synthesized.
 
 
+Synthesizing Unit <PWM>.
+    Related source file is "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd".
+WARNING:Xst:647 - Input <Freq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <up>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 8-bit latch for signal <Ampl_sig>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <PWMout>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 8-bit addsub for signal <Ampl_sig$addsub0000>.
+    Found 8-bit up counter for signal <PWMCnt>.
+    Found 8-bit comparator greatequal for signal <PWMout$cmp_ge0000> created at line 43.
+    Found 8-bit comparator greatequal for signal <PWMout$cmp_ge0001> created at line 66.
+    Found 8-bit comparator equal for signal <up$cmp_eq0003> created at line 52.
+    Found 8-bit comparator not equal for signal <up$cmp_ne0000> created at line 52.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <PWM> synthesized.
+
+
+Synthesizing Unit <DivClk>.
+    Related source file is "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd".
+    Found 32-bit adder for signal <$add0000>.
+    Found 32-bit comparator equal for signal <Clear1$cmp_eq0000> created at line 36.
+    Found 1-bit register for signal <Clk1_D>.
+    Found 25-bit up counter for signal <Cnt1>.
+    Found 32-bit adder for signal <mux0000$addsub0000>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <DivClk> synthesized.
+
+
+Synthesizing Unit <Clock_select>.
+    Related source file is "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd".
+    Found 32-bit register for signal <TimeDiv>.
+    Found 8-bit register for signal <Ampl_int>.
+    Found 16-bit adder for signal <Dend$addsub0000> created at line 45.
+    Found 16-bit subtractor for signal <Dend$addsub0001> created at line 45.
+    Found 16-bit subtractor for signal <Dend$addsub0002> created at line 45.
+    Found 16-bit subtractor for signal <Dend$addsub0003> created at line 45.
+    Found 16-bit subtractor for signal <Dend$addsub0004> created at line 45.
+    Found 16-bit subtractor for signal <Dend$addsub0005> created at line 45.
+    Found 16-bit subtractor for signal <Dend$addsub0006> created at line 45.
+    Found 16-bit subtractor for signal <Dend$addsub0007> created at line 45.
+    Found 16-bit comparator lessequal for signal <Dend$cmp_ge0000> created at line 43.
+    Found 16-bit adder for signal <Dend0$addsub0000> created at line 45.
+    Found 16-bit subtractor for signal <Dend0$addsub0001> created at line 45.
+    Found 16-bit subtractor for signal <Dend0$addsub0002> created at line 45.
+    Found 16-bit subtractor for signal <Dend0$addsub0003> created at line 45.
+    Found 16-bit subtractor for signal <Dend0$addsub0004> created at line 45.
+    Found 16-bit subtractor for signal <Dend0$addsub0005> created at line 45.
+    Found 16-bit subtractor for signal <Dend0$addsub0006> created at line 45.
+    Found 16-bit subtractor for signal <Dend0$addsub0007> created at line 45.
+    Found 16-bit comparator lessequal for signal <Dend0$cmp_ge0000> created at line 43.
+    Found 16-bit comparator greatequal for signal <Dend0$cmp_ge0001> created at line 43.
+    Found 16-bit comparator greatequal for signal <Dend0$cmp_ge0002> created at line 43.
+    Found 16-bit comparator greatequal for signal <Dend0$cmp_ge0003> created at line 43.
+    Found 16-bit comparator greatequal for signal <Dend0$cmp_ge0004> created at line 43.
+    Found 16-bit comparator greatequal for signal <Dend0$cmp_ge0005> created at line 43.
+    Found 16-bit comparator greatequal for signal <Dend0$cmp_ge0006> created at line 43.
+    Found 16-bit comparator greatequal for signal <Dend0$cmp_ge0007> created at line 43.
+    Found 32-bit adder for signal <Dend1$addsub0000> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0001> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0002> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0003> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0004> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0005> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0006> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0007> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0008> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0009> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0010> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0011> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0012> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0013> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0014> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0015> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0016> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0017> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0018> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0019> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0020> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0021> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0022> created at line 72.
+    Found 32-bit subtractor for signal <Dend1$addsub0023> created at line 72.
+    Found 32-bit comparator lessequal for signal <Dend1$cmp_ge0000> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0001> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0002> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0003> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0004> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0005> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0006> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0007> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0008> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0009> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0010> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0011> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0012> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0013> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0014> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0015> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0016> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0017> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0018> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0019> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0020> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0021> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0022> created at line 70.
+    Found 32-bit comparator greatequal for signal <Dend1$cmp_ge0023> created at line 70.
+    Found 8-bit register for signal <Freq_int>.
+    Found 9-bit register for signal <PulseWidth>.
+    Found 16-bit comparator greatequal for signal <ResLsb$cmp_ge0000> created at line 43.
+    Found 16-bit comparator greatequal for signal <ResLsb$cmp_ge0001> created at line 43.
+    Found 16-bit comparator greatequal for signal <ResLsb$cmp_ge0002> created at line 43.
+    Found 16-bit comparator greatequal for signal <ResLsb$cmp_ge0003> created at line 43.
+    Found 16-bit comparator greatequal for signal <ResLsb$cmp_ge0004> created at line 43.
+    Found 16-bit comparator greatequal for signal <ResLsb$cmp_ge0005> created at line 43.
+    Found 16-bit comparator greatequal for signal <ResLsb$cmp_ge0006> created at line 43.
+    Found 16-bit comparator greatequal for signal <ResLsb$cmp_ge0007> created at line 43.
+    Found 16-bit comparator greatequal for signal <ResLsb0$cmp_ge0000> created at line 43.
+    Found 32-bit comparator greatequal for signal <ResLsb1$cmp_ge0000> created at line 70.
+    Found 16-bit register for signal <Timed>.
+    Found 9x8-bit multiplier for signal <TimeDiv$mult0000> created at line 125.
+    Found 8-bit register for signal <Trek>.
+    Found 8-bit comparator greatequal for signal <Trek$cmp_ge0000> created at line 112.
+    Summary:
+	inferred  49 D-type flip-flop(s).
+	inferred  40 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred  44 Comparator(s).
+Unit <Clock_select> synthesized.
+
+
 Synthesizing Unit <SigGenSpiControl>.
-    Related source file is "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd".
+    Related source file is "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd".
 Unit <SigGenSpiControl> synthesized.
 
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 9
- 1-bit register                                        : 1
- 8-bit register                                        : 8
-# Comparators                                          : 3
- 8-bit comparator not equal                            : 3
+# Multipliers                                          : 1
+ 9x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 46
+ 16-bit adder                                          : 2
+ 16-bit subtractor                                     : 14
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 23
+ 8-bit adder                                           : 3
+ 8-bit addsub                                          : 1
+# Counters                                             : 2
+ 25-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 22
+ 1-bit register                                        : 6
+ 16-bit register                                       : 1
+ 32-bit register                                       : 1
+ 8-bit register                                        : 13
+ 9-bit register                                        : 1
+# Latches                                              : 3
+ 1-bit latch                                           : 2
+ 8-bit latch                                           : 1
+# Comparators                                          : 50
+ 16-bit comparator greatequal                          : 16
+ 16-bit comparator lessequal                           : 2
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greatequal                          : 24
+ 32-bit comparator lessequal                           : 1
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greatequal                           : 3
+ 8-bit comparator not equal                            : 2
 
 =========================================================================
 
@@ -218,22 +414,62 @@ Optimizing FSM <U2/State/FSM> on signal <State[1:3]> with user encoding.
  choose_state | 011
  reset_state  | 100
 --------------------------
+WARNING:Xst:1426 - The value init of the FF/Latch PulseWidth_0 hinder the constant cleaning in the block U5.
+   You should achieve better results by setting this init to 0.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # FSMs                                                 : 1
-# Registers                                            : 65
- Flip-Flops                                            : 65
-# Comparators                                          : 3
- 8-bit comparator not equal                            : 3
+# Multipliers                                          : 1
+ 9x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 46
+ 16-bit adder                                          : 2
+ 16-bit subtractor                                     : 14
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 23
+ 8-bit adder                                           : 3
+ 8-bit addsub                                          : 1
+# Counters                                             : 2
+ 25-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 167
+ Flip-Flops                                            : 167
+# Latches                                              : 3
+ 1-bit latch                                           : 2
+ 8-bit latch                                           : 1
+# Comparators                                          : 49
+ 16-bit comparator greatequal                          : 16
+ 16-bit comparator lessequal                           : 2
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greatequal                          : 24
+ 32-bit comparator lessequal                           : 1
+ 8-bit comparator greatequal                           : 3
+ 8-bit comparator not equal                            : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch PulseWidth_0 hinder the constant cleaning in the block Clock_select.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1710 - FF/Latch <TimeDiv_31> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_30> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_29> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_28> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_27> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_26> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_25> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_24> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_23> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_22> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_21> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_20> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_19> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_18> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TimeDiv_17> (without init value) has a constant value of 0 in block <Clock_select>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <SigGenSpiControl> ...
 
@@ -241,9 +477,19 @@ Optimizing unit <ShiftReg> ...
 
 Optimizing unit <Protokol> ...
 
+Optimizing unit <DivClk> ...
+
+Optimizing unit <PWM> ...
+
+Optimizing unit <Clock_select> ...
+WARNING:Xst:2677 - Node <U5/TimeDiv_0> of sequential type is unconnected in block <SigGenSpiControl>.
+WARNING:Xst:2677 - Node <U5/Timed_0> of sequential type is unconnected in block <SigGenSpiControl>.
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block SigGenSpiControl, actual ratio is 5.
+Found area constraint ratio of 100 (+ 5) on block SigGenSpiControl, actual ratio is 105.
+Optimizing block <SigGenSpiControl> to meet ratio 100 (+ 5) of 960 slices :
+Area constraint is met for block <SigGenSpiControl>, final ratio is 105.
 
 Final Macro Processing ...
 
@@ -251,8 +497,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 68
- Flip-Flops                                            : 68
+# Registers                                            : 186
+ Flip-Flops                                            : 186
 
 =========================================================================
 
@@ -278,31 +524,37 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 29
+# IOs                              : 7
 
 Cell Usage :
-# BELS                             : 90
+# BELS                             : 3632
 #      GND                         : 1
-#      INV                         : 2
-#      LUT2                        : 5
-#      LUT2_L                      : 1
-#      LUT3                        : 6
-#      LUT3_D                      : 1
-#      LUT4                        : 56
-#      LUT4_D                      : 5
-#      LUT4_L                      : 10
-#      MUXF5                       : 2
+#      INV                         : 49
+#      LUT1                        : 22
+#      LUT2                        : 183
+#      LUT3                        : 844
+#      LUT3_D                      : 114
+#      LUT3_L                      : 1
+#      LUT4                        : 680
+#      LUT4_D                      : 3
+#      MULT_AND                    : 42
+#      MUXCY                       : 1027
+#      MUXF5                       : 11
 #      VCC                         : 1
-# FlipFlops/Latches                : 68
-#      FDC                         : 2
-#      FDCE                        : 8
-#      FDE                         : 57
+#      XORCY                       : 654
+# FlipFlops/Latches                : 196
+#      FDC                         : 43
+#      FDCE                        : 17
+#      FDE                         : 125
 #      FDP                         : 1
+#      LD                          : 10
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 28
-#      IBUF                        : 3
-#      OBUF                        : 25
+# IO Buffers                       : 6
+#      IBUF                        : 4
+#      OBUF                        : 2
+# MULTs                            : 1
+#      MULT18X18SIO                : 1
 =========================================================================
 
 Device utilization summary:
@@ -310,12 +562,16 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                       55  out of    960     5%  
- Number of Slice Flip Flops:             68  out of   1920     3%  
- Number of 4 input LUTs:                 86  out of   1920     4%  
- Number of IOs:                          29
- Number of bonded IOBs:                  29  out of     83    34%  
+ Number of Slices:                     1009  out of    960   105% (*) 
+ Number of Slice Flip Flops:            195  out of   1920    10%  
+ Number of 4 input LUTs:               1896  out of   1920    98%  
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of     83     8%  
+    IOB Flip Flops:                       1
+ Number of MULT18X18SIOs:                 1  out of      4    25%  
  Number of GCLKs:                         1  out of     24     4%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -335,27 +591,35 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-SCK                                | BUFGP                  | 68    |
------------------------------------+------------------------+-------+
+---------------------------------------+------------------------+-------+
+Clock Signal                           | Clock buffer(FF name)  | Load  |
+---------------------------------------+------------------------+-------+
+SCK                                    | BUFGP                  | 178   |
+U3/Ampl_sig_not0001(U3/up_mux0005123:O)| NONE(*)(U3/Ampl_sig_7) | 8     |
+U4/Clk1_D                              | NONE(U3/PWMCnt_7)      | 8     |
+U3/up_not0001(U3/up_not0001199:O)      | NONE(*)(U3/up)         | 1     |
+U3/PWMout_not0001(U3/PWMout_not00011:O)| NONE(*)(U3/PWMout)     | 1     |
+---------------------------------------+------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-Reset                              | IBUF                   | 11    |
+Reset                              | IBUF                   | 61    |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 6.475ns (Maximum Frequency: 154.440MHz)
-   Minimum input arrival time before clock: 4.708ns
-   Maximum output required time after clock: 4.283ns
+   Minimum period: 105.989ns (Maximum Frequency: 9.435MHz)
+   Minimum input arrival time before clock: 6.130ns
+   Maximum output required time after clock: 4.368ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -364,79 +628,405 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SCK'
-  Clock period: 6.475ns (frequency: 154.440MHz)
-  Total number of paths / destination ports: 873 / 66
+  Clock period: 105.989ns (frequency: 9.435MHz)
+  Total number of paths / destination ports: 6958023144568888100000000000000000000 / 208
 -------------------------------------------------------------------------
-Delay:               6.475ns (Levels of Logic = 4)
-  Source:            U1/Reg_val_4 (FF)
-  Destination:       U2/State_FSM_FFd3 (FF)
+Delay:               105.989ns (Levels of Logic = 214)
+  Source:            U2/Freq_5 (FF)
+  Destination:       U5/Timed_1 (FF)
   Source Clock:      SCK rising
   Destination Clock: SCK rising
 
-  Data Path: U1/Reg_val_4 to U2/State_FSM_FFd3
+  Data Path: U2/Freq_5 to U5/Timed_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            10   0.591   1.057  U1/Reg_val_4 (U1/Reg_val_4)
-     LUT3_D:I0->O          9   0.704   0.824  U2/State_cmp_eq00001_SW0 (N2)
-     LUT4:I3->O            1   0.704   0.455  U2/State_FSM_FFd3-In34 (U2/State_FSM_FFd3-In34)
-     LUT4:I2->O            1   0.704   0.424  U2/State_FSM_FFd3-In45 (U2/State_FSM_FFd3-In45)
-     LUT4:I3->O            1   0.704   0.000  U2/State_FSM_FFd3-In63 (U2/State_FSM_FFd3-In)
-     FDC:D                     0.308          U2/State_FSM_FFd3
+     FDE:C->Q             64   0.591   1.447  U2/Freq_5 (U2/Freq_5)
+     LUT4:I0->O            2   0.704   0.526  U5/Freq_int_or000011 (U5/N7)
+     LUT2:I1->O           49   0.704   1.268  U5/Dend0_cmp_ge000011 (U5/Dend0_cmp_ge0000)
+     MULT_AND:I0->LO       0   0.741   0.000  U5/Dend1_mux0000<24>_mand_0 (U5/Dend1_mux0000<24>_mand3)
+     MUXCY:DI->O           1   0.888   0.000  U5/Mcompar_Dend1_cmp_ge0001_cy<1> (U5/Mcompar_Dend1_cmp_ge0001_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0001_cy<2> (U5/Mcompar_Dend1_cmp_ge0001_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0001_cy<3> (U5/Mcompar_Dend1_cmp_ge0001_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0001_cy<4> (U5/Mcompar_Dend1_cmp_ge0001_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0001_cy<5> (U5/Mcompar_Dend1_cmp_ge0001_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0001_cy<6> (U5/Mcompar_Dend1_cmp_ge0001_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0001_cy<7> (U5/Mcompar_Dend1_cmp_ge0001_cy<7>)
+     MUXCY:CI->O          15   0.459   1.021  U5/Mcompar_Dend1_cmp_ge0001_cy<8> (U5/Dend1_cmp_ge0001)
+     LUT4:I3->O            5   0.704   0.712  U5/Dend1_mux0001<24>1 (U5/Dend1_mux0001<24>)
+     LUT2:I1->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0002_lut<2> (U5/Mcompar_Dend1_cmp_ge0002_lut<2>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0002_cy<2> (U5/Mcompar_Dend1_cmp_ge0002_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0002_cy<3> (U5/Mcompar_Dend1_cmp_ge0002_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0002_cy<4> (U5/Mcompar_Dend1_cmp_ge0002_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0002_cy<5> (U5/Mcompar_Dend1_cmp_ge0002_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0002_cy<6> (U5/Mcompar_Dend1_cmp_ge0002_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0002_cy<7> (U5/Mcompar_Dend1_cmp_ge0002_cy<7>)
+     MUXCY:CI->O          28   0.459   1.340  U5/Mcompar_Dend1_cmp_ge0002_cy<8> (U5/Dend1_cmp_ge0002)
+     LUT2:I1->O            2   0.704   0.447  U5/Dend1_mux0002<22>1 (U5/Dend1_mux0002<22>)
+     MUXCY:DI->O           1   0.888   0.000  U5/Mcompar_Dend1_cmp_ge0003_cy<1> (U5/Mcompar_Dend1_cmp_ge0003_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0003_cy<2> (U5/Mcompar_Dend1_cmp_ge0003_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0003_cy<3> (U5/Mcompar_Dend1_cmp_ge0003_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0003_cy<4> (U5/Mcompar_Dend1_cmp_ge0003_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0003_cy<5> (U5/Mcompar_Dend1_cmp_ge0003_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0003_cy<6> (U5/Mcompar_Dend1_cmp_ge0003_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0003_cy<7> (U5/Mcompar_Dend1_cmp_ge0003_cy<7>)
+     MUXCY:CI->O          30   0.459   1.297  U5/Mcompar_Dend1_cmp_ge0003_cy<8> (U5/Dend1_cmp_ge0003)
+     LUT3:I2->O            3   0.704   0.706  U5/Dend1_mux0003<28>1 (U5/Dend1_mux0003<28>)
+     LUT4:I0->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0004_lut<8> (U5/Mcompar_Dend1_cmp_ge0004_lut<8>)
+     MUXCY:S->O           33   0.864   1.298  U5/Mcompar_Dend1_cmp_ge0004_cy<8> (U5/Dend1_cmp_ge0004)
+     LUT3:I2->O            3   0.704   0.706  U5/Dend1_mux0004<27>1 (U5/Dend1_mux0004<27>)
+     LUT4:I0->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0005_lut<8> (U5/Mcompar_Dend1_cmp_ge0005_lut<8>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0005_cy<8> (U5/Mcompar_Dend1_cmp_ge0005_cy<8>)
+     MUXCY:CI->O          35   0.459   1.298  U5/Mcompar_Dend1_cmp_ge0005_cy<9> (U5/Dend1_cmp_ge0005)
+     LUT3:I2->O            3   0.704   0.706  U5/Dend1_mux0005<26>1 (U5/Dend1_mux0005<26>)
+     LUT4:I0->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0007_lut<8> (U5/Mcompar_Dend1_cmp_ge0007_lut<8>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0007_cy<8> (U5/Mcompar_Dend1_cmp_ge0007_cy<8>)
+     MUXCY:CI->O          36   0.459   1.298  U5/Mcompar_Dend1_cmp_ge0007_cy<9> (U5/Dend1_cmp_ge0007)
+     LUT3:I2->O            3   0.704   0.706  U5/Dend1_mux0006<25>1 (U5/Dend1_mux0006<25>)
+     LUT4:I0->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0010_lut<8> (U5/Mcompar_Dend1_cmp_ge0010_lut<8>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0010_cy<8> (U5/Mcompar_Dend1_cmp_ge0010_cy<8>)
+     MUXCY:CI->O          38   0.459   1.299  U5/Mcompar_Dend1_cmp_ge0010_cy<9> (U5/Dend1_cmp_ge0010)
+     LUT3:I2->O            3   0.704   0.706  U5/Dend1_mux0007<24>1 (U5/Dend1_mux0007<24>)
+     LUT4:I0->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0012_lut<8> (U5/Mcompar_Dend1_cmp_ge0012_lut<8>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0012_cy<8> (U5/Mcompar_Dend1_cmp_ge0012_cy<8>)
+     MUXCY:CI->O          39   0.459   1.343  U5/Mcompar_Dend1_cmp_ge0012_cy<9> (U5/Dend1_cmp_ge0012)
+     LUT2:I1->O            4   0.704   0.666  U5/Dend1_mux0008<16>1 (U5/Dend1_mux0008<16>)
+     LUT2:I1->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0014_lut<1> (U5/Mcompar_Dend1_cmp_ge0014_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0014_cy<1> (U5/Mcompar_Dend1_cmp_ge0014_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0014_cy<2> (U5/Mcompar_Dend1_cmp_ge0014_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0014_cy<3> (U5/Mcompar_Dend1_cmp_ge0014_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0014_cy<4> (U5/Mcompar_Dend1_cmp_ge0014_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0014_cy<5> (U5/Mcompar_Dend1_cmp_ge0014_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0014_cy<6> (U5/Mcompar_Dend1_cmp_ge0014_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0014_cy<7> (U5/Mcompar_Dend1_cmp_ge0014_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0014_cy<8> (U5/Mcompar_Dend1_cmp_ge0014_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0014_cy<9> (U5/Mcompar_Dend1_cmp_ge0014_cy<9>)
+     MUXCY:CI->O          42   0.331   1.344  U5/Mcompar_Dend1_cmp_ge0014_cy<10> (U5/Dend1_cmp_ge0014)
+     LUT2:I1->O            4   0.704   0.666  U5/Dend1_mux0009<15>1 (U5/Dend1_mux0009<15>)
+     LUT2:I1->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0006_lut<1> (U5/Mcompar_Dend1_cmp_ge0006_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0006_cy<1> (U5/Mcompar_Dend1_cmp_ge0006_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0006_cy<2> (U5/Mcompar_Dend1_cmp_ge0006_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0006_cy<3> (U5/Mcompar_Dend1_cmp_ge0006_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0006_cy<4> (U5/Mcompar_Dend1_cmp_ge0006_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0006_cy<5> (U5/Mcompar_Dend1_cmp_ge0006_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0006_cy<6> (U5/Mcompar_Dend1_cmp_ge0006_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0006_cy<7> (U5/Mcompar_Dend1_cmp_ge0006_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0006_cy<8> (U5/Mcompar_Dend1_cmp_ge0006_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0006_cy<9> (U5/Mcompar_Dend1_cmp_ge0006_cy<9>)
+     MUXCY:CI->O          45   0.331   1.301  U5/Mcompar_Dend1_cmp_ge0006_cy<10> (U5/Dend1_cmp_ge0006)
+     LUT3:I2->O            3   0.704   0.706  U5/Dend1_mux0010<21>1 (U5/Dend1_mux0010<21>)
+     LUT4:I0->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0008_lut<8> (U5/Mcompar_Dend1_cmp_ge0008_lut<8>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0008_cy<8> (U5/Mcompar_Dend1_cmp_ge0008_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0008_cy<9> (U5/Mcompar_Dend1_cmp_ge0008_cy<9>)
+     MUXCY:CI->O          47   0.331   1.346  U5/Mcompar_Dend1_cmp_ge0008_cy<10> (U5/Dend1_cmp_ge0008)
+     LUT3:I1->O            3   0.704   0.706  U5/Dend1_mux0011<28>1 (U5/Dend1_mux0011<28>)
+     LUT4:I0->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0009_lut<10> (U5/Mcompar_Dend1_cmp_ge0009_lut<10>)
+     MUXCY:S->O           50   0.736   1.303  U5/Mcompar_Dend1_cmp_ge0009_cy<10> (U5/Dend1_cmp_ge0009)
+     LUT3:I2->O            3   0.704   0.706  U5/Dend1_mux0012<19>1 (U5/Dend1_mux0012<19>)
+     LUT4:I0->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0011_lut<8> (U5/Mcompar_Dend1_cmp_ge0011_lut<8>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0011_cy<8> (U5/Mcompar_Dend1_cmp_ge0011_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0011_cy<9> (U5/Mcompar_Dend1_cmp_ge0011_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0011_cy<10> (U5/Mcompar_Dend1_cmp_ge0011_cy<10>)
+     MUXCY:CI->O          52   0.331   1.304  U5/Mcompar_Dend1_cmp_ge0011_cy<11> (U5/Dend1_cmp_ge0011)
+     LUT3:I2->O            3   0.704   0.706  U5/Dend1_mux0013<18>1 (U5/Dend1_mux0013<18>)
+     LUT4:I0->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0013_lut<8> (U5/Mcompar_Dend1_cmp_ge0013_lut<8>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0013_cy<8> (U5/Mcompar_Dend1_cmp_ge0013_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0013_cy<9> (U5/Mcompar_Dend1_cmp_ge0013_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0013_cy<10> (U5/Mcompar_Dend1_cmp_ge0013_cy<10>)
+     MUXCY:CI->O          51   0.331   1.347  U5/Mcompar_Dend1_cmp_ge0013_cy<11> (U5/Dend1_cmp_ge0013)
+     LUT2:I1->O            4   0.704   0.666  U5/Dend1_mux0014<10>1 (U5/Dend1_mux0014<10>)
+     LUT2:I1->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0016_lut<1> (U5/Mcompar_Dend1_cmp_ge0016_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0016_cy<1> (U5/Mcompar_Dend1_cmp_ge0016_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0016_cy<2> (U5/Mcompar_Dend1_cmp_ge0016_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0016_cy<3> (U5/Mcompar_Dend1_cmp_ge0016_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0016_cy<4> (U5/Mcompar_Dend1_cmp_ge0016_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0016_cy<5> (U5/Mcompar_Dend1_cmp_ge0016_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0016_cy<6> (U5/Mcompar_Dend1_cmp_ge0016_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0016_cy<7> (U5/Mcompar_Dend1_cmp_ge0016_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0016_cy<8> (U5/Mcompar_Dend1_cmp_ge0016_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0016_cy<9> (U5/Mcompar_Dend1_cmp_ge0016_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0016_cy<10> (U5/Mcompar_Dend1_cmp_ge0016_cy<10>)
+     MUXCY:CI->O          53   0.331   1.348  U5/Mcompar_Dend1_cmp_ge0016_cy<11> (U5/Dend1_cmp_ge0016)
+     LUT2:I1->O            4   0.704   0.666  U5/Dend1_mux0015<9>1 (U5/Dend1_mux0015<9>)
+     LUT2:I1->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0018_lut<1> (U5/Mcompar_Dend1_cmp_ge0018_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0018_cy<1> (U5/Mcompar_Dend1_cmp_ge0018_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0018_cy<2> (U5/Mcompar_Dend1_cmp_ge0018_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0018_cy<3> (U5/Mcompar_Dend1_cmp_ge0018_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0018_cy<4> (U5/Mcompar_Dend1_cmp_ge0018_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0018_cy<5> (U5/Mcompar_Dend1_cmp_ge0018_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0018_cy<6> (U5/Mcompar_Dend1_cmp_ge0018_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0018_cy<7> (U5/Mcompar_Dend1_cmp_ge0018_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0018_cy<8> (U5/Mcompar_Dend1_cmp_ge0018_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0018_cy<9> (U5/Mcompar_Dend1_cmp_ge0018_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0018_cy<10> (U5/Mcompar_Dend1_cmp_ge0018_cy<10>)
+     MUXCY:CI->O          58   0.331   1.445  U5/Mcompar_Dend1_cmp_ge0018_cy<11> (U5/Dend1_cmp_ge0018)
+     LUT3:I0->O            3   0.704   0.706  U5/Dend1_mux0016<23>1 (U5/Dend1_mux0016<23>)
+     LUT4:I0->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0020_lut<10> (U5/Mcompar_Dend1_cmp_ge0020_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0020_cy<10> (U5/Mcompar_Dend1_cmp_ge0020_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Mcompar_Dend1_cmp_ge0020_cy<11> (U5/Mcompar_Dend1_cmp_ge0020_cy<11>)
+     MUXCY:CI->O          58   0.331   1.349  U5/Mcompar_Dend1_cmp_ge0020_cy<12> (U5/Dend1_cmp_ge0020)
+     LUT2:I1->O            4   0.704   0.666  U5/Dend1_mux0017<7>1 (U5/Dend1_mux0017<7>)
+     LUT2:I1->O            1   0.704   0.000  U5/Msub_Dend1_addsub0022_lut<7> (U5/Msub_Dend1_addsub0022_lut<7>)
+     MUXCY:S->O            1   0.464   0.000  U5/Msub_Dend1_addsub0022_cy<7> (U5/Msub_Dend1_addsub0022_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<8> (U5/Msub_Dend1_addsub0022_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<9> (U5/Msub_Dend1_addsub0022_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<10> (U5/Msub_Dend1_addsub0022_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<11> (U5/Msub_Dend1_addsub0022_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<12> (U5/Msub_Dend1_addsub0022_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<13> (U5/Msub_Dend1_addsub0022_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<14> (U5/Msub_Dend1_addsub0022_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<15> (U5/Msub_Dend1_addsub0022_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<16> (U5/Msub_Dend1_addsub0022_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<17> (U5/Msub_Dend1_addsub0022_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<18> (U5/Msub_Dend1_addsub0022_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<19> (U5/Msub_Dend1_addsub0022_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<20> (U5/Msub_Dend1_addsub0022_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<21> (U5/Msub_Dend1_addsub0022_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<22> (U5/Msub_Dend1_addsub0022_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<23> (U5/Msub_Dend1_addsub0022_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<24> (U5/Msub_Dend1_addsub0022_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<25> (U5/Msub_Dend1_addsub0022_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<26> (U5/Msub_Dend1_addsub0022_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<27> (U5/Msub_Dend1_addsub0022_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0022_cy<28> (U5/Msub_Dend1_addsub0022_cy<28>)
+     XORCY:CI->O           2   0.804   0.482  U5/Msub_Dend1_addsub0022_xor<29> (U5/Dend1_addsub0022<29>)
+     LUT3:I2->O            3   0.704   0.706  U5/Dend1_mux0018<29>1 (U5/Dend1_mux0018<29>)
+     LUT3:I0->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0023_lut<12> (U5/Mcompar_Dend1_cmp_ge0023_lut<12>)
+     MUXCY:S->O           61   0.736   1.350  U5/Mcompar_Dend1_cmp_ge0023_cy<12> (U5/Dend1_cmp_ge0023)
+     LUT2:I1->O            4   0.704   0.666  U5/Dend1_mux0019<5>1 (U5/Dend1_mux0019<5>)
+     LUT2:I1->O            1   0.704   0.000  U5/Msub_Dend1_addsub0015_lut<5> (U5/Msub_Dend1_addsub0015_lut<5>)
+     MUXCY:S->O            1   0.464   0.000  U5/Msub_Dend1_addsub0015_cy<5> (U5/Msub_Dend1_addsub0015_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<6> (U5/Msub_Dend1_addsub0015_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<7> (U5/Msub_Dend1_addsub0015_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<8> (U5/Msub_Dend1_addsub0015_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<9> (U5/Msub_Dend1_addsub0015_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<10> (U5/Msub_Dend1_addsub0015_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<11> (U5/Msub_Dend1_addsub0015_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<12> (U5/Msub_Dend1_addsub0015_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<13> (U5/Msub_Dend1_addsub0015_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<14> (U5/Msub_Dend1_addsub0015_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<15> (U5/Msub_Dend1_addsub0015_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<16> (U5/Msub_Dend1_addsub0015_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<17> (U5/Msub_Dend1_addsub0015_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<18> (U5/Msub_Dend1_addsub0015_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<19> (U5/Msub_Dend1_addsub0015_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<20> (U5/Msub_Dend1_addsub0015_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<21> (U5/Msub_Dend1_addsub0015_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<22> (U5/Msub_Dend1_addsub0015_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<23> (U5/Msub_Dend1_addsub0015_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<24> (U5/Msub_Dend1_addsub0015_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<25> (U5/Msub_Dend1_addsub0015_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<26> (U5/Msub_Dend1_addsub0015_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<27> (U5/Msub_Dend1_addsub0015_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<28> (U5/Msub_Dend1_addsub0015_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0015_cy<29> (U5/Msub_Dend1_addsub0015_cy<29>)
+     XORCY:CI->O           2   0.804   0.482  U5/Msub_Dend1_addsub0015_xor<30> (U5/Dend1_addsub0015<30>)
+     LUT3:I2->O            3   0.704   0.535  U5/Dend1_mux0020<30>1 (U5/Dend1_mux0020<30>)
+     LUT4:I3->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0017_lut<12> (U5/Mcompar_Dend1_cmp_ge0017_lut<12>)
+     MUXCY:S->O            1   0.464   0.000  U5/Mcompar_Dend1_cmp_ge0017_cy<12> (U5/Mcompar_Dend1_cmp_ge0017_cy<12>)
+     MUXCY:CI->O          68   0.331   1.353  U5/Mcompar_Dend1_cmp_ge0017_cy<13> (U5/Dend1_cmp_ge0017)
+     LUT2:I1->O            1   0.704   0.420  U5/Dend1_mux0021<3>1 (U5/Dend1_mux0021<3>)
+     MUXCY:DI->O           1   0.888   0.000  U5/Msub_Dend1_addsub0019_cy<3> (U5/Msub_Dend1_addsub0019_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<4> (U5/Msub_Dend1_addsub0019_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<5> (U5/Msub_Dend1_addsub0019_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<6> (U5/Msub_Dend1_addsub0019_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<7> (U5/Msub_Dend1_addsub0019_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<8> (U5/Msub_Dend1_addsub0019_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<9> (U5/Msub_Dend1_addsub0019_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<10> (U5/Msub_Dend1_addsub0019_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<11> (U5/Msub_Dend1_addsub0019_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<12> (U5/Msub_Dend1_addsub0019_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<13> (U5/Msub_Dend1_addsub0019_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<14> (U5/Msub_Dend1_addsub0019_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<15> (U5/Msub_Dend1_addsub0019_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<16> (U5/Msub_Dend1_addsub0019_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<17> (U5/Msub_Dend1_addsub0019_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<18> (U5/Msub_Dend1_addsub0019_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<19> (U5/Msub_Dend1_addsub0019_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<20> (U5/Msub_Dend1_addsub0019_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<21> (U5/Msub_Dend1_addsub0019_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<22> (U5/Msub_Dend1_addsub0019_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<23> (U5/Msub_Dend1_addsub0019_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<24> (U5/Msub_Dend1_addsub0019_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<25> (U5/Msub_Dend1_addsub0019_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<26> (U5/Msub_Dend1_addsub0019_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<27> (U5/Msub_Dend1_addsub0019_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  U5/Msub_Dend1_addsub0019_cy<28> (U5/Msub_Dend1_addsub0019_cy<28>)
+     XORCY:CI->O           1   0.804   0.455  U5/Msub_Dend1_addsub0019_xor<29> (U5/Dend1_addsub0019<29>)
+     LUT3:I2->O            1   0.704   0.595  U5/Dend1_mux0022<29>1 (U5/Dend1_mux0022<29>)
+     LUT3:I0->O            1   0.704   0.000  U5/Mcompar_Dend1_cmp_ge0021_lut<13> (U5/Mcompar_Dend1_cmp_ge0021_lut<13>)
+     MUXCY:S->O            1   0.736   0.000  U5/Mcompar_Dend1_cmp_ge0021_cy<13> (U5/Dend1_cmp_ge0021)
+     FDE:D                     0.308          U5/Timed_1
     ----------------------------------------
-    Total                      6.475ns (3.715ns logic, 2.760ns route)
-                                       (57.4% logic, 42.6% route)
+    Total                    105.989ns (61.873ns logic, 44.116ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U3/Ampl_sig_not0001'
+  Clock period: 7.434ns (frequency: 134.517MHz)
+  Total number of paths / destination ports: 36 / 8
+-------------------------------------------------------------------------
+Delay:               7.434ns (Levels of Logic = 5)
+  Source:            U3/Ampl_sig_0 (LATCH)
+  Destination:       U3/Ampl_sig_7 (LATCH)
+  Source Clock:      U3/Ampl_sig_not0001 falling
+  Destination Clock: U3/Ampl_sig_not0001 falling
+
+  Data Path: U3/Ampl_sig_0 to U3/Ampl_sig_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               8   0.676   0.932  U3/Ampl_sig_0 (U3/Ampl_sig_0)
+     LUT3:I0->O            2   0.704   0.451  U3/Ampl_sig_mux0004<4>11 (U3/N01)
+     LUT4:I3->O            3   0.704   0.610  U3/Ampl_sig_mux0004<4>311 (U3/N15)
+     LUT3:I1->O            2   0.704   0.482  U3/Maddsub_Ampl_sig_addsub0000_cy<4>11 (U3/Maddsub_Ampl_sig_addsub0000_cy<4>)
+     LUT4:I2->O            1   0.704   0.455  U3/Ampl_sig_mux0004<7>211 (U3/N19)
+     LUT4:I2->O            1   0.704   0.000  U3/Ampl_sig_mux0004<7>1 (U3/Ampl_sig_mux0004<7>)
+     LD:D                      0.308          U3/Ampl_sig_7
+    ----------------------------------------
+    Total                      7.434ns (4.504ns logic, 2.930ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U4/Clk1_D'
+  Clock period: 3.928ns (frequency: 254.582MHz)
+  Total number of paths / destination ports: 36 / 8
+-------------------------------------------------------------------------
+Delay:               3.928ns (Levels of Logic = 8)
+  Source:            U3/PWMCnt_1 (FF)
+  Destination:       U3/PWMCnt_7 (FF)
+  Source Clock:      U4/Clk1_D rising
+  Destination Clock: U4/Clk1_D rising
+
+  Data Path: U3/PWMCnt_1 to U3/PWMCnt_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.591   0.762  U3/PWMCnt_1 (U3/PWMCnt_1)
+     LUT1:I0->O            1   0.704   0.000  U3/Mcount_PWMCnt_cy<1>_rt (U3/Mcount_PWMCnt_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  U3/Mcount_PWMCnt_cy<1> (U3/Mcount_PWMCnt_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  U3/Mcount_PWMCnt_cy<2> (U3/Mcount_PWMCnt_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  U3/Mcount_PWMCnt_cy<3> (U3/Mcount_PWMCnt_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U3/Mcount_PWMCnt_cy<4> (U3/Mcount_PWMCnt_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U3/Mcount_PWMCnt_cy<5> (U3/Mcount_PWMCnt_cy<5>)
+     MUXCY:CI->O           0   0.059   0.000  U3/Mcount_PWMCnt_cy<6> (U3/Mcount_PWMCnt_cy<6>)
+     XORCY:CI->O           1   0.804   0.000  U3/Mcount_PWMCnt_xor<7> (U3/Result<7>)
+     FDCE:D                    0.308          U3/PWMCnt_7
+    ----------------------------------------
+    Total                      3.928ns (3.166ns logic, 0.762ns route)
+                                       (80.6% logic, 19.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U3/up_not0001'
+  Clock period: 2.726ns (frequency: 366.838MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.726ns (Levels of Logic = 1)
+  Source:            U3/up (LATCH)
+  Destination:       U3/up (LATCH)
+  Source Clock:      U3/up_not0001 falling
+  Destination Clock: U3/up_not0001 falling
+
+  Data Path: U3/up to U3/up
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              16   0.676   1.038  U3/up (U3/up)
+     LUT4:I3->O            1   0.704   0.000  U3/up_mux00051 (U3/up_mux0005)
+     LD:D                      0.308          U3/up
+    ----------------------------------------
+    Total                      2.726ns (1.688ns logic, 1.038ns route)
+                                       (61.9% logic, 38.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SCK'
-  Total number of paths / destination ports: 66 / 66
+  Total number of paths / destination ports: 142 / 134
 -------------------------------------------------------------------------
-Offset:              4.708ns (Levels of Logic = 2)
+Offset:              6.130ns (Levels of Logic = 3)
   Source:            Reset (PAD)
-  Destination:       U2/Ampl_7 (FF)
+  Destination:       U5/PulseWidth_8 (FF)
   Destination Clock: SCK rising
 
-  Data Path: Reset to U2/Ampl_7
+  Data Path: Reset to U5/PulseWidth_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            12   1.218   0.961  Reset_IBUF (Reset_IBUF)
-     INV:I->O             57   0.704   1.270  U2/Reset_inv1_INV_0 (U2/Reset_inv)
-     FDE:CE                    0.555          U2/prev_SPIdat_0
+     IBUF:I->O            64   1.218   1.276  Reset_IBUF (Reset_IBUF)
+     LUT4:I3->O            2   0.704   0.622  U5/Timed_and000021 (U5/N8)
+     LUT2:I0->O           17   0.704   1.051  U5/Trek_and00001 (U5/Trek_and0000)
+     FDE:CE                    0.555          U5/Trek_0
     ----------------------------------------
-    Total                      4.708ns (2.477ns logic, 2.231ns route)
-                                       (52.6% logic, 47.4% route)
+    Total                      6.130ns (3.181ns logic, 2.949ns route)
+                                       (51.9% logic, 48.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U4/Clk1_D'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.530ns (Levels of Logic = 1)
+  Source:            SigEN (PAD)
+  Destination:       U3/PWMCnt_7 (FF)
+  Destination Clock: U4/Clk1_D rising
+
+  Data Path: SigEN to U3/PWMCnt_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.218   0.757  SigEN_IBUF (SigEN_IBUF)
+     FDCE:CE                   0.555          U3/PWMCnt_0
+    ----------------------------------------
+    Total                      2.530ns (1.773ns logic, 0.757ns route)
+                                       (70.1% logic, 29.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'SCK'
-  Total number of paths / destination ports: 24 / 24
+  Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              4.283ns (Levels of Logic = 1)
-  Source:            U2/Freq_7 (FF)
-  Destination:       Freq<7> (PAD)
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            U2/Paritet (FF)
+  Destination:       Paritet (PAD)
   Source Clock:      SCK rising
 
-  Data Path: U2/Freq_7 to Freq<7>
+  Data Path: U2/Paritet to Paritet
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              1   0.591   0.420  U2/Freq_7 (U2/Freq_7)
-     OBUF:I->O                 3.272          Freq_7_OBUF (Freq<7>)
+     FDE:C->Q              2   0.591   0.447  U2/Paritet (U2/Paritet)
+     OBUF:I->O                 3.272          Paritet_OBUF (Paritet)
     ----------------------------------------
-    Total                      4.283ns (3.863ns logic, 0.420ns route)
-                                       (90.2% logic, 9.8% route)
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U3/PWMout_not0001'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.368ns (Levels of Logic = 1)
+  Source:            U3/PWMout (LATCH)
+  Destination:       output (PAD)
+  Source Clock:      U3/PWMout_not0001 falling
+
+  Data Path: U3/PWMout to output
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.676   0.420  U3/PWMout (U3/PWMout)
+     OBUF:I->O                 3.272          output_OBUF (output)
+    ----------------------------------------
+    Total                      4.368ns (3.948ns logic, 0.420ns route)
+                                       (90.4% logic, 9.6% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.39 secs
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.76 secs
  
 --> 
 
-Total memory usage is 4509760 kilobytes
+Total memory usage is 4560460 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 

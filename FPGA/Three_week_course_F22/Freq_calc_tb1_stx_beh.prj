@@ -1,0 +1,2 @@
+vhdl isim_temp "Freq_calc.vhd"
+vhdl isim_temp "Freq_calc_tb1.vhd"

@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/xst"
+elaborate
+-ifn test_Protokol.prj
+-ifmt mixed

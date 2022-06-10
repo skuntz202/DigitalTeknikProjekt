@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/protokol_tb1_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="protokol_tb1" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/protokol_tb1/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/spidat" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">spidat[7:0]</obj_property>
+      <obj_property name="ObjectShortName">spidat[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/uut/prev_spidat" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">prev_spidat[7:0]</obj_property>
+      <obj_property name="ObjectShortName">prev_spidat[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/ampl" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ampl[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ampl[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/uut/ack" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ack[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ack[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/uut/crc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">crc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">crc[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/uut/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/shape" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">shape[7:0]</obj_property>
+      <obj_property name="ObjectShortName">shape[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/freq" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">freq[7:0]</obj_property>
+      <obj_property name="ObjectShortName">freq[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/sigen" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sigen</obj_property>
+      <obj_property name="ObjectShortName">sigen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/uut/temp_shape" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temp_shape[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_shape[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/uut/temp_ampl" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temp_ampl[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_ampl[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/protokol_tb1/uut/temp_freq" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temp_freq[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_freq[7:0]</obj_property>
+   </wvobject>
+</wave_config>

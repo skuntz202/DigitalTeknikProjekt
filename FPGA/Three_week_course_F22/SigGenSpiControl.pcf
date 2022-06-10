@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.15xf on Thu Jun 09 10:18:58 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "SCK" LOCATE = SITE "A9" LEVEL 1;
+COMP "MOSI" LOCATE = SITE "C6" LEVEL 1;
+COMP "Paritet" LOCATE = SITE "B5" LEVEL 1;
+COMP "SigEN" LOCATE = SITE "C5" LEVEL 1;
+COMP "SS_not" LOCATE = SITE "B6" LEVEL 1;
+COMP "output" LOCATE = SITE "J3" LEVEL 1;
+NET "SCK_BUFGP/IBUFG" BEL "SCK_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

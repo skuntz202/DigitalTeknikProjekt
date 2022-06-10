@@ -1,0 +1,21 @@
+# Assignements of pins
+#NET "LD[7]" LOC = G1;
+#NET "LD[6]" LOC = P4;
+#NET "LD[5]" LOC = N4;
+#NET "LD[4]" LOC = N5;
+#NET "LD[3]" LOC = P6;
+#NET "LD[2]" LOC = P7;
+#NET "LD[1]" LOC = M11;
+#NET "LD[0]" LOC = M5;
+#Clock
+NET "SCK" LOC = A9;
+#Mosi
+NET "Mosi" LOC = C6;
+#SS_not
+NET "SS_not" LOC = B6;
+#SigEN
+Net "SigEN" LOC = C5;
+#Paritet
+Net "Paritet" LOC = B5;
+#PWM output
+Net "Output" LOC = J3;
