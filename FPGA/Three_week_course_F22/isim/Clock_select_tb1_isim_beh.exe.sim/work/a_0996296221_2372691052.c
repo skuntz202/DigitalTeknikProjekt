@@ -144,7 +144,7 @@ LAB4:    xsi_set_current_line(94, ng0);
     t2 = (t0 + 2128U);
     t3 = *((char **)t2);
     t7 = *((int64 *)t3);
-    t8 = (t7 * 2);
+    t8 = (t7 * 10);
     t2 = (t0 + 3168);
     xsi_process_wait(t2, t8);
 
@@ -156,7 +156,7 @@ LAB5:    goto LAB4;
 LAB7:    goto LAB5;
 
 LAB8:    xsi_set_current_line(96, ng0);
-    t2 = (t0 + 7332);
+    t2 = (t0 + 7320);
     t4 = (t0 + 3872);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -165,7 +165,7 @@ LAB8:    xsi_set_current_line(96, ng0);
     memcpy(t10, t2, 8U);
     xsi_driver_first_trans_fast(t4);
     xsi_set_current_line(97, ng0);
-    t2 = (t0 + 7340);
+    t2 = (t0 + 7328);
     t4 = (t0 + 3936);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -174,7 +174,7 @@ LAB8:    xsi_set_current_line(96, ng0);
     memcpy(t10, t2, 8U);
     xsi_driver_first_trans_fast(t4);
     xsi_set_current_line(98, ng0);
-    t2 = (t0 + 7348);
+    t2 = (t0 + 7336);
     t4 = (t0 + 4000);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
@@ -198,30 +198,6 @@ LAB9:    goto LAB8;
 LAB11:    goto LAB9;
 
 LAB12:    xsi_set_current_line(100, ng0);
-    t2 = (t0 + 7356);
-    t4 = (t0 + 3872);
-    t5 = (t4 + 56U);
-    t6 = *((char **)t5);
-    t9 = (t6 + 56U);
-    t10 = *((char **)t9);
-    memcpy(t10, t2, 8U);
-    xsi_driver_first_trans_fast(t4);
-    xsi_set_current_line(101, ng0);
-    t2 = (t0 + 7364);
-    t4 = (t0 + 3936);
-    t5 = (t4 + 56U);
-    t6 = *((char **)t5);
-    t9 = (t6 + 56U);
-    t10 = *((char **)t9);
-    memcpy(t10, t2, 8U);
-    xsi_driver_first_trans_fast(t4);
-    xsi_set_current_line(102, ng0);
-    t2 = (t0 + 2128U);
-    t3 = *((char **)t2);
-    t7 = *((int64 *)t3);
-    t8 = (t7 * 10);
-    t2 = (t0 + 3168);
-    xsi_process_wait(t2, t8);
 
 LAB18:    *((char **)t1) = &&LAB19;
     goto LAB1;
@@ -230,20 +206,11 @@ LAB13:    goto LAB12;
 
 LAB15:    goto LAB13;
 
-LAB16:    xsi_set_current_line(103, ng0);
-
-LAB22:    *((char **)t1) = &&LAB23;
-    goto LAB1;
+LAB16:    goto LAB2;
 
 LAB17:    goto LAB16;
 
 LAB19:    goto LAB17;
-
-LAB20:    goto LAB2;
-
-LAB21:    goto LAB20;
-
-LAB23:    goto LAB21;
 
 }
 

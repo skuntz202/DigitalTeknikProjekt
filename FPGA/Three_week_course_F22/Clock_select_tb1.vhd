@@ -92,13 +92,10 @@ BEGIN
       Reset <= '1';
 		wait for Clk_period*2;
 		Reset <= '0';
-		wait for Clk_period*2;
-		Shape <= X"02";
-		Freq <= X"02";
-		Ampl <= X"0F";
 		wait for Clk_period*10;
 		Shape <= X"03";
-		Freq <= X"FF";
+		Ampl <= X"FF";
+		Freq <= X"0F";
 		wait for Clk_period*10;
       wait;
    end process;

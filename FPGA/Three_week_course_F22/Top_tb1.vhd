@@ -65,7 +65,7 @@ ARCHITECTURE behavior OF Top_tb1 IS
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
-   constant SCK_period : time := 10 ns;
+   constant SCK_period : time := 10 ps;
  
 BEGIN
  
@@ -97,8 +97,9 @@ BEGIN
 		wait for SCK_period;
 		reset <= '0';
 		
+		-- Første
+		
 		-- Sender til Addrese: Shape sender X"01"
-		
 		wait for SCK_period*10;
 		SS_not <= '0';
 		wait for SCK_period;
@@ -120,9 +121,8 @@ BEGIN
 		wait for SCK_period;
 		SS_not <= '1';
 		
-		-- Sender Data til Shape: Firkant sender X"02"
-		
-		wait for SCK_period*10;
+		-- Sender Data til Shape: Firkant sender X"03"
+		wait for SCK_period*1;
 		SS_not <= '0';
 		wait for SCK_period;
 		MOSI <= '0';
@@ -144,8 +144,8 @@ BEGIN
 		SS_not <= '1';
 		
 		
-		-- Sender CRC sender X"FD"
-		wait for SCK_period*10;
+		-- Sender CRC sender X"FC"
+		wait for SCK_period*1;
 		SS_not <= '0';
 		wait for SCK_period;
 		MOSI <= '1';
@@ -168,8 +168,7 @@ BEGIN
 
 		
 		-- Sender ACK sender X"01"
-		
-		wait for SCK_period*10;
+		wait for SCK_period*1;
 		SS_not <= '0';
 		wait for SCK_period;
 		MOSI <= '0';
@@ -189,7 +188,192 @@ BEGIN
 		MOSI <= '1';
 		wait for SCK_period;
 		SS_not <= '1';
+		
+		
+		-- Anden omgang
+		
+		--Addresse Ampl X"02"
+		wait for SCK_period*1;
+		SS_not <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		SS_not <= '1';
+		
+		--Data Ampl X"10"
+		wait for SCK_period*1;
+		SS_not <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		SS_not <= '1';
 
+		
+		--CRC Ampl X"00"
+		wait for SCK_period*1;
+		SS_not <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		SS_not <= '1';
+		
+		--ACK Ampl X"F0"
+		wait for SCK_period*1;
+		SS_not <= '0';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		SS_not <= '1';
+		
+		--Tredje omgang
+		
+		--Addr Freq X"03"
+		wait for SCK_period*1;
+		SS_not <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		SS_not <= '1';
+		
+		--Data Freq X"FF"
+		wait for SCK_period*1;
+		SS_not <= '0';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		SS_not <= '1';
+		
+		--CRC Freq "F0"
+		wait for SCK_period*1;
+		SS_not <= '0';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		SS_not <= '1';
+		
+		--ACK Freq X"01"
+		wait for SCK_period;
+		SS_not <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '1';
+		wait for SCK_period;
+		SS_not <= '1';
+		
+		wait for SCK_period*10;
+		SigEN <= '1';
+		
       wait;
    end process;
 

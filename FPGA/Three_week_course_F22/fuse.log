@@ -25,8 +25,9 @@ Compiling architecture behavioral of entity Clock_select [clock_select_default]
 Compiling architecture behavioral of entity SigGenSpiControl [siggenspicontrol_default]
 Compiling architecture behavior of entity top_tb1
 Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\Top_tb1_isim_beh.exe.sim\libPortability.dll".
 Compiled 18 VHDL Units
 Built simulation executable C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Top_tb1_isim_beh.exe
-Fuse Memory Usage: 36580 KB
-Fuse CPU Usage: 593 ms
+Fuse Memory Usage: 37140 KB
+Fuse CPU Usage: 577 ms

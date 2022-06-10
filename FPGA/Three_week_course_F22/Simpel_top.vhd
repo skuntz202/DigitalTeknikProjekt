@@ -15,7 +15,7 @@ entity SigGenSpiControl is
 end SigGenSpiControl;
 
 architecture Behavioral of SigGenSpiControl is
-
+--Interne signaler som forbinder forskellige moduler
 Signal SPIdat_sig : STD_LOGIC_VECTOR(7 downto 0);
 Signal Shape_sig : STD_LOGIC_VECTOR(7 downto 0);
 Signal Ampl_sig : STD_LOGIC_VECTOR(7 downto 0);
@@ -24,7 +24,8 @@ Signal Freq_Clk : STD_LOGIC;
 Signal TimePP : Integer;
 
 
-
+--Skiftregister for at modtage sekventiel data, og konvertere det til Paralel data
+--Aka at få 8 forskellige bits, og lave dem til en liste på 8 bits
 Component ShiftReg is
 	port(
 		Clk: in STD_LOGIC;
@@ -34,6 +35,8 @@ Component ShiftReg is
 		Q : out STD_LOGIC_VECTOR(7 downto 0));
 end component ShiftReg;
 
+--Protokol for hvordan data bliver lagt i forskellige variable afhængigt af hvad der bliver modtaget,
+--Addresse osv, og chekcer derudover for Paritet, altså om der er sket noget med dataet, så det ikke længere er korrekt.
 Component Protokol is
     Port ( Clk : in  STD_LOGIC;
            Reset : in  STD_LOGIC;
@@ -44,6 +47,7 @@ Component Protokol is
            Paritet : out  STD_LOGIC);
 end component Protokol;
 
+--Data behandling som generer det ønskede signal type med korrekt, amplitude, frekvens og form
 Component PWM is
     Port ( Clk : in  STD_LOGIC;
            Reset : in  STD_LOGIC;
@@ -54,14 +58,17 @@ Component PWM is
            PWMout : out  STD_LOGIC);
 end component PWM;
 
+--Modul til at gøre klokken langsommere end de 50MHz som er boardets default clock
 component DivClk is
     port ( 
        Reset: in STD_LOGIC;     -- Global Reset (BTN1)
        Clk: in STD_LOGIC;     -- Master Clock (50 MHz)
-       TimeP: in integer;     -- Time periode of the divided clock (50e3)
-       Clk1: out STD_LOGIC);   -- Divided clock1 (1 kHz)
-end component DivClk;
+       TimeP: in integer;     -- Time periode of the divided clock 
+       Clk1: out STD_LOGIC);   -- Divided clock1 
+	end component DivClk;
 
+--Her vælger vi clocken afhængigt af hvilket signal vi får, frekvensen og i tilfælde også amplituden
+--Dette sendes så til DivClk modulet hvor klokken justeres.
 component Clock_select is
     Port (
 			  Freq : in  STD_LOGIC_VECTOR (7 downto 0);
