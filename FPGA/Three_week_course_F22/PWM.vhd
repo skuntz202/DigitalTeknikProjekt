@@ -17,7 +17,7 @@ architecture Behavioral of PWM is
 
 --Interne signaler
 Signal PWMCnt : STD_LOGIC_VECTOR(7 downto 0);
-Signal Ampl_sig : STD_LOGIC_VECTOR(7 downto 0):=X"FF";
+Signal Ampl_sig : STD_LOGIC_VECTOR(7 downto 0):=X"00";
 Signal up : STD_LOGIC:='1';
 
 begin
