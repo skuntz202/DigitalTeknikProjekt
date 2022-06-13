@@ -1,80 +1,50 @@
-V3 40
-FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Protokol.vhd" 2022/06/03.14:25:51 P.15xf
-FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/ShiftReg.vhd" 2022/06/02.13:20:58 P.15xf
-FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/Simpel_top.vhd" 2022/06/03.14:25:28 P.15xf
-FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/test_protokol.vhd" 2022/06/03.13:23:59 P.15xf
-EN work/test_Protokol 1654255445 \
-      FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/test_protokol.vhd" \
-      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
-      PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/test_Protokol/Behavioral 1654255446 \
-      FL "C:/Users/tniel/Desktop/Skole arbejde/DTU/Digital techniques/Three_week_course_F22/test_protokol.vhd" \
-      EN work/test_Protokol 1654255445
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd" 2022/06/09.08:04:21 P.15xf
-EN work/DivClk 1654862129 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd" \
-      PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
-      PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/DivClk/DivClk_arch 1654862130 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd" \
-      EN work/DivClk 1654862129
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd" 2022/06/10.13:41:54 P.15xf
-EN work/Clock_select 1654862131 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd" \
-      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
-      PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/Clock_select/Behavioral 1654862132 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd" \
-      EN work/Clock_select 1654862131
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd" 2022/06/10.13:04:52 P.15xf
-EN work/Protokol 1654862125 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd" \
-      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
-      PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/Protokol/Behavioral 1654862126 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd" \
-      EN work/Protokol 1654862125
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd" 2022/06/10.13:55:20 P.15xf
-EN work/PWM 1654862127 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd" \
-      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
-      PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/PWM/Behavioral 1654862128 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd" \
-      EN work/PWM 1654862127
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg.vhd" 2022/06/10.12:33:15 P.15xf
-EN work/ShiftReg 1654862123 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg.vhd" \
-      PB ieee/std_logic_1164 1335251622
-AR work/ShiftReg/Behavioral 1654862124 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg.vhd" \
-      EN work/ShiftReg 1654862123
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd" 2022/06/10.12:29:59 P.15xf
-EN work/SigGenSpiControl 1654862133 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd" \
-      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
-      PB ieee/STD_LOGIC_UNSIGNED 1335251625 PB ieee/std_logic_arith 1335251623
-AR work/SigGenSpiControl/Behavioral 1654862134 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd" \
-      EN work/SigGenSpiControl 1654862133 CP ShiftReg CP Protokol CP PWM CP DivClk \
+V3 24
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd 2022/06/07.14:36:43 P.20131013
+EN work/DivClk 1655122965 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/DivClk/DivClk_arch 1655122966 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd \
+      EN work/DivClk 1655122965
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd 2022/06/13.13:48:50 P.20131013
+EN work/Clock_select 1655122967 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Clock_select/Behavioral 1655122968 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd \
+      EN work/Clock_select 1655122967
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd 2022/06/13.14:16:55 P.20131013
+EN work/Protokol 1655122961 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Protokol/Behavioral 1655122962 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd \
+      EN work/Protokol 1655122961
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd 2022/06/13.14:22:35 P.20131013
+EN work/PWM 1655122963 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/PWM/Behavioral 1655122964 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd \
+      EN work/PWM 1655122963
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg.vhd 2022/06/13.09:19:09 P.20131013
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg1.vhd 2022/06/13.14:09:01 P.20131013
+EN work/ShiftReg 1655122959 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg1.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ShiftReg/Behavioral 1655122960 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg1.vhd \
+      EN work/ShiftReg 1655122959
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd 2022/06/13.14:19:44 P.20131013
+EN work/SigGenSpiControl 1655122969 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB ieee/std_logic_arith 1381692177
+AR work/SigGenSpiControl/Behavioral 1655122970 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd \
+      EN work/SigGenSpiControl 1655122969 CP ShiftReg CP Protokol CP PWM CP DivClk \
       CP Clock_select
-FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Behandling.vhd 2022/06/07.11:28:39 P.15xf
-EN work/Behandling 1654594197 \
-      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Behandling.vhd \
-      PB ieee/std_logic_1164 1335251622
-AR work/Behandling/Behavioral 1654594198 \
-      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Behandling.vhd \
-      EN work/Behandling 1654594197
-FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd 2022/06/07.14:36:43 P.15xf
-FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd 2022/06/07.16:21:41 P.15xf
-EN work/Freq_calc 1654611969 \
-      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd \
-      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
-      PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/Freq_calc/Behavioral 1654611970 \
-      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd \
-      EN work/Freq_calc 1654611969
-FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd 2022/06/07.14:36:43 P.15xf
-FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd 2022/06/07.14:50:09 P.15xf
-FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg.vhd 2022/06/07.11:12:24 P.15xf
-FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd 2022/06/07.16:26:00 P.15xf

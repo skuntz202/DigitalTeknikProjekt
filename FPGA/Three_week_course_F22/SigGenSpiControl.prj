@@ -1,4 +1,4 @@
-vhdl work "ShiftReg.vhd"
+vhdl work "ShiftReg1.vhd"
 vhdl work "PWM.vhd"
 vhdl work "Protokol.vhd"
 vhdl work "Freq_calc.vhd"

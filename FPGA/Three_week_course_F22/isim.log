@@ -1,7 +1,6 @@
 ISim log file
-Running: C:\Users\tniel\OneDrive - Danmarks Tekniske Universitet\Dokumenter\GitHub\DigitalTeknikProjekt\FPGA\Three_week_course_F22\Top_tb1_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Top_tb1_isim_beh.wdb 
-INFO: There is another simulation running in the same directory. Using database file name isim2.wdb.
-ISim P.15xf (signature 0xc3576ebc)
+Running: C:\Users\tniel\OneDrive\Dokumenter\GitHub\DigitalTeknikProjekt\FPGA\Three_week_course_F22\top_tb2_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/top_tb2_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
@@ -12,9 +11,9 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-ISim P.15xf (signature 0xc3576ebc)
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
@@ -22,9 +21,9 @@ This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-ISim P.15xf (signature 0xc3576ebc)
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
@@ -32,9 +31,9 @@ This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-ISim P.15xf (signature 0xc3576ebc)
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
@@ -42,9 +41,9 @@ This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-ISim P.15xf (signature 0xc3576ebc)
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
@@ -52,9 +51,9 @@ This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-ISim P.15xf (signature 0xc3576ebc)
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
@@ -62,9 +61,9 @@ This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-ISim P.15xf (signature 0xc3576ebc)
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
@@ -72,78 +71,5 @@ This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 5500 ps(3), Instance /top_tb1/uut/U3/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-ISim P.15xf (signature 0xc3576ebc)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 5500 ps(3), Instance /top_tb1/uut/U3/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-ISim P.15xf (signature 0xc3576ebc)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 1500 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-ISim P.15xf (signature 0xc3576ebc)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-ERROR: at 0 ps: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation can not advance in time because signals can not resolve to a stable value in File "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Top_tb1.vhd" Line 87. Please correct this code in order to advance past the current simulation time.
-
-INFO: Simulator is stopped.
-ISim P.15xf (signature 0xc3576ebc)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-at 15 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 15 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-ISim P.15xf (signature 0xc3576ebc)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-at 15 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 15 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-ISim P.15xf (signature 0xc3576ebc)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-at 15 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 15 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-ISim P.15xf (signature 0xc3576ebc)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-at 15 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 15 ps(1), Instance /top_tb1/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 105 ps(1), Instance /top_tb2/uut/U5/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0

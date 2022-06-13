@@ -10,7 +10,8 @@ entity Protokol is
            Shape : out  STD_LOGIC_VECTOR (7 downto 0);
            Ampl : out  STD_LOGIC_VECTOR (7 downto 0);
            Freq : out  STD_LOGIC_VECTOR (7 downto 0);
-           Paritet : out  STD_LOGIC);
+           Paritet : out  STD_LOGIC;
+			  SigEN : out STD_LOGIC);
 end Protokol;
 
 architecture Behavioral of Protokol is
@@ -20,7 +21,7 @@ type StateType is (Shape_state, Ampl_state, Freq_state, choose_state, Reset_stat
 signal State: StateType;
 signal temp_Shape, temp_Ampl, temp_freq, ACK, CRC_temp, prev_SPIdat : STD_LOGIC_VECTOR(7 downto 0):=X"00";
 --Signaler til at sikre os SpiDat bliver lagt i rigtig rækkefølge.
-signal Adr, Data, Crc, Final : STD_LOGIC := '0';
+signal Adr, Data, Crc, Final: STD_LOGIC := '0';
 
 begin
 	StateReg: process(Reset, Clk)
@@ -28,6 +29,7 @@ begin
 	begin
 		--Hvis Reset er høj kører vi igennem et reset_state som sætter alle værdier til 0 og går derefter i choose_state
 		if Reset = '1' then 
+			Paritet <= '0';
 			State <= Reset_state;
 		elsif clk'event and clk = '1' then
 			--Alle værdier opdateres til deres "temp" værdier hver clock
@@ -36,6 +38,13 @@ begin
 			Freq <= temp_freq;
 			--Prev_SPIdat bruges til at få en tidsforskudt SPIdat, så det er muligt at se hvornår SPIDat ændres.
 			Prev_SPIdat <= SPIdat;
+			
+			--SigEN skal være højt når der er indsat værdier i alle registrer.
+			if temp_shape /= X"00" and temp_ampl /= X"00" and temp_freq /= X"00" then
+				sigEN <= '1';
+			else
+				sigEN <= '0';
+			end if;
 			
 			case State is
 				when Reset_state =>

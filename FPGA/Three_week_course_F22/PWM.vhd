@@ -17,24 +17,23 @@ architecture Behavioral of PWM is
 
 --Interne signaler
 Signal PWMCnt : STD_LOGIC_VECTOR(7 downto 0);
-Signal Ampl_sig : STD_LOGIC_VECTOR(7 downto 0):=X"00";
+Signal Ampl_sig : STD_LOGIC_VECTOR(7 downto 0):=X"FF";
 Signal up : STD_LOGIC:='1';
 
 begin
-
 --PWMCount får PWMCnt til at tælle på til 255 og derefter gå til 0
 PWMCount: process(Reset,Clk)
 begin
 	if reset = '1' then
-		PWMCnt <= X"00";
+		PWMCnt <= X"FF";
 	elsif Clk'event and Clk = '1' and sigEN = '1' then
 		PWMCnt <= PWMCnt + 1;
 	end if;
 end process;
 
-signal_gen: process (PWMcnt)
+signal_gen: process (PWMcnt,Shape,Ampl,Ampl_sig,Up)
 begin
-
+	
 	if Shape = X"01" then -- Sinus
 		PWMout <= '1';
 	
@@ -60,7 +59,6 @@ begin
 				end if;
 			end if;
 		end if;
-		
 
 	elsif Shape = X"03" then -- Firkant
 		if Ampl >= PWMCnt then
@@ -68,6 +66,9 @@ begin
 		else 
 			PWMout <= '0';
 		end if;
+	
+	else
+		PWMout <= '0';
 	end if;
 end process;
 
