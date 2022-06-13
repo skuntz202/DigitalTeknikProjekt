@@ -9,12 +9,7 @@ extern int compareValue;
 #define BODEPLOT 0x03
 
 typedef struct{
-	char recordLength;
-	char* data;
-} Settings;
-
-typedef struct{
-	Settings* settings;
+	int recordLength : 2;
 	char type;
 	char* data;
 } UARTPacket;

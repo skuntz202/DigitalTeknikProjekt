@@ -12,6 +12,6 @@
 #define SQUARE 0x03
 
 void packet_makeSPIPacket(char ADDR, char DATA, SPIPacket* packet);
-void packet_makeOSCPacket(char ADDR, char DATA, UARTPacket* packet);
+void packet_makeOSCPacket(char type, char* DATA, UARTPacket* packet);
 
 #endif /*PACKET_H*/

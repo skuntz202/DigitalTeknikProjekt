@@ -15,9 +15,9 @@ int ADCSampleFlag = 0;
 
 int initTimer0(){
 	TCCR0A = (1<<WGM01);	    //Sets mode to CTC
-	TCCR0B = (1<<CS02);			//Sets prescaler to 512
-	OCR0A =	0x7C;				//Sets compare value to 124
-	OCR0B =	0x7C;
+	TCCR0B = (1<<CS01);			//Sets prescaler to 8
+	OCR0A =	0xC7;				//Sets compare value to 124
+	OCR0B =	0xC7;
 	TIMSK0 = (1<<OCIE0A);
 	TIFR0 = (1<<OCF0A);
 	return 1;
@@ -52,5 +52,5 @@ ISR(TIMER0_COMPA_vect){
 }
 
 ISR(ADC_vect){
-	ADC_storeSample();
+	//ADC_storeSample();
 }
