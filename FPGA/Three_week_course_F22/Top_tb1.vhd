@@ -305,35 +305,33 @@ BEGIN
 		wait for SCK_period;
 		SS_not <= '1';
 		
-		--Data Freq X"FF"
+		--Data Freq X"10"
 		wait for SCK_period*1;
 		SS_not <= '0';
 		wait for SCK_period;
-		MOSI <= '1';
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
+		wait for SCK_period;
+		MOSI <= '0';
 		wait for SCK_period;
 		MOSI <= '1';
 		wait for SCK_period;
-		MOSI <= '1';
+		MOSI <= '0';
 		wait for SCK_period;
-		MOSI <= '1';
+		MOSI <= '0';
 		wait for SCK_period;
-		MOSI <= '1';
+		MOSI <= '0';
 		wait for SCK_period;
-		MOSI <= '1';
-		wait for SCK_period;
-		MOSI <= '1';
-		wait for SCK_period;
-		MOSI <= '1';
+		MOSI <= '0';
 		wait for SCK_period;
 		SS_not <= '1';
 		
-		--CRC Freq "F0"
+		--CRC Freq "EF"
 		wait for SCK_period*1;
 		SS_not <= '0';
 		wait for SCK_period;
-		MOSI <= '1';
-		wait for SCK_period;
-		MOSI <= '1';
+		MOSI <= '0';
 		wait for SCK_period;
 		MOSI <= '1';
 		wait for SCK_period;
@@ -341,11 +339,13 @@ BEGIN
 		wait for SCK_period;
 		MOSI <= '0';
 		wait for SCK_period;
-		MOSI <= '0';
+		MOSI <= '1';
 		wait for SCK_period;
-		MOSI <= '0';
+		MOSI <= '1';
 		wait for SCK_period;
-		MOSI <= '0';
+		MOSI <= '1';
+		wait for SCK_period;
+		MOSI <= '1';
 		wait for SCK_period;
 		SS_not <= '1';
 		

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/top_tb2_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="top_tb2" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/top_tb2/sck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sck</obj_property>
+      <obj_property name="ObjectShortName">sck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb2/mclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mclk</obj_property>
+      <obj_property name="ObjectShortName">mclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb2/paritet" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">paritet</obj_property>
+      <obj_property name="ObjectShortName">paritet</obj_property>
+      <obj_property name="label">paritet</obj_property>
+   </wvobject>
+   <wvobject fp_name="group11" type="group">
+      <obj_property name="label">Top</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb2/output" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">output</obj_property>
+         <obj_property name="ObjectShortName">output</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/sigen" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">sigen</obj_property>
+         <obj_property name="ObjectShortName">sigen</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group12" type="group">
+      <obj_property name="label">Shift_reg</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb2/ss_not" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">ss_not</obj_property>
+         <obj_property name="ObjectShortName">ss_not</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/mosi" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">mosi</obj_property>
+         <obj_property name="ObjectShortName">mosi</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U1/reg_val" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">reg_val[7:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_val[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U1/q" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">q[7:0]</obj_property>
+         <obj_property name="ObjectShortName">q[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group13" type="group">
+      <obj_property name="label">Protokol</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb2/uut/U2/sigen" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">sigen</obj_property>
+         <obj_property name="ObjectShortName">sigen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U2/spidat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">spidat[7:0]</obj_property>
+         <obj_property name="ObjectShortName">spidat[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U2/prev_spidat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">prev_spidat[7:0]</obj_property>
+         <obj_property name="ObjectShortName">prev_spidat[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U2/shape" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">shape[7:0]</obj_property>
+         <obj_property name="ObjectShortName">shape[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U2/ampl" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ampl[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ampl[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U2/freq" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">freq[7:0]</obj_property>
+         <obj_property name="ObjectShortName">freq[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U2/state" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">state</obj_property>
+         <obj_property name="ObjectShortName">state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U2/ack" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ack[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ack[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U2/crc_temp" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">crc_temp[7:0]</obj_property>
+         <obj_property name="ObjectShortName">crc_temp[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U2/adr" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">adr</obj_property>
+         <obj_property name="ObjectShortName">adr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U2/data" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">data</obj_property>
+         <obj_property name="ObjectShortName">data</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U2/crc" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">crc</obj_property>
+         <obj_property name="ObjectShortName">crc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U2/final" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">final</obj_property>
+         <obj_property name="ObjectShortName">final</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group14" type="group">
+      <obj_property name="label">PWM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb2/uut/U3/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U3/shape" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">shape[7:0]</obj_property>
+         <obj_property name="ObjectShortName">shape[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U3/ampl" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ampl[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ampl[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U3/freq" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">freq[7:0]</obj_property>
+         <obj_property name="ObjectShortName">freq[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U3/pwmout" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">pwmout</obj_property>
+         <obj_property name="ObjectShortName">pwmout</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U3/pwmcnt" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pwmcnt[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pwmcnt[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U3/ampl_sig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ampl_sig[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ampl_sig[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U3/up" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">up</obj_property>
+         <obj_property name="ObjectShortName">up</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group15" type="group">
+      <obj_property name="label">DivClk</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb2/uut/U4/timep" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">timep</obj_property>
+         <obj_property name="ObjectShortName">timep</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U4/clk1" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk1</obj_property>
+         <obj_property name="ObjectShortName">clk1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U4/clk1_d" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk1_d</obj_property>
+         <obj_property name="ObjectShortName">clk1_d</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group16" type="group">
+      <obj_property name="label">Clock_select</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb2/uut/U5/shape" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">shape[7:0]</obj_property>
+         <obj_property name="ObjectShortName">shape[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U5/freq" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">freq[7:0]</obj_property>
+         <obj_property name="ObjectShortName">freq[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U5/ampl" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ampl[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ampl[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U5/timediv" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">timediv</obj_property>
+         <obj_property name="ObjectShortName">timediv</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

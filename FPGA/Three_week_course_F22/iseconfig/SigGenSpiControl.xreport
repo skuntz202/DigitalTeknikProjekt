@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-06-09T10:21:55</DateModified>
+  <DateModified>2022-06-13T11:53:08</DateModified>
   <ModuleName>SigGenSpiControl</ModuleName>
-  <SummaryTimeStamp>2022-06-07T11:30:00</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/iseconfig/SigGenSpiControl.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2022-06-13T11:43:46</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/iseconfig/SigGenSpiControl.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22\</ImplementationReportsDirectory>
   <DateInitialized>2022-06-03T11:51:36</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

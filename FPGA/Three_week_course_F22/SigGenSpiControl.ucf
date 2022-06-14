@@ -10,12 +10,13 @@
 #Clock
 NET "SCK" LOC = A9;
 #Mosi
-NET "Mosi" LOC = C6;
+NET "Mosi" LOC = A3;
 #SS_not
 NET "SS_not" LOC = B6;
 #SigEN
 Net "SigEN" LOC = C5;
 #Paritet
-Net "Paritet" LOC = B5;
+Net "Paritet" LOC = C6;
 #PWM output
 Net "Output" LOC = J3;
+#Net "Paritet2" LOC = C6;
