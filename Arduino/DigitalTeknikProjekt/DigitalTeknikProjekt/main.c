@@ -13,7 +13,7 @@
 int transmitSPIPacket(SPIPacket* packet){
 	//Transmits address
 	packet->ACK = SPI_transmit(packet->ADDR, 1);
-	UART_transChar(packet->ACK);
+	//UART_transChar(packet->ACK);
 	/*if(packet->ACK == 0x03){
 		UART_transStr("ERR: 101", 1);
 		return -1;
@@ -33,7 +33,7 @@ int transmitSPIPacket(SPIPacket* packet){
 
 	//Transmits data
 	packet->ACK = SPI_transmit(packet->DATA, 1);
-	UART_transChar(packet->ACK);
+	//UART_transChar(packet->ACK);
 	/*if(packet->ACK == 0x03){
 		UART_transStr("ERR: 101", 1);
 		return -1;
@@ -53,7 +53,7 @@ int transmitSPIPacket(SPIPacket* packet){
 
 	//Transmits CRC
 	packet->ACK = SPI_transmit(packet->CRC, 1);
-	UART_transChar(packet->ACK);
+	//UART_transChar(packet->ACK);
 	/*if(packet->ACK == 0x03){
 		UART_transStr("ERR: 101", 1);
 		return -1;
@@ -76,7 +76,7 @@ int transmitSPIPacket(SPIPacket* packet){
 
 	//Gets ack
 	packet->ACK = SPI_transmit(0x00, 1);
-	UART_transChar(packet->ACK);
+	//UART_transChar(packet->ACK);
 	/*if(packet->ACK == 0x03){
 		UART_transStr("ERR: 101", 1);
 		return -1;
@@ -135,10 +135,10 @@ int main(void){
 			free(temp);
 			packetReceiveFlag = 0;
 		}
-		//packet_makeSPIPacket(AMPLITUDE, 0x3F, &genPacket);
-		//transmitSPIPacket(&genPacket);
-		packet_makeOSCPacket(OSCILLOSCOPE, data, &OscPacket);
-		transmitUARTPacket(&OscPacket);
+		packet_makeSPIPacket(AMPLITUDE, 0x3F, &genPacket);
+		transmitSPIPacket(&genPacket);
+		//packet_makeOSCPacket(OSCILLOSCOPE, data, &OscPacket);
+		//transmitUARTPacket(&OscPacket);
 		//UART_transChar(adcSample);
 		if(ADCSampleFlag){
 			//Send contents of ADCReadBuffer to computer.
