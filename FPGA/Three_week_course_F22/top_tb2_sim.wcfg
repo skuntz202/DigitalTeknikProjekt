@@ -179,13 +179,14 @@
          <obj_property name="ElementShortName">shape[7:0]</obj_property>
          <obj_property name="ObjectShortName">shape[7:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/top_tb2/uut/U5/freq" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">freq[7:0]</obj_property>
-         <obj_property name="ObjectShortName">freq[7:0]</obj_property>
-      </wvobject>
       <wvobject fp_name="/top_tb2/uut/U5/ampl" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">ampl[7:0]</obj_property>
          <obj_property name="ObjectShortName">ampl[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb2/uut/U5/freq" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">freq[7:0]</obj_property>
+         <obj_property name="ObjectShortName">freq[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/top_tb2/uut/U5/timediv" type="other" db_ref_id="1">
          <obj_property name="ElementShortName">timediv</obj_property>

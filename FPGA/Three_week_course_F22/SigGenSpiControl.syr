@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Reading design: SigGenSpiControl.prj
 
@@ -109,14 +109,15 @@ Architecture behavioral of Entity shiftreg is up to date.
 Compiling vhdl file "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd" in Library work.
 Architecture behavioral of Entity protokol is up to date.
 Compiling vhdl file "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd" in Library work.
-Entity <pwm> compiled.
-Entity <pwm> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity pwm is up to date.
 Compiling vhdl file "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd" in Library work.
 Architecture divclk_arch of Entity divclk is up to date.
 Compiling vhdl file "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd" in Library work.
-Architecture behavioral of Entity clock_select is up to date.
+Entity <clock_select> compiled.
+Entity <clock_select> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd" in Library work.
-Architecture behavioral of Entity siggenspicontrol is up to date.
+Entity <siggenspicontrol> compiled.
+Entity <siggenspicontrol> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -880,11 +881,11 @@ Offset:              9.217ns (Levels of Logic = 12)
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.39 secs
+Total CPU time to Xst completion: 9.29 secs
  
 --> 
 
-Total memory usage is 4529472 kilobytes
+Total memory usage is 4529456 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    4 (   0 filtered)

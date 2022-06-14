@@ -78,7 +78,7 @@ component Clock_select is
 			  Reset : in STD_LOGIC;
            Ampl : in  STD_LOGIC_VECTOR (7 downto 0);
 			  Shape : in STD_LOGIC_VECTOR (7 downto 0);
-           TimeDiv : out  integer);
+           TimeDiv : out  integer); -- Værdi som ligges i TimeP
 end component Clock_select;
 
 begin
