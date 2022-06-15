@@ -9,6 +9,7 @@ extern int compareValue;
 #define BODEPLOT 0x03
 
 typedef struct{
+	int sampleRate : 2;
 	int recordLength : 2;
 	char type;
 	char* data;

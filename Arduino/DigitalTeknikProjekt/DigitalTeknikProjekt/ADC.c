@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include "ADC.h"
+#include "UART.h"
 #include "GLOBALS.h"
 
 unsigned int adcSample = 0;
@@ -48,7 +49,13 @@ void ADC_storeSample(){
 }
 
 ISR(TIMER0_COMPA_vect){
-	
+	static int timer = 0;
+	if(timer  == 100){
+		packetReceiveFlag = 1;
+		timer = 0;
+	} else{
+		timer += 1;
+	}
 }
 
 ISR(ADC_vect){

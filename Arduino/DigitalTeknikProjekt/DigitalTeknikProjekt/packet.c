@@ -1,11 +1,28 @@
 #include "packet.h"
 #include <string.h>	
 
-void packet_makeSPIPacket(char ADDR, char DATA, SPIPacket* packet){
-	char CRC = 255 - DATA;
-	packet->ADDR = ADDR;
-	packet->DATA = DATA;
-	packet->CRC = CRC;
+int packet_makeSPIPacket(SPIPacket* packet, UARTPacket* inputPacket){
+	if(inputPacket->type == 0x01){
+		//Enter pressed
+		if(inputPacket->data[0] == 0x00){
+			packet->DATA = inputPacket->data[1];
+		}
+		//Select pressed
+		else if(inputPacket->data[0] == 0x01){
+			packet->ADDR = inputPacket->data[1];
+		}
+		//Run/Stop pressed
+		else if(inputPacket->data[0] == 0x02){
+			packet->ADDR = 0x04;
+			packet->DATA = inputPacket->data[1];
+		}
+		//Reset
+		else if(inputPacket->data[0] == 0x03){
+			
+		}
+	}
+	packet->CRC = 255 - packet->DATA;
+	return 1;
 }
 
 void packet_makeOSCPacket(char type, char* DATA, UARTPacket* packet){

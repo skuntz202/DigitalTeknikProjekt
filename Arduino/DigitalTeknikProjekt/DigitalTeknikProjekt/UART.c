@@ -7,6 +7,7 @@
 
 volatile int transmitComplete = 1;
 volatile int bufferIndex = 0;
+char tempBuffer[2];
 char* buffer;
 char RX = ' ';
 int carriageReturn = 0;
@@ -53,7 +54,6 @@ void checkCarriageReturn(){
 }
 
 int UART_receiveChar(){
-	char tempBuffer[2];
 	RX = UDR0;
 	buffer[bufferIndex] = RX;
 	if(bufferIndex == 3){
@@ -65,6 +65,8 @@ int UART_receiveChar(){
 	}
 	if(bufferIndex == packetLength && packetLength != 0){
 		packetReceiveFlag = 1;
+		bufferIndex = 0;
+		return 1;
 	}
 	bufferIndex += 1;
 	//checkCarriageReturn();
