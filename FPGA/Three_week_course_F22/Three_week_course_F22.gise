@@ -15,7 +15,7 @@
 
   <!--                                                          -->
 
-  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
 
   <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
 
@@ -75,6 +75,9 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="putin.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="putin.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="putin.xst"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="siggenspicontrol.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="siggenspicontrol.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="siggenspicontrol.drc" xil_pn:subbranch="FPGAConfiguration"/>
@@ -210,6 +213,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="SigGenSpiControl.lso"/>
       <outfile xil_pn:name="SigGenSpiControl.ngc"/>
@@ -224,14 +232,17 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1655121193" xil_pn:in_ck="-2880867531671912714" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3446510636469938558" xil_pn:start_ts="1655121193">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1655121198" xil_pn:in_ck="5766403843599440038" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="8411453206826421637" xil_pn:start_ts="1655121193">
+    <transform xil_pn:end_ts="1655286407" xil_pn:in_ck="-2880867531671912714" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3446510636469938558" xil_pn:start_ts="1655286407">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1655286413" xil_pn:in_ck="5766403843599440038" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="8411453206826421637" xil_pn:start_ts="1655286407">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="SigGenSpiControl.bld"/>
       <outfile xil_pn:name="SigGenSpiControl.ngd"/>
@@ -239,12 +250,14 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1655121202" xil_pn:in_ck="1643550611657855783" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1303429204059397298" xil_pn:start_ts="1655121198">
+    <transform xil_pn:end_ts="1655286422" xil_pn:in_ck="1643550611657855783" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1303429204059397298" xil_pn:start_ts="1655286413">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SigGenSpiControl.pcf"/>
       <outfile xil_pn:name="SigGenSpiControl_map.map"/>
@@ -256,11 +269,13 @@
       <outfile xil_pn:name="SigGenSpiControl_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1655121217" xil_pn:in_ck="-1138795979861630400" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1655121202">
+    <transform xil_pn:end_ts="1655286440" xil_pn:in_ck="-1138795979861630400" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1655286422">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="SigGenSpiControl.ncd"/>
       <outfile xil_pn:name="SigGenSpiControl.pad"/>
       <outfile xil_pn:name="SigGenSpiControl.par"/>
@@ -272,13 +287,11 @@
       <outfile xil_pn:name="SigGenSpiControl_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1655121222" xil_pn:in_ck="-2880867531671920339" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1655121217">
+    <transform xil_pn:end_ts="1655286447" xil_pn:in_ck="-2880867531671920339" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1655286440">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SigGenSpiControl.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="siggenspicontrol.bgn"/>
@@ -288,10 +301,12 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1655121217" xil_pn:in_ck="-7542144983339571037" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1655121214">
+    <transform xil_pn:end_ts="1655286440" xil_pn:in_ck="-7542144983339571037" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1655286437">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="SigGenSpiControl.twr"/>
       <outfile xil_pn:name="SigGenSpiControl.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

@@ -4,9 +4,13 @@ EN shiftreg NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/
 AR shiftreg behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/ShiftReg1.vhd sub00/vhpl01 1655227893
 AR clock_select behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd sub00/vhpl09 1655227901
 AR protokol behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Protokol.vhd sub00/vhpl03 1655227895
+AR putin behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/putin.vhd" sub00/vhpl13 1655304189
 AR pwm behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/PWM.vhd sub00/vhpl05 1655227897
 AR siggenspicontrol behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd sub00/vhpl11 1655227903
 EN siggenspicontrol NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Simpel_top.vhd sub00/vhpl10 1655227902
+AR btndb behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/BTNdb.vhd" sub00/vhpl15 1655304187
 EN clock_select NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd sub00/vhpl08 1655227900
+EN putin NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/putin.vhd" sub00/vhpl12 1655304188
 EN divclk NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd sub00/vhpl06 1655227898
+EN btndb NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/BTNdb.vhd" sub00/vhpl14 1655304186
 AR divclk divclk_arch C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/DivClk.vhd sub00/vhpl07 1655227899

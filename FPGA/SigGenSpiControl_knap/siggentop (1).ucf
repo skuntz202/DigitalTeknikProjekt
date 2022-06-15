@@ -1,0 +1,29 @@
+#Assignemtns of SW signal
+NET "SW[7]" LOC = N3;
+NET "SW[6]" LOC = E2;
+NET "SW[5]" LOC = F3;
+NET "SW[4]" LOC = G3;
+NET "SW[3]" LOC = B4;
+NET "SW[2]" LOC = K3;
+NET "SW[1]" LOC = L3;
+NET "SW[0]" LOC = P11;
+#Assignments of the BTN signal
+NET "BTN0" LOC = G12;
+NET "BTN1" LOC = C11;
+NET "BTN2" LOC = M4;
+NET "BTN3" LOC = A7;
+# CLK go *brrrrr*
+NET "MClk" LOC = B8;
+# Seven Segment display
+NET "CAT[0]" LOC = L14;
+NET "CAT[1]" LOC = H12;
+NET "CAT[2]" LOC = N14;
+NET "CAT[3]" LOC = N11;
+NET "CAT[4]" LOC = P12;
+NET "CAT[5]" LOC = L13;
+NET "CAT[6]" LOC = M12;
+# Anodes
+NET "AN[0]" LOC = F12;
+NET "AN[1]" LOC = J12;
+NET "AN[2]" LOC = M13;
+NET "AN[3]" LOC = K14;

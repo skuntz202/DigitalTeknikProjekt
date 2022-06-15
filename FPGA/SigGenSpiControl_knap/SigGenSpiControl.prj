@@ -1,0 +1,7 @@
+vhdl work "SevenSeg5 (1).vhd"
+vhdl work "PWM.vhd"
+vhdl work "putin.vhd"
+vhdl work "Freq_calc.vhd"
+vhdl work "DivClk.vhd"
+vhdl work "Debounce_corrected.vhd"
+vhdl work "Simpel_top.vhd"

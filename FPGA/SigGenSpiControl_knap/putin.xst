@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/xst"
+elaborate
+-ifn putin.prj
+-ifmt mixed

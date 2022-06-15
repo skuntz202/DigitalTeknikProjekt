@@ -1,7 +1,7 @@
-Release 14.7 - par P.20131013 (nt64)
-Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Release 14.1 - par P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Mon Jun 13 13:53:32 2022
+Wed Jun 15 11:47:15 2022
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -51,7 +51,7 @@ C1|||NC||||||||||||
 C2||DIFFS|IO_L02N_3|UNUSED||3|||||||||
 C3||DIFFM|IO_L02P_3|UNUSED||3|||||||||
 C4|||NC||||||||||||
-C5|SigEN|IBUF|IO_L09N_0|INPUT|LVCMOS25*|0||||NONE||LOCATED|NO|NONE|
+C5||DIFFS|IO_L09N_0|UNUSED||0|||||||||
 C6|Paritet|IOB|IO_L08N_0/VREF_0|OUTPUT|LVCMOS25*|0|12|SLOW|NONE**|||LOCATED|NO|NONE|
 C7|||GND||||||||||||
 C8|MClk|IBUF|IP_L06N_0/GCLK9|INPUT|LVCMOS25*|0||||NONE||UNLOCATED|NO|NONE|

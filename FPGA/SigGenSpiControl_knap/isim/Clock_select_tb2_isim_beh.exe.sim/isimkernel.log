@@ -1,0 +1,29 @@
+Command line:
+   Clock_select_tb2_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  64297
+
+Thu Jun 16 00:24:13 2022
+
+
+ Elaboration Time: 0.015625 sec
+
+ Current Memory Usage: 5143.07 Meg
+
+ Total Signals          : 18
+ Total Nets             : 39
+ Total Signal Drivers   : 11
+ Total Blocks           : 6
+ Total Primitive Blocks : 5
+ Total Processes        : 3
+ Total Traceable Variables  : 16
+ Total Scalar Nets and Variables : 541
+Total Line Count : 34
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 4985.79 Meg
+
+Thu Jun 16 00:25:38 2022
+

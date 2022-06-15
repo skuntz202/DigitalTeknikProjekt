@@ -13,8 +13,6 @@ NET "SCK" LOC = A9;
 NET "Mosi" LOC = A3;
 #SS_not
 NET "SS_not" LOC = B6;
-#SigEN
-Net "SigEN" LOC = C5;
 #Paritet
 Net "Paritet" LOC = C6;
 #PWM output
