@@ -144,10 +144,10 @@ int main(void){
 			receiveCompleteFlag = 0;
 		}
 		if(packetReceiveFlag){
-			input_makePacket(&OscPacket, temptemp);
-			/*char* temp = buffer;
+			input_makePacket(&OscPacket, buffer);
+			char* temp = buffer;
 			buffer = (char*)calloc(100, sizeof(char));
-			free(temp);*/
+			free(temp);
 			packet_makeSPIPacket(&genPacket, &OscPacket);
 			transmitSPIPacket(&genPacket);
 			packetReceiveFlag = 0;
