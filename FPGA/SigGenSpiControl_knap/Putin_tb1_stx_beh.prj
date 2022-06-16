@@ -1,0 +1,2 @@
+vhdl isim_temp "putin.vhd"
+vhdl isim_temp "Putin_tb1.vhd"

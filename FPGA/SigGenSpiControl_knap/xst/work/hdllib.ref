@@ -1,0 +1,16 @@
+EN sevenseg5 NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/SevenSeg5 (1).vhd" sub00/vhpl14 1655336618
+AR sevenseg5 sevenseg_arch "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/SevenSeg5 (1).vhd" sub00/vhpl15 1655336619
+EN pwm NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/PWM.vhd" sub00/vhpl04 1655336610
+AR clock_select behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Freq_calc.vhd" sub00/vhpl09 1655336615
+EN debounce NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Debounce_corrected.vhd" sub00/vhpl12 1655336616
+AR putin behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/putin.vhd" sub00/vhpl03 1655336609
+AR pwm behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/PWM.vhd" sub00/vhpl05 1655336611
+AR siggenspicontrol behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Simpel_top.vhd" sub00/vhpl11 1655336621
+EN siggenspicontrol NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Simpel_top.vhd" sub00/vhpl10 1655336620
+AR btndb behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/BTNdb.vhd" sub00/vhpl01 1655327346
+AR debounce behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Debounce_corrected.vhd" sub00/vhpl13 1655336617
+EN clock_select NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Freq_calc.vhd" sub00/vhpl08 1655336614
+EN putin NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/putin.vhd" sub00/vhpl02 1655336608
+EN divclk NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/DivClk.vhd" sub00/vhpl06 1655336612
+EN btndb NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/BTNdb.vhd" sub00/vhpl00 1655327345
+AR divclk divclk_arch "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/DivClk.vhd" sub00/vhpl07 1655336613
