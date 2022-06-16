@@ -1,13 +1,5 @@
-# Assignements of pins
-#NET "LD[7]" LOC = G1;
-#NET "LD[6]" LOC = P4;
-#NET "LD[5]" LOC = N4;
-#NET "LD[4]" LOC = N5;
-#NET "LD[3]" LOC = P6;
-#NET "LD[2]" LOC = P7;
-#NET "LD[1]" LOC = M11;
-#NET "LD[0]" LOC = M5;
-#Clock
+#Ekstern Clock input
+NET "SCK" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "SCK" LOC = A9;
 #Mosi
 NET "Mosi" LOC = A3;
@@ -17,4 +9,21 @@ NET "SS_not" LOC = B6;
 Net "Paritet" LOC = C6;
 #PWM output
 Net "Output" LOC = J3;
-#Net "Paritet2" LOC = C6;
+# CLK go *brrrrr* Master Clock
+NET "MClk" LOC = B8;
+# Seven Segment display
+# Cathodes
+NET "CAT[0]" LOC = L14;
+NET "CAT[1]" LOC = H12;
+NET "CAT[2]" LOC = N14;
+NET "CAT[3]" LOC = N11;
+NET "CAT[4]" LOC = P12;
+NET "CAT[5]" LOC = L13;
+NET "CAT[6]" LOC = M12;
+# Anodes
+NET "AN[0]" LOC = F12;
+NET "AN[1]" LOC = J12;
+NET "AN[2]" LOC = M13;
+NET "AN[3]" LOC = K14;
+#Knap reset
+NET "BTN3" LOC = A7;

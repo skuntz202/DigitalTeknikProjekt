@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-06-16T01:15:59</DateModified>
+  <DateModified>2022-06-16T12:14:13</DateModified>
   <ModuleName>SigGenSpiControl</ModuleName>
   <SummaryTimeStamp>2022-06-16T01:15:23</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/iseconfig/SigGenSpiControl.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/iseconfig/SigGenSpiControl.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap\</ImplementationReportsDirectory>
   <DateInitialized>2022-06-15T22:16:31</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

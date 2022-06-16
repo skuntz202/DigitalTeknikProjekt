@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                    */
 /***********************************************************************/
 
-/* This file is designed for use with ISim build 0xc3576ebc */
+/* This file is designed for use with ISim build 0x7708f090 */
 
 #define XSI_HIDE_SYMBOL_SPEC true
 #include "xsi.h"
@@ -21,13 +21,10 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Debounce_corrected.vhd";
+static const char *ng0 = "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Debounce_corrected.vhd";
 extern char *IEEE_P_2592010699;
 
-unsigned char ieee_p_2592010699_sub_1605435078_503743352(char *, unsigned char , unsigned char );
-unsigned char ieee_p_2592010699_sub_1690584930_503743352(char *, unsigned char );
 unsigned char ieee_p_2592010699_sub_2507238156_503743352(char *, unsigned char , unsigned char );
-unsigned char ieee_p_2592010699_sub_2545490612_503743352(char *, unsigned char , unsigned char );
 
 
 static void work_a_1585794704_3212880686_p_0(char *t0)
@@ -419,42 +416,26 @@ static void work_a_1585794704_3212880686_p_5(char *t0)
     char *t2;
     unsigned char t3;
     char *t4;
-    unsigned char t5;
+    char *t5;
     char *t6;
-    unsigned char t7;
-    unsigned char t8;
-    unsigned char t9;
-    unsigned char t10;
-    char *t11;
-    char *t12;
-    char *t13;
-    char *t14;
-    char *t15;
+    char *t7;
+    char *t8;
 
-LAB0:    xsi_set_current_line(73, ng0);
+LAB0:    xsi_set_current_line(74, ng0);
 
-LAB3:    t1 = (t0 + 2312U);
+LAB3:    t1 = (t0 + 1992U);
     t2 = *((char **)t1);
     t3 = *((unsigned char *)t2);
-    t1 = (t0 + 2152U);
-    t4 = *((char **)t1);
-    t5 = *((unsigned char *)t4);
-    t1 = (t0 + 1832U);
-    t6 = *((char **)t1);
-    t7 = *((unsigned char *)t6);
-    t8 = ieee_p_2592010699_sub_2545490612_503743352(IEEE_P_2592010699, t5, t7);
-    t9 = ieee_p_2592010699_sub_1690584930_503743352(IEEE_P_2592010699, t8);
-    t10 = ieee_p_2592010699_sub_1605435078_503743352(IEEE_P_2592010699, t3, t9);
     t1 = (t0 + 5752);
-    t11 = (t1 + 56U);
-    t12 = *((char **)t11);
-    t13 = (t12 + 56U);
-    t14 = *((char **)t13);
-    *((unsigned char *)t14) = t10;
+    t4 = (t1 + 56U);
+    t5 = *((char **)t4);
+    t6 = (t5 + 56U);
+    t7 = *((char **)t6);
+    *((unsigned char *)t7) = t3;
     xsi_driver_first_trans_fast_port(t1);
 
-LAB2:    t15 = (t0 + 5352);
-    *((int *)t15) = 1;
+LAB2:    t8 = (t0 + 5352);
+    *((int *)t8) = 1;
 
 LAB1:    return;
 LAB4:    goto LAB2;

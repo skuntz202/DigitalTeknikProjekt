@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/top_tb2_isim_beh.exe" -prj "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/top_tb2_beh.prj" "work.top_tb2" 
+-intstyle "ise" -incremental -o "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/top_tb3_isim_beh.exe" -prj "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/top_tb3_beh.prj" "work.top_tb3" 

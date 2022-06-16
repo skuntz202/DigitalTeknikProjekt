@@ -1,5 +1,5 @@
-V3 31
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/BTNdb.vhd" 2022/06/15.23:09:03 P.15xf
+V3 38
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/BTNdb.vhd" 2022/06/15.23:09:03 P.20131013
 EN work/BTNdb 1655327345 \
       FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/BTNdb.vhd" \
       PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
@@ -7,60 +7,67 @@ EN work/BTNdb 1655327345 \
 AR work/BTNdb/Behavioral 1655327346 \
       FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/BTNdb.vhd" \
       EN work/BTNdb 1655327345
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Debounce_corrected.vhd" 2022/06/16.01:24:38 P.15xf
-EN work/Debounce 1655336616 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Debounce_corrected.vhd" \
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Debounce_corrected.vhd" 2022/06/16.01:24:38 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/DivClk.vhd" 2022/06/15.11:38:28 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Freq_calc.vhd" 2022/06/16.01:19:57 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/putin.vhd" 2022/06/16.01:43:26 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/PWM.vhd" 2022/06/16.01:13:43 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/SevenSeg5 (1).vhd" 2022/06/15.23:19:19 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Simpel_top.vhd" 2022/06/16.01:14:17 P.20131013
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Debounce_corrected.vhd 2022/06/16.12:13:46 P.20131013
+EN work/Debounce 1655376210 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Debounce_corrected.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/Debounce/Behavioral 1655336617 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Debounce_corrected.vhd" \
-      EN work/Debounce 1655336616
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/DivClk.vhd" 2022/06/15.11:38:28 P.15xf
-EN work/DivClk 1655336612 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/DivClk.vhd" \
+AR work/Debounce/Behavioral 1655376211 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Debounce_corrected.vhd \
+      EN work/Debounce 1655376210
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/DivClk.vhd 2022/06/16.12:13:46 P.20131013
+EN work/DivClk 1655376206 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/DivClk.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/DivClk/DivClk_arch 1655336613 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/DivClk.vhd" \
-      EN work/DivClk 1655336612
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Freq_calc.vhd" 2022/06/16.01:19:57 P.15xf
-EN work/Clock_select 1655336614 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Freq_calc.vhd" \
+AR work/DivClk/DivClk_arch 1655376207 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/DivClk.vhd \
+      EN work/DivClk 1655376206
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Freq_calc.vhd 2022/06/16.12:13:46 P.20131013
+EN work/Clock_select 1655376208 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Freq_calc.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/Clock_select/Behavioral 1655336615 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Freq_calc.vhd" \
-      EN work/Clock_select 1655336614
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/putin.vhd" 2022/06/16.01:43:26 P.15xf
-EN work/putin 1655336608 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/putin.vhd" \
+AR work/Clock_select/Behavioral 1655376209 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Freq_calc.vhd \
+      EN work/Clock_select 1655376208
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/putin.vhd 2022/06/16.12:13:46 P.20131013
+EN work/putin 1655376202 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/putin.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/putin/Behavioral 1655336609 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/putin.vhd" \
-      EN work/putin 1655336608 CP Disp
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/PWM.vhd" 2022/06/16.01:13:43 P.15xf
-EN work/PWM 1655336610 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/PWM.vhd" \
+AR work/putin/Behavioral 1655376203 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/putin.vhd \
+      EN work/putin 1655376202 CP Disp
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/PWM.vhd 2022/06/16.12:13:46 P.20131013
+EN work/PWM 1655376204 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/PWM.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/PWM/Behavioral 1655336611 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/PWM.vhd" \
-      EN work/PWM 1655336610
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/SevenSeg5 (1).vhd" 2022/06/15.23:19:19 P.15xf
-EN work/SevenSeg5 1655336618 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/SevenSeg5 (1).vhd" \
+AR work/PWM/Behavioral 1655376205 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/PWM.vhd \
+      EN work/PWM 1655376204
+FL "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/SevenSeg5 (1).vhd" 2022/06/16.12:13:46 P.20131013
+EN work/SevenSeg5 1655376212 \
+      FL "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/SevenSeg5 (1).vhd" \
       PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/SevenSeg5/SevenSeg_arch 1655336619 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/SevenSeg5 (1).vhd" \
-      EN work/SevenSeg5 1655336618
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Simpel_top.vhd" 2022/06/16.01:14:17 P.15xf
-EN work/SigGenSpiControl 1655336620 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Simpel_top.vhd" \
+AR work/SevenSeg5/SevenSeg_arch 1655376213 \
+      FL "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/SevenSeg5 (1).vhd" \
+      EN work/SevenSeg5 1655376212
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Simpel_top.vhd 2022/06/16.12:13:46 P.20131013
+EN work/SigGenSpiControl 1655376214 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Simpel_top.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625 PB ieee/std_logic_arith 1335251623
-AR work/SigGenSpiControl/Behavioral 1655336621 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Simpel_top.vhd" \
-      EN work/SigGenSpiControl 1655336620 CP Putin CP PWM CP DivClk CP Clock_select \
+AR work/SigGenSpiControl/Behavioral 1655376215 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/Simpel_top.vhd \
+      EN work/SigGenSpiControl 1655376214 CP Putin CP PWM CP DivClk CP Clock_select \
       CP Debounce CP SevenSeg5

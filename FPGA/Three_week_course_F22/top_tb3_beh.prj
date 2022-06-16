@@ -1,0 +1,8 @@
+vhdl work "ShiftReg.vhd"
+vhdl work "SevenSeg5 (1).vhd"
+vhdl work "PWM.vhd"
+vhdl work "Protokol.vhd"
+vhdl work "Freq_calc.vhd"
+vhdl work "DivClk.vhd"
+vhdl work "Simpel_top.vhd"
+vhdl work "top_tb3.vhd"
