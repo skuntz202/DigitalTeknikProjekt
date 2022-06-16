@@ -3,9 +3,12 @@
 
 extern char ADCReadBuffer[1000];
 extern char ADCWriteBuffer[1000];
+extern unsigned long sampleRate;
+extern unsigned int recordLength;
+extern unsigned int tempRecordLength;
 extern float voltage;
-extern int ADCSampleFlag;
-extern int ADCBufferIndex;
+extern volatile int ADCSampleFlag;
+extern volatile int ADCBufferIndex;
 extern unsigned int adcSample;
 
 extern void ADC_init();

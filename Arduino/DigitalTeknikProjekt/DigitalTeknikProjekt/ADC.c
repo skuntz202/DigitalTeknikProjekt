@@ -8,34 +8,41 @@
 #include "GLOBALS.h"
 
 unsigned int adcSample = 0;
+unsigned long sampleRate = 10;
 char ADCReadBuffer[1000];
 char ADCWriteBuffer[1000];
-int ADCBufferIndex = 0;
+volatile int ADCBufferIndex = 0;
 float voltage = 0.f;
-int ADCSampleFlag = 0;
+volatile int ADCSampleFlag = 0;
+unsigned int recordLength = 10;
+unsigned int tempRecordLength;
 
-int initTimer0(){
-	TCCR0A = (1<<WGM01);	    //Sets mode to CTC
-	TCCR0B = (1<<CS01);			//Sets prescaler to 8
-	OCR0A =	0xC7;				//Sets compare value to 124
-	OCR0B =	0xC7;
-	TIMSK0 = (1<<OCIE0A);
-	TIFR0 = (1<<OCF0A);
+int initTimer1(){
+	TCCR1B = (1<<WGM12)|(1<<CS10)|(1<<CS11);	    //Sets mode to CTC, Sets prescaler to 64
+	OCR1A =	0x8F;				//Sets compare value to 24
+	OCR1B =	0x8F;				//Sets compare value to 24
+	TIMSK1 = (1<<OCIE1B);
+	TIFR1 = (1<<OCF1B);
 	return 1;
 }
 
 void ADC_init(){
-	initTimer0();
-	ADMUX = (1<<REFS0)|(1<<ADLAR);
-	ADCSRA = (1<<ADEN)|(1<<ADATE)|(1<<ADIE)|(1<<ADPS2)|(1<<ADPS0);
-	ADCSRB = (1<<ADTS1)|(1<<ADTS0);
+	sei();
+	tempRecordLength = recordLength;
+	initTimer1();
+	ADMUX |= (1<<ADLAR);
+	ADCSRA |= (1<<ADPS2)|(1<<ADEN)|(1<<ADATE)|(1<<ADIE);
+	ADCSRB |= (1<<ADTS2)|(1<<ADTS0);
 }
 
-void ADC_storeSample(){
+ISR(TIMER1_COMPB_vect){
+	packetReceiveFlag = 1;
+}
+
+ISR(ADC_vect){
 	adcSample = ADCH;
-	/*voltage = (float)adcSample*0.013;
 	ADCWriteBuffer[ADCBufferIndex] = adcSample;
-	if(ADCBufferIndex == 999){
+	if(ADCBufferIndex == 10){
 		ADCBufferIndex = 0;
 		ADCSampleFlag = 1;
 		
@@ -43,21 +50,8 @@ void ADC_storeSample(){
 		char* temp = ADCWriteBuffer;
 		*ADCWriteBuffer = *ADCReadBuffer;
 		*ADCReadBuffer = *temp;
+		tempRecordLength = recordLength;
 	} else{
 		ADCBufferIndex += 1;
-	}*/
-}
-
-ISR(TIMER0_COMPA_vect){
-	/*static int timer = 0;
-	if(timer  == 100){
-		packetReceiveFlag = 1;
-		timer = 0;
-	} else{
-		timer += 1;
-	}*/
-}
-
-ISR(ADC_vect){
-	//ADC_storeSample();
+ 	}
 }

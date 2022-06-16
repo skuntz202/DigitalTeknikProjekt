@@ -1,4 +1,7 @@
 #include "input.h"
+#include "ADC.h"
+#include "UART.h"
+#include <avr/io.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,7 +9,6 @@ int input_makePacket(UARTPacket* returnData, char* packet){
 	if(packet[0] != 0x55 || packet[1] != 0xAA){
 		return -1;
 	}
-	char* temp = (char*)calloc(2, sizeof(char));
 	if(packet[4] == 0x01){
 		if(packet[7] != 0x00 || packet[8] != 0x00){
 			return -1;
@@ -22,12 +24,24 @@ int input_makePacket(UARTPacket* returnData, char* packet){
 		}
 		returnData->type = packet[4];
 		returnData->data = (char*)calloc(4, sizeof(char));
-		temp[0] = packet[5];
-		temp[1] = packet[6];
-		returnData->sampleRate = atoi(temp);
-		temp[0] = packet[7];
-		temp[1] = packet[8];
-		returnData->recordLength = atoi(temp);
+		int inputSampleRate = ((packet[5]<<8)&0x7F00) + packet[6];
+		if(inputSampleRate < 10){
+			sampleRate = 24999;
+		} else if(inputSampleRate > 10000){
+			sampleRate = 0x8F;
+		} else{
+			sampleRate = (unsigned long)((16000000.f*(1.f/(float)inputSampleRate)-64.f)/64.f);	
+		}
+		OCR1B = sampleRate;
+		OCR1A = sampleRate;
+		int inputRecordLength = (packet[7]<<8) + packet[8];
+		if(inputRecordLength > 10000){
+			recordLength = 10000;
+		} else if(inputRecordLength < 10){
+			recordLength = 10;
+		} else{
+			recordLength = inputRecordLength;
+		}
 	}
 	else if(packet[4] == 0x03){}
 	return 1;

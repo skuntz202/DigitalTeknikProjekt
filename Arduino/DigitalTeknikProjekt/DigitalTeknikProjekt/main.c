@@ -72,11 +72,11 @@ int transmitSPIPacket(SPIPacket* packet){
 	}*/
 
 	//Delay
-	for(int timer = 0; timer < 20; timer++){}
+	//for(int timer = 0; timer < 20; timer++){}
 
 	//Gets ack
 	packet->ACK = SPI_transmit(0x00, 1);
-	UART_transChar(packet->ACK);
+	//UART_transChar(packet->ACK);
 	/*if(packet->ACK == 0x03){
 		UART_transStr("ERR: 101", 1);
 		return -1;
@@ -99,37 +99,37 @@ int transmitSPIPacket(SPIPacket* packet){
 }
 
 int transmitUARTPacket(UARTPacket* packet){
-	char recordLengthL = (packet->recordLength+7) & 0x00FF;
-	char recordLengthH = (packet->recordLength+7)>>8;
-	UART_transChar(0x55);
-	UART_transChar(0xAA);
-	UART_transChar(recordLengthH);
-	UART_transChar(recordLengthL);
-	UART_transChar(packet->type);
-	for(int i = 0; i < packet->recordLength; i++){
-		UART_transChar(packet->data[i]);
+	char recordLengthL = (tempRecordLength+7) & 0x00FF;
+	char recordLengthH = (tempRecordLength+7)>>8;
+	SPI_transmit(0x55, 0);
+	SPI_transmit(0xAA, 0);
+	SPI_transmit(recordLengthH, 0);
+	SPI_transmit(recordLengthL, 0);
+	SPI_transmit(packet->type, 0);
+	for(int i = 0; i < recordLength; i++){
+		SPI_transmit(packet->data[i], 0);
 	}
-	UART_transChar(0x00);
-	UART_transChar(0x00);
-	UART_transChar('\n');
-	UART_transChar('\r');
-	for(int timer = 0; timer < 20; timer++){}
+	SPI_transmit(0x00, 0);
+	SPI_transmit(0x00, 0);
+	//UART_transChar('\n');
+	//UART_transChar('\r');
+	for(int timer = 0; timer < 200; timer++){}
 	return 1;
 }
 
 int main(void){
 	UARTPacket OscPacket;
 	SPIPacket genPacket;
-	genPacket.ADDR = 0x02;
+	genPacket.ADDR = 0x01;
 	genPacket.DATA = 0x02;
-	genPacket.CRC = 0x00;
+	genPacket.CRC = 0xFE;
 	SPI_init(MASTER);
 	UART_init();
 	ADC_init();
 	char* data = "SS";
 	OscPacket.recordLength = 2;
 	char* temptemp = (char*)calloc(100, sizeof(char));
-	temptemp[0] = 0x55;
+	/*temptemp[0] = 0x55;
 	temptemp[1] = 0xAA;
 	temptemp[2] = 0x00;
 	temptemp[3] = 0x09;
@@ -137,25 +137,38 @@ int main(void){
 	temptemp[5] = 0x00;
 	temptemp[6] = 0x3F;
 	temptemp[7] = 0x00;
-	temptemp[8] = 0x00;
+	temptemp[8] = 0x00;*/
+	temptemp[0] = 0x55;
+	temptemp[1] = 0xAA;
+	temptemp[2] = 0x00;
+	temptemp[3] = 0x09;
+	temptemp[4] = 0x02;
+	temptemp[5] = 0xFF;
+	temptemp[6] = 0xFF;
+	temptemp[7] = 0x00;
+	temptemp[8] = 0x01;
+	temptemp[9] = 0x00;
+	temptemp[10] = 0x00;
     while(1){
 		if(receiveCompleteFlag){
 			UART_receiveChar();
 			receiveCompleteFlag = 0;
 		}
-		if(packetReceiveFlag){
-			input_makePacket(&OscPacket, buffer);
-			char* temp = buffer;
+		//if(packetReceiveFlag){
+			//input_makePacket(&OscPacket, temptemp);
+			/*char* temp = buffer;
 			buffer = (char*)calloc(100, sizeof(char));
 			free(temp);
 			packet_makeSPIPacket(&genPacket, &OscPacket);
 			transmitSPIPacket(&genPacket);
-			packetReceiveFlag = 0;
-		}
+			packetReceiveFlag = 0;*/
+		//}
 		//packet_makeOSCPacket(OSCILLOSCOPE, data, &OscPacket);
 		// transmitUARTPacket(&OscPacket);
-		//UART_transChar(adcSample);
 		if(ADCSampleFlag){
+			packet_makeOSCPacket(0x02, ADCReadBuffer, &OscPacket);
+			transmitUARTPacket(&OscPacket);
+			ADCSampleFlag = 0;
 			//Send contents of ADCReadBuffer to computer.
 		}
     }

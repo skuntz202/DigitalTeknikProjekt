@@ -16,19 +16,20 @@ int receiveCompleteFlag = 0;
 int packetReceiveFlag = 0;
 
 
+
 void UART_init(){
 	buffer = (char*)calloc(100, sizeof(char));
 	sei();
 	int ubrr = 51;
 	UBRR0H = (unsigned char)(ubrr>>8);
 	UBRR0L = (unsigned char)ubrr;
-	UCSR0B |= (1<<RXCIE0)|(1<<TXCIE0)|(1<<RXEN0)|(1<<TXEN0);
+	UCSR0B |= (1<<RXCIE0)|(1<<RXEN0)|(1<<TXEN0);
 	UCSR0C |= (1<<UCSZ01)|(1<<UCSZ00);
 }
 
 
 void UART_transChar(char transData){
-	while(!transmitComplete){}
+	//while(!transmitComplete){}
 	transmitComplete = 0;
 	UDR0 = transData;
 }
