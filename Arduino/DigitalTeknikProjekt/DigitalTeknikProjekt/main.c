@@ -170,30 +170,27 @@ int main(void){
 // 	buffer[6] = 0x00;
 	
     while(1){
-		//Make packet for SPI and transmission of packet
-		//Test with ADC connected, remove dims and paste code into RX ISR, remove code in CTC ISR
-		if(packetReceiveFlag){
-			SPDR = 0x00;
-			/*input_makePacket(&OscPacket, buffer);
-			packet_makeSPIPacket(&genPacket, &OscPacket);
-			
-			//Clear buffer or it wont work after time, buffer should only be left uncleared when testing
-			//strcpy(buffer, "");
- 			if(OscPacket.type == GENERATOR){
- 				if(transmitSPIPacket(&genPacket)){}
- 			} 
- 			else if(OscPacket.type == OSCILLOSCOPE){continue;} 
- 			else if(OscPacket.type == BODEPLOT){continue;}*/
-			packetReceiveFlag = 0;
-		}
+//		Make packet for SPI and transmission of packet
+		//Remove dims and paste code into RX ISR, remove code in CTC ISR
+// 		if(packetReceiveFlag){
+// 			input_makePacket(&OscPacket, buffer);
+// 			packet_makeSPIPacket(&genPacket, &OscPacket);
+//  			strcpy(buffer, "");
+//  			if(OscPacket.type == GENERATOR){
+//  				if(transmitSPIPacket(&genPacket)){}
+//  			} 
+//  			else if(OscPacket.type == OSCILLOSCOPE){continue;} 
+//  			else if(OscPacket.type == BODEPLOT){continue;}
+// 			packetReceiveFlag = 0;
+// 		}
 		
-		//Sending ADC data to LabView    TEST WITH ADC CONNECTED, Expand makeOscPacket based on type
-		if(ADCSampleFlag){
-			packet_makeOSCPacket(OscPacket.type, ADCReadBuffer, &OscPacket);
-			transmitUARTPacket(&OscPacket);
-			strcpy(ADCReadBuffer, "");
-			ADCSampleFlag = 0;
-		}
+		//Sending ADC data to LabView    Expand makeOscPacket based on type
+// 		if(ADCSampleFlag){
+// 			packet_makeOSCPacket(ADCWriteBuffer, &OscPacket);
+// 			transmitUARTPacket(&OscPacket);
+// 			strcpy(ADCWriteBuffer, "");
+// 			ADCSampleFlag = 0;
+// 		}
     }
 	free(buffer);
 }

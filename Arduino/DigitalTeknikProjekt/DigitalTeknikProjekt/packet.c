@@ -1,6 +1,7 @@
 #include "packet.h"
 #include "ADC.h"
-#include <string.h>	
+#include <string.h>
+#include <stdlib.h>
 
 int packet_makeSPIPacket(SPIPacket* packet, UARTPacket* inputPacket){
 	if(inputPacket->type == 0x01){
@@ -30,6 +31,6 @@ int packet_makeSPIPacket(SPIPacket* packet, UARTPacket* inputPacket){
 	return 1;
 }
 
-void packet_makeOSCPacket(char type, char* DATA, UARTPacket* packet){
-	strcpy(packet->data, DATA);
+void packet_makeOSCPacket(char* DATA, UARTPacket* packet){
+	packet->data = DATA;
 }

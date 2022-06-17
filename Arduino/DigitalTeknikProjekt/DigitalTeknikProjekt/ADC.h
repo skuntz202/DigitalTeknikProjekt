@@ -13,5 +13,4 @@ extern unsigned int adcSample;
 extern void ADC_init();
 extern void ADC_storeSample();
 
-
 #endif /*ADC_H_*/
