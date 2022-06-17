@@ -1,67 +1,75 @@
-V3 41
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd" 2022/06/15.16:07:35 P.15xf
-EN work/BTNdb 1655452594 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd" \
+V3 49
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd" 2022/06/15.16:07:35 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd" 2022/06/15.16:07:38 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd" 2022/06/17.09:56:29 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" 2022/06/15.23:19:19 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5.vhd" 2022/06/15.16:07:36 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd" 2022/06/15.11:38:29 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd" 2022/06/17.07:55:25 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd" 2022/06/17.07:30:28 P.20131013
+FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd" 2022/06/17.09:59:52 P.20131013
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd 2022/06/17.10:45:59 P.20131013
+EN work/BTNdb 1655457817 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/BTNdb/Behavioral 1655452595 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd" \
-      EN work/BTNdb 1655452594
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd" 2022/06/15.16:07:38 P.15xf
-EN work/DivClk 1655452925 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd" \
+AR work/BTNdb/Behavioral 1655457818 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd \
+      EN work/BTNdb 1655457817
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd 2022/06/17.10:45:59 P.20131013
+EN work/DivClk 1655459340 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/DivClk/DivClk_arch 1655452926 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd" \
-      EN work/DivClk 1655452925
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd" 2022/06/17.09:56:29 P.15xf
-EN work/Protokol 1655452933 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd" \
+AR work/DivClk/DivClk_arch 1655459341 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd \
+      EN work/DivClk 1655459340
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd 2022/06/17.11:46:18 P.20131013
+EN work/Protokol 1655459348 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/Protokol/Behavioral 1655452934 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd" \
-      EN work/Protokol 1655452933 CP Disp
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" 2022/06/15.23:19:19 P.15xf
-EN work/SevenSeg5 1655452929 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" \
+AR work/Protokol/Behavioral 1655459349 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd \
+      EN work/Protokol 1655459348 CP Disp
+FL "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" 2022/06/17.10:45:59 P.20131013
+EN work/SevenSeg5 1655459344 \
+      FL "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" \
       PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/SevenSeg5/SevenSeg_arch 1655452930 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" \
-      EN work/SevenSeg5 1655452929
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5.vhd" 2022/06/15.16:07:36 P.15xf
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd" 2022/06/15.11:38:29 P.15xf
-EN work/ShiftReg 1655452931 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd" \
+AR work/SevenSeg5/SevenSeg_arch 1655459345 \
+      FL "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" \
+      EN work/SevenSeg5 1655459344
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd 2022/06/17.10:45:59 P.20131013
+EN work/ShiftReg 1655459346 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd \
       PB ieee/std_logic_1164 1335251622
-AR work/ShiftReg/Behavioral 1655452932 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd" \
-      EN work/ShiftReg 1655452931
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd" 2022/06/17.07:55:25 P.15xf
-EN work/SigGenControl 1655452598 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd" \
+AR work/ShiftReg/Behavioral 1655459347 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd \
+      EN work/ShiftReg 1655459346
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd 2022/06/17.10:45:59 P.20131013
+EN work/SigGenControl 1655457821 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/SigGenControl/Behavioral 1655452599 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd" \
-      EN work/SigGenControl 1655452598 CP Disp CP BTNdb
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd" 2022/06/17.07:30:28 P.15xf
-EN work/SigGenDatapath 1655452927 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd" \
+AR work/SigGenControl/Behavioral 1655457822 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd \
+      EN work/SigGenControl 1655457821 CP Disp CP BTNdb
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd 2022/06/17.10:45:59 P.20131013
+EN work/SigGenDatapath 1655459342 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/SigGenDatapath/Behavioral 1655452928 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd" \
-      EN work/SigGenDatapath 1655452927 CP FreqCnt CP nSigCnt CP PWMwrap \
+AR work/SigGenDatapath/Behavioral 1655459343 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd \
+      EN work/SigGenDatapath 1655459342 CP FreqCnt CP nSigCnt CP PWMwrap \
       CP SigSquare CP SigSaw CP Sig CP PWM CP PWMout
-FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd" 2022/06/17.09:59:52 P.15xf
-EN work/SigGenTop 1655452935 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd" \
+FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd 2022/06/17.11:48:56 P.20131013
+EN work/SigGenTop 1655459350 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/SigGenTop/Behavioral 1655452936 \
-      FL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd" \
-      EN work/SigGenTop 1655452935 CP work/DivClk CP work/SigGenDataPath \
+AR work/SigGenTop/Behavioral 1655459351 \
+      FL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd \
+      EN work/SigGenTop 1655459350 CP work/DivClk CP work/SigGenDataPath \
       CP work/SevenSeg5 CP LD CP work/ShiftReg CP work/Protokol

@@ -1,13 +1,14 @@
 --------------------------------------------------------------------------------
-Release 14.1 Trace  (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-E:\Xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
 -n 3 -fastpaths -xml SigGenTop.twx SigGenTop.ncd -o SigGenTop.twr SigGenTop.pcf
+-ucf eteller.ucf
 
 Design file:              SigGenTop.ncd
 Physical constraint file: SigGenTop.pcf
-Device,package,speed:     xc3s100e,cp132,-4 (PRODUCTION 1.27 2012-04-23)
+Device,package,speed:     xc3s100e,cp132,-4 (PRODUCTION 1.27 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -39,41 +40,22 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Setup/Hold to clock Clk
-------------+------------+------------+------------------+--------+
-            |Max Setup to|Max Hold to |                  | Clock  |
-Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
-------------+------------+------------+------------------+--------+
-BTN3        |    1.564(R)|    0.384(R)|Clk_BUFGP         |   0.000|
-------------+------------+------------+------------------+--------+
-
 Setup/Hold to clock SCK
 ------------+------------+------------+------------------+--------+
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-BTN3        |    4.498(R)|   -1.985(R)|SCK_BUFGP         |   0.000|
-Mosi        |    0.517(R)|    0.769(R)|SCK_BUFGP         |   0.000|
-SS_not      |    3.268(R)|    0.609(R)|SCK_BUFGP         |   0.000|
+BTN3        |    1.396(R)|    0.296(R)|SCK_BUFGP         |   0.000|
+Mosi        |    0.706(R)|    0.621(R)|SCK_BUFGP         |   0.000|
+SS_not      |    2.090(R)|    0.744(R)|SCK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
-
-Clock Clk to Pad
-------------+------------+------------------+--------+
-            | clk (edge) |                  | Clock  |
-Destination |   to PAD   |Internal Clock(s) | Phase  |
-------------+------------+------------------+--------+
-LD          |   46.336(R)|Clk_BUFGP         |   0.000|
-PWMOut      |   45.710(R)|Clk_BUFGP         |   0.000|
-Paritet     |    8.513(R)|Clk_BUFGP         |   0.000|
-------------+------------+------------------+--------+
 
 Clock to Setup on destination clock Clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk            |    7.716|         |         |         |
-SCK            |    9.244|         |         |         |
+Clk            |    7.999|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock SCK
@@ -81,18 +63,18 @@ Clock to Setup on destination clock SCK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-SCK            |    1.687|         |         |         |
+SCK            |    2.234|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Jun 17 10:02:31 2022 
+Analysis completed Fri Jun 17 11:49:40 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4502 MB
+Peak Memory Usage: 4503 MB
 
 
 

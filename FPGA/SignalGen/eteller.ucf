@@ -43,4 +43,4 @@ NET "Mosi" LOC = A3;
 #SS_not
 NET "SS_not" LOC = B6;
 #Paritet
-Net "Paritet" LOC = C6;
+#Net "Paritet" LOC = C6;

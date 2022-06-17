@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/top_tb1_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/top_tb1_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="numeric_std" />
             <top_module name="std_logic_1164" />
@@ -37,6 +37,12 @@
    <wvobject fp_name="group16" type="group">
       <obj_property name="label">Top</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb1/uut/U3/clk" type="logic" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+         <obj_property name="label">DispClk</obj_property>
+      </wvobject>
       <wvobject fp_name="/top_tb1/uut/U7/disp" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">disp[19:0]</obj_property>
          <obj_property name="ObjectShortName">disp[19:0]</obj_property>
@@ -61,6 +67,10 @@
    <wvobject fp_name="group18" type="group">
       <obj_property name="label">ShiftReg</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb1/uut/U6/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
       <wvobject fp_name="/top_tb1/mosi" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">mosi</obj_property>
          <obj_property name="ObjectShortName">mosi</obj_property>
@@ -68,10 +78,6 @@
       <wvobject fp_name="/top_tb1/uut/U6/ss_not" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">ss_not</obj_property>
          <obj_property name="ObjectShortName">ss_not</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_tb1/uut/U6/clk" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">clk</obj_property>
-         <obj_property name="ObjectShortName">clk</obj_property>
       </wvobject>
       <wvobject fp_name="/top_tb1/uut/U6/reg_val" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">reg_val[7:0]</obj_property>
@@ -85,9 +91,17 @@
    <wvobject fp_name="group17" type="group">
       <obj_property name="label">Protokol</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/top_tb1/uut/U7/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
       <wvobject fp_name="/top_tb1/uut/U7/spidat" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">spidat[7:0]</obj_property>
          <obj_property name="ObjectShortName">spidat[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb1/uut/U7/prev_spidat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">prev_spidat[7:0]</obj_property>
+         <obj_property name="ObjectShortName">prev_spidat[7:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/top_tb1/uut/U7/shape" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">shape[7:0]</obj_property>
@@ -109,21 +123,25 @@
          <obj_property name="ElementShortName">dispsel[2:0]</obj_property>
          <obj_property name="ObjectShortName">dispsel[2:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/top_tb1/uut/U7/final" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">final</obj_property>
-         <obj_property name="ObjectShortName">final</obj_property>
+      <wvobject fp_name="/top_tb1/uut/U7/ss_not" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">ss_not</obj_property>
+         <obj_property name="ObjectShortName">ss_not</obj_property>
       </wvobject>
-      <wvobject fp_name="/top_tb1/uut/U7/crc" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">crc</obj_property>
-         <obj_property name="ObjectShortName">crc</obj_property>
+      <wvobject fp_name="/top_tb1/uut/U7/adr" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">adr</obj_property>
+         <obj_property name="ObjectShortName">adr</obj_property>
       </wvobject>
       <wvobject fp_name="/top_tb1/uut/U7/data" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">data</obj_property>
          <obj_property name="ObjectShortName">data</obj_property>
       </wvobject>
-      <wvobject fp_name="/top_tb1/uut/U7/adr" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">adr</obj_property>
-         <obj_property name="ObjectShortName">adr</obj_property>
+      <wvobject fp_name="/top_tb1/uut/U7/crc" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">crc</obj_property>
+         <obj_property name="ObjectShortName">crc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb1/uut/U7/final" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">final</obj_property>
+         <obj_property name="ObjectShortName">final</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group87" type="group">

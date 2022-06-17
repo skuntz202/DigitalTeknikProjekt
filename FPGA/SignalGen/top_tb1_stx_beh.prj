@@ -1,6 +1,6 @@
 vhdl isim_temp "SigGenDatapath.vhd"
 vhdl isim_temp "ShiftReg.vhd"
-vhdl isim_temp "SevenSeg5.vhd"
+vhdl isim_temp "SevenSeg5 (1).vhd"
 vhdl isim_temp "Protokol.vhd"
 vhdl isim_temp "DivClk.vhd"
 vhdl isim_temp "SigGenTop.vhd"

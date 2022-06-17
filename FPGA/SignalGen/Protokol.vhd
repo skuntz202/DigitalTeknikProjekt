@@ -42,7 +42,7 @@ begin
 			--Prev_SPIdat bruges til at få en tidsforskudt SPIdat, så det er muligt at se hvornår SPIDat ændres.
 			Prev_SPIdat <= SPIdat;
 			
-			if temp_shape /= X"00" and temp_ampl /= X"00" and temp_freq /= X"00" then
+			if temp_shape /= X"00" and temp_ampl /= X"00" and temp_freq /= X"00" and Final = '1' then
 				State <= Run_state;
 			end if;
 			
@@ -105,21 +105,18 @@ begin
 						temp_Shape <= SPIdat;
 						Data <= '1';
 						Adr <= '0';
-					end if;
-					if SPIdat /= prev_SPIdat and Data = '1' then
+					elsif SPIdat /= prev_SPIdat and Data = '1' then
 						CRC_temp <= SPIdat;
 						CRC <= '1';
 						Data <= '0';
-					end if;
-					if SPIdat /= Prev_SPIdat and CRC = '1' then
+					elsif SPIdat /= Prev_SPIdat and CRC = '1' then
 						ACK <= SPIdat;
 						CRC <= '0';
 						Final <= '1';
 						if CRC_temp + temp_shape = X"FF" then
 							Paritet <= '1';
 						end if;
-					end if;
-					if SPIdat /= Prev_SPIDat and Final = '1' then
+					elsif SPIdat /= Prev_SPIDat and Final = '1' then
 						state <= choose_state;
 					end if;
 					

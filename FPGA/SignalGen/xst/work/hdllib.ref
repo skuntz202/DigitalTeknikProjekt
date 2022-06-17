@@ -1,16 +1,16 @@
-AR siggendatapath behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd" sub00/vhpl07 1655452928
-EN siggendatapath NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd" sub00/vhpl06 1655452927
-EN sevenseg5 NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" sub00/vhpl08 1655452929
-AR sevenseg5 sevenseg_arch "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" sub00/vhpl09 1655452930
-EN protokol NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd" sub00/vhpl14 1655452933
-EN siggencontrol NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd" sub00/vhpl04 1655452598
-EN siggentop NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd" sub00/vhpl10 1655452935
-EN shiftreg NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd" sub00/vhpl12 1655452931
-AR siggentop behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd" sub00/vhpl11 1655452936
-AR shiftreg behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd" sub00/vhpl13 1655452932
-AR protokol behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd" sub00/vhpl15 1655452934
-AR btndb behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd" sub00/vhpl01 1655452595
-AR siggencontrol behavioral "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd" sub00/vhpl05 1655452599
-EN divclk NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd" sub00/vhpl02 1655452925
-EN btndb NULL "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd" sub00/vhpl00 1655452594
-AR divclk divclk_arch "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd" sub00/vhpl03 1655452926
+AR siggendatapath behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd sub00/vhpl07 1655459343
+EN siggendatapath NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd sub00/vhpl06 1655459342
+EN sevenseg5 NULL "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" sub00/vhpl08 1655459344
+AR sevenseg5 sevenseg_arch "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" sub00/vhpl09 1655459345
+EN protokol NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd sub00/vhpl14 1655459348
+EN siggencontrol NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd sub00/vhpl04 1655457821
+EN siggentop NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd sub00/vhpl10 1655459350
+EN shiftreg NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd sub00/vhpl12 1655459346
+AR siggentop behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd sub00/vhpl11 1655459351
+AR shiftreg behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd sub00/vhpl13 1655459347
+AR protokol behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd sub00/vhpl15 1655459349
+AR btndb behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd sub00/vhpl01 1655457818
+AR siggencontrol behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd sub00/vhpl05 1655457822
+EN divclk NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd sub00/vhpl02 1655459340
+EN btndb NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd sub00/vhpl00 1655457817
+AR divclk divclk_arch C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd sub00/vhpl03 1655459341

@@ -131,6 +131,7 @@ BEGIN
 		BTN3 <= '0';
 		wait for CLK_period*10;
 		
+		-- Sender addresse Shape 
 		wait for Clk_period*10;
 		SS_not <= '0';
 		wait for Clk_period;

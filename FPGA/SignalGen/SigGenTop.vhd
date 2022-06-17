@@ -52,7 +52,7 @@ U6: entity WORK.ShiftReg
 	port map(Clk => SCK, D => Mosi, Reset => BTN3, Q => SPIdat_sig, SS_not => SS_not);
 
 U7: entity WORK.Protokol
-	port map(Clk => Clk, Reset => BTN3, SPIdat => SpiDat_sig, Shape => Shape, Ampl => Ampl, Freq => Freq,
+	port map(Clk => MClk, Reset => BTN3, SPIdat => SpiDat_sig, Shape => Shape, Ampl => Ampl, Freq => Freq,
 	SigEN => SigEN, Disp => Disp, SS_not => SS_not, Paritet => Paritet);
 
 
