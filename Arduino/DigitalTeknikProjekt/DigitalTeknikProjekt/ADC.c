@@ -18,8 +18,8 @@ unsigned int recordLength = 10;
 
 int initTimer1(){
 	TCCR1B = (1<<WGM12)|(1<<CS10)|(1<<CS11);	    //Sets mode to CTC, Sets prescaler to 64
-	OCR1A =	0x8F;				//Sets compare value to 24
-	OCR1B =	0x8F;				//Sets compare value to 24
+	OCR1A =	0x18;				//Sets compare value to 24
+	OCR1B =	0x18;				//Sets compare value to 24
 	TIMSK1 = (1<<OCIE1B);
 	TIFR1 = (1<<OCF1B);
 	return 1;
@@ -34,12 +34,13 @@ void ADC_init(){
 }
 
 ISR(TIMER1_COMPB_vect){
-	static int timer = 0;
+	packetReceiveFlag = 1;
+	/*static int timer = 0;
 	if(timer == 100){
 		dims();
 	} else{
 		timer += 1;
-	}
+	}*/
 }
 
 ISR(ADC_vect){

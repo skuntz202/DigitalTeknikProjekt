@@ -63,15 +63,15 @@ int main(void){
 	ADC_init();
 	
 //Type 0x01 button 0x00
-// 	buffer[0] = 0x55;
-// 	buffer[1] = 0xAA;
-// 	buffer[2] = 0x00;
-// 	buffer[3] = 0x09;
-// 	buffer[4] = 0x01;
-// 	buffer[5] = 0x00;
-// 	buffer[6] = 0x3F;
-// 	buffer[7] = 0x00;
-// 	buffer[8] = 0x00;
+	buffer[0] = 0x55;
+	buffer[1] = 0xAA;
+	buffer[2] = 0x00;
+	buffer[3] = 0x09;
+	buffer[4] = 0x01;
+	buffer[5] = 0x00;
+	buffer[6] = 0x3F;
+	buffer[7] = 0x00;
+	buffer[8] = 0x00;
 	
 //Type 0x01 button 0x01
 // 	buffer[0] = 0x55;
@@ -173,7 +173,8 @@ int main(void){
 		//Make packet for SPI and transmission of packet
 		//Test with ADC connected, remove dims and paste code into RX ISR, remove code in CTC ISR
 		if(packetReceiveFlag){
-			input_makePacket(&OscPacket, buffer);
+			SPDR = 0x00;
+			/*input_makePacket(&OscPacket, buffer);
 			packet_makeSPIPacket(&genPacket, &OscPacket);
 			
 			//Clear buffer or it wont work after time, buffer should only be left uncleared when testing
@@ -182,7 +183,7 @@ int main(void){
  				if(transmitSPIPacket(&genPacket)){}
  			} 
  			else if(OscPacket.type == OSCILLOSCOPE){continue;} 
- 			else if(OscPacket.type == BODEPLOT){continue;}
+ 			else if(OscPacket.type == BODEPLOT){continue;}*/
 			packetReceiveFlag = 0;
 		}
 		

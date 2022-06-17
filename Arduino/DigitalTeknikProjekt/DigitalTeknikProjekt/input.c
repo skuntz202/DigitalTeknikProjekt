@@ -29,7 +29,7 @@ int input_makePacket(UARTPacket* returnData, char* packet){
 		if(inputSampleRate < 10){
 			sampleRate = 24999;
 		} else if(inputSampleRate > 10000){
-			sampleRate = 0x8F;
+			sampleRate = 24;
 		} else{
 			sampleRate = (unsigned long)((16000000.f*(1.f/(float)inputSampleRate)-64.f)/64.f);	
 		}
