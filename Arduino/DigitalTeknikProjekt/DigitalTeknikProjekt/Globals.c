@@ -1,3 +1,4 @@
 #include "Globals.h"
 
-char ADCBuffer[1000];
+unsigned long packetLength = 0;
+int compareValue = 256;

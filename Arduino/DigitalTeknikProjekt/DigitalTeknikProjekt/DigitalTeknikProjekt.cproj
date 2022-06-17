@@ -122,10 +122,22 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ADC.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ADC.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Globals.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Globals.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="input.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="input.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">

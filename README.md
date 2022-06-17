@@ -10,6 +10,7 @@ ADDR;DATA;CRC;ACK
 | 0x02 | Amplitude     |      |
 | 0x03 | Frequency     |      |
 | 0x04 | Signal Enable |      |
+| 0x05 | Reset         |      |
 
 | DATA      |                      |      |
 | --------- | -------------------- | ---- |
@@ -21,12 +22,19 @@ ADDR;DATA;CRC;ACK
 | 0x00      | Signal(Disable)      |      |
 | 0x01      | Signal(Enable)       |      |
 
-| ACK  |                                |      |
-| ---- | ------------------------------ | ---- |
-| 0x00 | Placeholder during transmition |      |
-| 0x01 | Transmition acknowledged.      |      |
-| 0x02 | CRC error                      |      |
-| 0x03 | Unknown error                  |      |
+| ACK  |                            |      |
+| ---- | -------------------------- | ---- |
+| 0x00 | Transmission Error         |      |
+| 0xFF | Transmission acknowledged. |      |
+
+| ERR  | Description        | Type               |
+| ---- | ------------------ | ------------------ |
+| 101  | Transmission Error | SPI Response Error |
+| 102  | Unknown Response   | SPI Response Error |
+
+
+
+
 
 For følgende pakke.
 
@@ -49,3 +57,4 @@ CRC er en relativ simpel redundancy check, det er ikke nøvendigt at bruge speci
 
 Frequency maxes out at 115.2kHz
 
+ 

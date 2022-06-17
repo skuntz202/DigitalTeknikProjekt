@@ -1,13 +1,37 @@
 #include "packet.h"
+#include "ADC.h"
+#include <string.h>
+#include <stdlib.h>
 
-void packet_makePacket(char ADDR, char DATA, char* packet){
-	char CRC;
-	if(DATA >= 255){
-		CRC = 255 - ((int)DATA % 255);
-	} else{
-		CRC = 255 - DATA;
+int packet_makeSPIPacket(SPIPacket* packet, UARTPacket* inputPacket){
+	if(inputPacket->type == 0x01){
+		//Enter pressed
+		if(inputPacket->data[0] == 0x00){
+			packet->DATA = inputPacket->data[1];
+		}
+		//Select pressed
+		if(inputPacket->data[0] == 0x01){
+			packet->ADDR = inputPacket->data[1];
+		}
+		//Run/Stop pressed
+		else if(inputPacket->data[0] == 0x02){
+			packet->ADDR = 0x04;
+			packet->DATA = inputPacket->data[1];
+		}
+		//Reset
+		else if(inputPacket->data[0] == 0x03){
+			packet->ADDR = 0x00;
+			packet->DATA = 0x00;
+			strcpy(ADCWriteBuffer, "");
+			ADCBufferIndex = 0;
+			recordLength = 255;
+		}
 	}
-	packet[0] = ADDR;
-	packet[1] = DATA;
-	packet[2] = CRC;
+	packet->CRC = 255 - packet->DATA;
+	return 1;
+}
+
+void packet_makeOSCPacket(char type, char* DATA, UARTPacket* packet){
+	packet->type = type;
+	packet->data = DATA;
 }
