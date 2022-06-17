@@ -11,7 +11,8 @@
 #define TRIANGLE 0x02
 #define SQUARE 0x03
 
-int packet_makeSPIPacket(SPIPacket* packet, UARTPacket* inputPacket);
-void packet_makeOSCPacket(char type, char* DATA, UARTPacket* packet);
+extern int packet_makeSPIPacket(SPIPacket* packet, UARTPacket* inputPacket);
+extern void packet_makeOSCPacket(char type, char* DATA, UARTPacket* packet);
+extern void packet_makeOSCResponse(SPIPacket* inputPacket, UARTPacket* returnPacket);
 
 #endif /*PACKET_H*/

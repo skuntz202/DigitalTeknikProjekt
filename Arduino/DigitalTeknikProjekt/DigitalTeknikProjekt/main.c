@@ -14,6 +14,16 @@
 int transmitSPIPacket(SPIPacket* packet){
 	//Transmits ADDR
 	packet->ACK = SPI_transmit(packet->ADDR, 1);
+	if(packet->ADDR == 0x01){
+		packet->curr = 0x00;
+		packet->shape = packet->DATA;
+	} else if(packet->ADDR == 0x02){
+		packet->curr = 0x01;
+		packet->amplitude = packet->DATA;
+	} else if(packet->ADDR == 0x03){
+		packet->curr = 0x02;
+		packet->frequency = packet->DATA;
+	} else
 
 	//Transmits DATA
 	packet->ACK = SPI_transmit(packet->DATA, 1);
@@ -22,7 +32,7 @@ int transmitSPIPacket(SPIPacket* packet){
 	packet->ACK = SPI_transmit(packet->CRC, 1);
 
 	//Delay
-	for(int timer = 0; timer < 20; timer++){}
+	//for(int timer = 0; timer < 20; timer++){}
 
 	//Gets ACK
 	packet->ACK = SPI_transmit(0x00, 1);
@@ -35,19 +45,25 @@ int transmitSPIPacket(SPIPacket* packet){
 int transmitUARTPacket(UARTPacket* packet){
 	char recordLengthL = (recordLength+7) & 0x00FF;
 	char recordLengthH = (recordLength+7)>>8;
+	//Transmits sync byte
 	UART_transChar(0x55);
 	UART_transChar(0xAA);
+	
+	//Transmits total packet length
 	UART_transChar(recordLengthH);
 	UART_transChar(recordLengthL);
+	
+	//Transmits packet type
 	UART_transChar(packet->type);
-	for(int i = 0; i < recordLength; i++){
+	
+	//Transmits packet data
+	for(int i = 0; i < ADCBufferIndex[UARTUser][0]; i++){
 		UART_transChar(packet->data[i]);
 	}
+	
+	//Transmits CRC(ZERO16)
 	UART_transChar(0x00);
 	UART_transChar(0x00);
-	//UART_transChar('\n');
-	//UART_transChar('\r');
-	//for(int timer = 0; timer < 200; timer++){}
 	return 1;
 }
 
@@ -55,6 +71,8 @@ int main(void){
 	UARTPacket OscPacket;
 	OscPacket.type = GENERATOR;
 	SPIPacket genPacket;
+	
+	//Initializes SPI packet
 	genPacket.ADDR = 0x00;
 	genPacket.DATA = 0x00;
 	genPacket.CRC = 0xFF;
@@ -62,6 +80,9 @@ int main(void){
 	UART_init();
 	ADC_init();
 	
+	
+	
+/////////  TEST PACKETS, ONLY WORK IF CTC ISR AND DIMS() IS IMPLEMENTED/////////
 //Type 0x01 button 0x00
 // 	buffer[0] = 0x55;
 // 	buffer[1] = 0xAA;
@@ -170,23 +191,37 @@ int main(void){
 // 	buffer[6] = 0x00;
 	
     while(1){
-//		Make packet for SPI and transmission of packet	FULLY FUNCTIONAL
+		//Make packet for SPI and transmission of packet
 		if(packetReceiveFlag){
+			//Handles input packet
 			input_makePacket(&OscPacket, buffer);
+			
+			//Makes SPI compatible packet
 			packet_makeSPIPacket(&genPacket, &OscPacket);
- 			if(OscPacket.type == GENERATOR){
- 				if(transmitSPIPacket(&genPacket)){continue;}
- 			} 
- 			else if(OscPacket.type == OSCILLOSCOPE){continue;} 
- 			else if(OscPacket.type == BODEPLOT){continue;}
+			
+			if(OscPacket.type == GENERATOR){
+				//Transmits packet via SPI
+ 				if(transmitSPIPacket(&genPacket)){}
+				packet_makeOSCResponse(&genPacket, &OscPacket);
+				transmitUARTPacket(&OscPacket);
+				OscPacket.type = 0x00;
+			 }
 			packetReceiveFlag = 0;
 		}
 		
-		//Sending ADC data to LabView    Expand makeOscPacket based on type
+		//Sending ADC data to LabView
 		if(ADCSampleFlag){
-			packet_makeOSCPacket(OSCILLOSCOPE, ADCWriteBuffer, &OscPacket);
+			//Swaps buffers
+			UARTUser = (!UARTUser) & 0x01;
+			UARTKernel = (!UARTKernel) & 0x01;
+			ADCBufferIndex[UARTKernel][0] = 0;
+			
+			//Makes packet labview accepts
+			packet_makeOSCPacket(OSCILLOSCOPE, ADCBuffer[UARTUser], &OscPacket);
+			
+			//Sends Labview packet via UART
 			transmitUARTPacket(&OscPacket);
-			strcpy(ADCWriteBuffer, "");
+	
 			ADCSampleFlag = 0;
 		}
     }

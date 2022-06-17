@@ -3,18 +3,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 #include "ADC.h"
 #include "UART.h"
 #include "GLOBALS.h"
 
+int UARTKernel = 0;
+int UARTUser = 1;
 unsigned int adcSample = 0;
 unsigned long sampleRate = 24;
-char ADCReadBuffer[1000];
-char ADCWriteBuffer[1000];
-volatile int ADCBufferIndex = 0;
+char ADCBuffer[2][1000];
+volatile int ADCBufferIndex[2][1];
 float voltage = 0.f;
 volatile int ADCSampleFlag = 0;
-unsigned int recordLength = 500;
+unsigned int recordLength = 30;
 
 int initTimer1(){
 	TCCR1B = (1<<WGM12)|(1<<CS10)|(1<<CS11);	    //Sets mode to CTC, Sets prescaler to 64
@@ -45,12 +47,11 @@ ISR(TIMER1_COMPB_vect){
 
 ISR(ADC_vect){
 	adcSample = ADCH;
-	ADCWriteBuffer[ADCBufferIndex] = adcSample;
-	if(ADCBufferIndex == recordLength){
-		//UART_transChar('s');
-		ADCBufferIndex = 0;
+	ADCBuffer[UARTKernel][ADCBufferIndex[UARTKernel][0]] = adcSample;
+
+	if(ADCBufferIndex[UARTKernel][0] == recordLength){
 		ADCSampleFlag = 1;
 	} else{
-		ADCBufferIndex += 1;
+		ADCBufferIndex[UARTKernel][0]++;
  	}
 }

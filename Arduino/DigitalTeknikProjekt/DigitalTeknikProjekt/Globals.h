@@ -14,6 +14,10 @@ typedef struct{
 } UARTPacket;
 
 typedef struct{
+	char curr;
+	char shape;
+	char amplitude;
+	char frequency;
 	char ADDR;
 	char DATA;
 	char CRC;

@@ -35,8 +35,9 @@ int input_makePacket(UARTPacket* returnData, char* packet){
 		}
 		OCR1B = sampleRate;
 		OCR1A = sampleRate;
+		ADCBufferIndex[UARTKernel][0] = 0;
+		ADCBufferIndex[UARTUser][0] = 0;
 		int inputRecordLength = ((packet[7]<<8)&0x7F00) + packet[8];
-		ADCBufferIndex = 0;
 		if(inputRecordLength > 10000){
 			recordLength = 10000;
 		} else if(inputRecordLength < 10){
@@ -45,13 +46,6 @@ int input_makePacket(UARTPacket* returnData, char* packet){
 			recordLength = inputRecordLength;
 		}
 	}
-	else if(packet[4] == BODEPLOT){
-		if(packet[5] != 0x00 || packet[6] != 0x00){
-			return -1;
-		}
-		returnData->type = packet[4];
-		ADCBufferIndex = 0;
-		recordLength = 255;
-	}
+	else if(packet[4] == BODEPLOT){}
 	return 1;
 }

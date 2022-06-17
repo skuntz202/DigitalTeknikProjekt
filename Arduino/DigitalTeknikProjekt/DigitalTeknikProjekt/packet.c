@@ -22,9 +22,6 @@ int packet_makeSPIPacket(SPIPacket* packet, UARTPacket* inputPacket){
 		else if(inputPacket->data[0] == 0x03){
 			packet->ADDR = 0x00;
 			packet->DATA = 0x00;
-			strcpy(ADCWriteBuffer, "");
-			ADCBufferIndex = 0;
-			recordLength = 255;
 		}
 	}
 	packet->CRC = 255 - packet->DATA;
@@ -34,4 +31,12 @@ int packet_makeSPIPacket(SPIPacket* packet, UARTPacket* inputPacket){
 void packet_makeOSCPacket(char type, char* DATA, UARTPacket* packet){
 	packet->type = type;
 	packet->data = DATA;
+}
+
+void packet_makeOSCResponse(SPIPacket* inputPacket, UARTPacket* returnPacket){
+	returnPacket->data = (char*)calloc(4, sizeof(char));
+	returnPacket->data[0] = inputPacket->curr;
+	returnPacket->data[1] = inputPacket->shape;
+	returnPacket->data[2] = inputPacket->amplitude;
+	returnPacket->data[3] = inputPacket->frequency;
 }
