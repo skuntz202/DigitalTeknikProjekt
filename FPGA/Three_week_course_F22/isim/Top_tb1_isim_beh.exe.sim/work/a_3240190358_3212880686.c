@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                    */
 /***********************************************************************/
 
-/* This file is designed for use with ISim build 0x7708f090 */
+/* This file is designed for use with ISim build 0xc3576ebc */
 
 #define XSI_HIDE_SYMBOL_SPEC true
 #include "xsi.h"
@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd";
+static const char *ng0 = "C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd";
 extern char *IEEE_P_1242562249;
 extern char *IEEE_P_3620187407;
 
@@ -90,7 +90,7 @@ LAB2:    xsi_set_current_line(32, ng0);
 LAB5:    xsi_set_current_line(36, ng0);
     t2 = (t0 + 1032U);
     t6 = *((char **)t2);
-    t2 = (t0 + 7356U);
+    t2 = (t0 + 7804U);
     t12 = ieee_p_1242562249_sub_1657552908_1035706684(IEEE_P_1242562249, t6, t2);
     t13 = (t12 > 100);
     if (t13 == 1)
@@ -98,7 +98,7 @@ LAB5:    xsi_set_current_line(36, ng0);
 
 LAB14:    t7 = (t0 + 1032U);
     t8 = *((char **)t7);
-    t7 = (t0 + 7356U);
+    t7 = (t0 + 7804U);
     t14 = ieee_p_1242562249_sub_1657552908_1035706684(IEEE_P_1242562249, t8, t7);
     t15 = (t14 == 0);
     t11 = t15;
@@ -109,7 +109,7 @@ LAB15:    if (t11 != 0)
 LAB12:    xsi_set_current_line(39, ng0);
     t1 = (t0 + 1032U);
     t2 = *((char **)t1);
-    t1 = (t0 + 7356U);
+    t1 = (t0 + 7804U);
     t12 = ieee_p_1242562249_sub_1657552908_1035706684(IEEE_P_1242562249, t2, t1);
     t5 = (t0 + 4256);
     t6 = (t5 + 56U);
@@ -122,7 +122,7 @@ LAB12:    xsi_set_current_line(39, ng0);
 LAB11:    xsi_set_current_line(42, ng0);
     t1 = (t0 + 1672U);
     t2 = *((char **)t1);
-    t1 = (t0 + 7372U);
+    t1 = (t0 + 7820U);
     t12 = ieee_p_1242562249_sub_1657552908_1035706684(IEEE_P_1242562249, t2, t1);
     t3 = (t12 == 0);
     if (t3 != 0)
@@ -131,7 +131,7 @@ LAB11:    xsi_set_current_line(42, ng0);
 LAB18:    xsi_set_current_line(45, ng0);
     t1 = (t0 + 1672U);
     t2 = *((char **)t1);
-    t1 = (t0 + 7372U);
+    t1 = (t0 + 7820U);
     t12 = ieee_p_1242562249_sub_1657552908_1035706684(IEEE_P_1242562249, t2, t1);
     t5 = (t0 + 4320);
     t6 = (t5 + 56U);
@@ -217,8 +217,8 @@ LAB16:    xsi_set_current_line(43, ng0);
 LAB19:    xsi_set_current_line(56, ng0);
     t1 = (t0 + 1832U);
     t5 = *((char **)t1);
-    t1 = (t0 + 7388U);
-    t6 = (t0 + 7456);
+    t1 = (t0 + 7836U);
+    t6 = (t0 + 7904);
     t8 = (t21 + 0U);
     t16 = (t8 + 0U);
     *((int *)t16) = 0;
@@ -237,8 +237,8 @@ LAB19:    xsi_set_current_line(56, ng0);
 
 LAB24:    t1 = (t0 + 1832U);
     t2 = *((char **)t1);
-    t1 = (t0 + 7388U);
-    t5 = (t0 + 7464);
+    t1 = (t0 + 7836U);
+    t5 = (t0 + 7912);
     t7 = (t21 + 0U);
     t8 = (t7 + 0U);
     *((int *)t8) = 0;
@@ -257,8 +257,8 @@ LAB24:    t1 = (t0 + 1832U);
 
 LAB26:    t1 = (t0 + 1832U);
     t2 = *((char **)t1);
-    t1 = (t0 + 7388U);
-    t5 = (t0 + 7472);
+    t1 = (t0 + 7836U);
+    t5 = (t0 + 7920);
     t7 = (t21 + 0U);
     t8 = (t7 + 0U);
     *((int *)t8) = 0;

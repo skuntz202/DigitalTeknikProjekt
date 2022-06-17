@@ -1,0 +1,6 @@
+work	"DivClk.vhd"
+work	"Protokol.vhd"
+work	"SevenSeg5.vhd"
+work	"ShiftReg.vhd"
+work	"SigGenDatapath.vhd"
+work	"SigGenTop.vhd"

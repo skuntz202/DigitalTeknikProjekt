@@ -9,7 +9,7 @@ entity SigGenSpiControl is
 			  MClk : in STD_LOGIC;
            MOSI : in  STD_LOGIC;
 			  SS_not : in STD_LOGIC;
-			  BTN3 : in STD_LOGIC;
+			  --BTN3 : in STD_LOGIC;
 			  Reset : in STD_LOGIC;
 			  output : out STD_LOGIC;
 			  An : out STD_LOGIC_VECTOR ( 3 downto 0);
@@ -98,7 +98,7 @@ end component SevenSeg5;
 begin
 
 U1: ShiftReg PORT MAP(Clk => SCK, D => Mosi, Reset => Reset, Q => SPIdat_sig, SS_not => SS_not);
-U2: Protokol PORT MAP(Clk => MClk, Reset => BTN3, SPIdat => SPIdat_sig, Shape => Shape_sig, Ampl => Ampl_sig, Freq => Freq_sig, Paritet => Paritet, SigEN => Sig_SigEN, Disp => Disp, SS_not => SS_not);
+U2: Protokol PORT MAP(Clk => MClk, Reset => Reset, SPIdat => SPIdat_sig, Shape => Shape_sig, Ampl => Ampl_sig, Freq => Freq_sig, Paritet => Paritet, SigEN => Sig_SigEN, Disp => Disp, SS_not => SS_not);
 U3: PWM PORT MAP(Clk => Freq_Clk, Reset => Reset, Shape => Shape_sig, Ampl => Ampl_sig, Freq => Freq_sig, SigEN => Sig_SigEN, PWMout => Output);
 U4: DivClk PORT MAP(Reset => Reset, Clk => MClk, TimeP => TimePP, Clk1 => Freq_clk);
 U5: Clock_select PORT MAP(Reset => Reset, Clk => MClk, Ampl => Ampl_sig, Freq => Freq_sig, Shape => Shape_sig, TimeDiv => TimePP, SigEN => Sig_SigEN);

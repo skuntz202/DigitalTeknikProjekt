@@ -41,7 +41,7 @@ ARCHITECTURE behavior OF Top_tb1 IS
    signal Paritet : std_logic;
 
    -- Clock period definitions
-   constant SCK_period : time := 100 ps;
+   constant SCK_period : time := 10 ps;
 	constant MCLK_period : time := 10 ps;
  
 BEGIN
@@ -108,7 +108,7 @@ BEGIN
 		wait for SCK_period;
 		SS_not <= '1';
 		
-		-- Sender Data til Shape: Firkant sender X"03"
+		-- Sender Data til Shape: Savtak sender X"02"
 		wait for SCK_period*1;
 		SS_not <= '0';
 		wait for SCK_period;
@@ -126,7 +126,7 @@ BEGIN
 		wait for SCK_period;
 		MOSI <= '1';
 		wait for SCK_period;
-		MOSI <= '1';
+		MOSI <= '0';
 		wait for SCK_period;
 		SS_not <= '1';
 		

@@ -1,0 +1,7 @@
+vhdl work "SigGenDatapath.vhd"
+vhdl work "ShiftReg.vhd"
+vhdl work "SevenSeg5.vhd"
+vhdl work "Protokol.vhd"
+vhdl work "DivClk.vhd"
+vhdl work "SigGenTop.vhd"
+vhdl work "top_tb1.vhd"

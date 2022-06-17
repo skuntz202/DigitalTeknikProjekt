@@ -1,0 +1,6 @@
+vhdl work "C:\Users\tniel\OneDrive - Danmarks Tekniske Universitet\Dokumenter\GitHub\DigitalTeknikProjekt\FPGA\SignalGen\SigGenDatapath.vhd"
+vhdl work "C:\Users\tniel\OneDrive - Danmarks Tekniske Universitet\Dokumenter\GitHub\DigitalTeknikProjekt\FPGA\SignalGen\ShiftReg.vhd"
+vhdl work "C:\Users\tniel\OneDrive - Danmarks Tekniske Universitet\Dokumenter\GitHub\DigitalTeknikProjekt\FPGA\SignalGen\SevenSeg5 (1).vhd"
+vhdl work "C:\Users\tniel\OneDrive - Danmarks Tekniske Universitet\Dokumenter\GitHub\DigitalTeknikProjekt\FPGA\SignalGen\Protokol.vhd"
+vhdl work "C:\Users\tniel\OneDrive - Danmarks Tekniske Universitet\Dokumenter\GitHub\DigitalTeknikProjekt\FPGA\SignalGen\DivClk.vhd"
+vhdl work "C:\Users\tniel\OneDrive - Danmarks Tekniske Universitet\Dokumenter\GitHub\DigitalTeknikProjekt\FPGA\SignalGen\SigGenTop.vhd"
