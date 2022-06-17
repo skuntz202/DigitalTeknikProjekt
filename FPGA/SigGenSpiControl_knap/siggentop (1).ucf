@@ -27,3 +27,8 @@ NET "AN[0]" LOC = F12;
 NET "AN[1]" LOC = J12;
 NET "AN[2]" LOC = M13;
 NET "AN[3]" LOC = K14;
+#PWM output
+Net "Output" LOC = B5;
+#Paritet outout
+Net "Paritet" LOC = J3;
+

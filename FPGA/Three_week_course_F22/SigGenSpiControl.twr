@@ -1,14 +1,14 @@
 --------------------------------------------------------------------------------
-Release 14.1 Trace  (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-E:\Xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
 -n 3 -fastpaths -xml SigGenSpiControl.twx SigGenSpiControl.ncd -o
 SigGenSpiControl.twr SigGenSpiControl.pcf -ucf SigGenSpiControl.ucf
 
 Design file:              SigGenSpiControl.ncd
 Physical constraint file: SigGenSpiControl.pcf
-Device,package,speed:     xc3s100e,cp132,-4 (PRODUCTION 1.27 2012-04-23)
+Device,package,speed:     xc3s100e,cp132,-4 (PRODUCTION 1.27 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -45,7 +45,8 @@ Setup/Hold to clock MClk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-Reset       |    6.372(R)|    0.346(R)|MClk_BUFGP        |   0.000|
+BTN3        |    1.613(R)|    1.157(R)|MClk_BUFGP        |   0.000|
+Reset       |    1.379(R)|    0.327(R)|MClk_BUFGP        |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Setup/Hold to clock SCK
@@ -53,9 +54,9 @@ Setup/Hold to clock SCK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-MOSI        |    0.706(R)|    0.621(R)|SCK_BUFGP         |   0.000|
-Reset       |    1.944(R)|   -0.142(R)|SCK_BUFGP         |   0.000|
-SS_not      |    1.701(R)|    1.020(R)|SCK_BUFGP         |   0.000|
+MOSI        |   -0.173(R)|    1.319(R)|SCK_BUFGP         |   0.000|
+Reset       |    4.082(R)|   -1.647(R)|SCK_BUFGP         |   0.000|
+SS_not      |    1.663(R)|    1.223(R)|SCK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock MClk to Pad
@@ -63,8 +64,8 @@ Clock MClk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-Paritet     |    8.343(R)|MClk_BUFGP        |   0.000|
-output      |   13.517(R)|MClk_BUFGP        |   0.000|
+Paritet     |    8.277(R)|MClk_BUFGP        |   0.000|
+output      |   13.851(R)|MClk_BUFGP        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock MClk
@@ -72,8 +73,8 @@ Clock to Setup on destination clock MClk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-MClk           |   38.901|         |         |         |
-SCK            |   10.867|         |         |         |
+MClk           |   14.163|         |         |         |
+SCK            |   11.667|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock SCK
@@ -81,11 +82,11 @@ Clock to Setup on destination clock SCK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-SCK            |    1.750|         |         |         |
+SCK            |    1.801|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Jun 15 11:47:19 2022 
+Analysis completed Thu Jun 16 14:58:43 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:

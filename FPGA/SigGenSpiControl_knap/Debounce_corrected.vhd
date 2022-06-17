@@ -70,8 +70,8 @@ begin
   end if;
 end process;
 
-BTNd <= Cout2 and not (Cout1 or BTNb); --På board
---BTNd <= BTNp; -- Simulation
+--BTNd <= Cout2 and not (Cout1 or BTNb); --På board
+BTNd <= BTNp; -- Simulation
 
 end Behavioral;
 
