@@ -5,14 +5,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-volatile int transmitComplete = 1;
-volatile int bufferIndex = 0;
+volatile unsigned long bufferIndex = 0;
 char tempBuffer[2];
 char* buffer;
 char RX = ' ';
 int carriageReturn = 0;
 int receiveComplete = 0;
-int receiveCompleteFlag = 0;
 int packetReceiveFlag = 0;
 
 
@@ -29,8 +27,6 @@ void UART_init(){
 
 
 void UART_transChar(char transData){
-	//while(!transmitComplete){}
-	transmitComplete = 0;
 	UDR0 = transData;
 }
 
@@ -54,31 +50,22 @@ void checkCarriageReturn(){
 	}
 }
 
-int UART_receiveChar(){
-	RX = UDR0;
-	buffer[bufferIndex] = RX;
+void dims(){
 	if(bufferIndex == 3){
 		if(buffer[0] == 0x55 && buffer[1] == 0xAA){
-			tempBuffer[0] = buffer[2];
-			tempBuffer[1] = buffer[3];
-			packetLength = atoi(tempBuffer);
+			packetLength = (buffer[2]<<8) + buffer[3];
 		}
 	}
-	if(bufferIndex == packetLength && packetLength != 0){
+	if(bufferIndex == (packetLength - 1) && bufferIndex > 3){
 		packetReceiveFlag = 1;
 		bufferIndex = 0;
-		return 1;
+	} else{
+		bufferIndex += 1;
 	}
-	bufferIndex += 1;
-	//checkCarriageReturn();
-	return 1;
 }
-
 
 ISR(USART0_RX_vect){
-	receiveCompleteFlag = 1;
+	RX = UDR0;
+	//buffer[bufferIndex] = RX;
+	
 };
-
-ISR(USART0_TX_vect){
-	transmitComplete = 1;
-}

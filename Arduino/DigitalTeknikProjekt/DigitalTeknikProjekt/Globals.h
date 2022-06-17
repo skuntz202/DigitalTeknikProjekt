@@ -1,7 +1,7 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
-extern int packetLength;
+extern unsigned long packetLength;
 extern int compareValue;
 
 #define GENERATOR 0x01
@@ -9,8 +9,6 @@ extern int compareValue;
 #define BODEPLOT 0x03
 
 typedef struct{
-	int sampleRate : 2;
-	int recordLength : 2;
 	char type;
 	char* data;
 } UARTPacket;

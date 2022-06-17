@@ -15,7 +15,6 @@ volatile int ADCBufferIndex = 0;
 float voltage = 0.f;
 volatile int ADCSampleFlag = 0;
 unsigned int recordLength = 10;
-unsigned int tempRecordLength;
 
 int initTimer1(){
 	TCCR1B = (1<<WGM12)|(1<<CS10)|(1<<CS11);	    //Sets mode to CTC, Sets prescaler to 64
@@ -28,7 +27,6 @@ int initTimer1(){
 
 void ADC_init(){
 	sei();
-	tempRecordLength = recordLength;
 	initTimer1();
 	ADMUX |= (1<<ADLAR);
 	ADCSRA |= (1<<ADPS2)|(1<<ADEN)|(1<<ADATE)|(1<<ADIE);
@@ -36,13 +34,18 @@ void ADC_init(){
 }
 
 ISR(TIMER1_COMPB_vect){
-	packetReceiveFlag = 1;
+	static int timer = 0;
+	if(timer == 100){
+		dims();
+	} else{
+		timer += 1;
+	}
 }
 
 ISR(ADC_vect){
 	adcSample = ADCH;
 	ADCWriteBuffer[ADCBufferIndex] = adcSample;
-	if(ADCBufferIndex == 10){
+	if(ADCBufferIndex == recordLength){
 		ADCBufferIndex = 0;
 		ADCSampleFlag = 1;
 		
@@ -50,7 +53,6 @@ ISR(ADC_vect){
 		char* temp = ADCWriteBuffer;
 		*ADCWriteBuffer = *ADCReadBuffer;
 		*ADCReadBuffer = *temp;
-		tempRecordLength = recordLength;
 	} else{
 		ADCBufferIndex += 1;
  	}

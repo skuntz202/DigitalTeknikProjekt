@@ -1,4 +1,5 @@
 #include "packet.h"
+#include "ADC.h"
 #include <string.h>	
 
 int packet_makeSPIPacket(SPIPacket* packet, UARTPacket* inputPacket){
@@ -8,7 +9,7 @@ int packet_makeSPIPacket(SPIPacket* packet, UARTPacket* inputPacket){
 			packet->DATA = inputPacket->data[1];
 		}
 		//Select pressed
-		else if(inputPacket->data[0] == 0x01){
+		if(inputPacket->data[0] == 0x01){
 			packet->ADDR = inputPacket->data[1];
 		}
 		//Run/Stop pressed
@@ -18,7 +19,11 @@ int packet_makeSPIPacket(SPIPacket* packet, UARTPacket* inputPacket){
 		}
 		//Reset
 		else if(inputPacket->data[0] == 0x03){
-			
+			packet->ADDR = 0x00;
+			packet->DATA = 0x00;
+			strcpy(ADCWriteBuffer, "");
+			ADCBufferIndex = 0;
+			recordLength = 255;
 		}
 	}
 	packet->CRC = 255 - packet->DATA;
