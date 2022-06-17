@@ -8,13 +8,13 @@
 #include "GLOBALS.h"
 
 unsigned int adcSample = 0;
-unsigned long sampleRate = 10;
+unsigned long sampleRate = 24;
 char ADCReadBuffer[1000];
 char ADCWriteBuffer[1000];
 volatile int ADCBufferIndex = 0;
 float voltage = 0.f;
 volatile int ADCSampleFlag = 0;
-unsigned int recordLength = 30;
+unsigned int recordLength = 500;
 
 int initTimer1(){
 	TCCR1B = (1<<WGM12)|(1<<CS10)|(1<<CS11);	    //Sets mode to CTC, Sets prescaler to 64
@@ -34,19 +34,20 @@ void ADC_init(){
 }
 
 ISR(TIMER1_COMPB_vect){
-	packetReceiveFlag = 1;
-	static int timer = 0;
-	if(timer == 100){
-		dims();
-	} else{
-		timer += 1;
-	}
+// 	packetReceiveFlag = 1;
+// 	static int timer = 0;
+// 	if(timer == 100){
+// 		dims();
+// 		} else{
+// 		timer += 1;
+// 	}
 }
 
 ISR(ADC_vect){
 	adcSample = ADCH;
 	ADCWriteBuffer[ADCBufferIndex] = adcSample;
 	if(ADCBufferIndex == recordLength){
+		//UART_transChar('s');
 		ADCBufferIndex = 0;
 		ADCSampleFlag = 1;
 	} else{

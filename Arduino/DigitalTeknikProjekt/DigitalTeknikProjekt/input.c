@@ -36,7 +36,6 @@ int input_makePacket(UARTPacket* returnData, char* packet){
 		OCR1B = sampleRate;
 		OCR1A = sampleRate;
 		int inputRecordLength = ((packet[7]<<8)&0x7F00) + packet[8];
-		strcpy(ADCWriteBuffer, "");
 		ADCBufferIndex = 0;
 		if(inputRecordLength > 10000){
 			recordLength = 10000;
@@ -51,7 +50,6 @@ int input_makePacket(UARTPacket* returnData, char* packet){
 			return -1;
 		}
 		returnData->type = packet[4];
-		strcpy(ADCWriteBuffer, "");
 		ADCBufferIndex = 0;
 		recordLength = 255;
 	}

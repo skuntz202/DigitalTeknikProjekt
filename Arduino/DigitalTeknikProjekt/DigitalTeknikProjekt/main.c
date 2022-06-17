@@ -63,15 +63,15 @@ int main(void){
 	ADC_init();
 	
 //Type 0x01 button 0x00
-	buffer[0] = 0x55;
-	buffer[1] = 0xAA;
-	buffer[2] = 0x00;
-	buffer[3] = 0x09;
-	buffer[4] = 0x01;
-	buffer[5] = 0x00;
-	buffer[6] = 0x3F;
-	buffer[7] = 0x00;
-	buffer[8] = 0x00;
+// 	buffer[0] = 0x55;
+// 	buffer[1] = 0xAA;
+// 	buffer[2] = 0x00;
+// 	buffer[3] = 0x09;
+// 	buffer[4] = 0x01;
+// 	buffer[5] = 0x00;
+// 	buffer[6] = 0x3F;
+// 	buffer[7] = 0x00;
+// 	buffer[8] = 0x00;
 	
 //Type 0x01 button 0x01
 // 	buffer[0] = 0x55;
@@ -170,27 +170,25 @@ int main(void){
 // 	buffer[6] = 0x00;
 	
     while(1){
-//		Make packet for SPI and transmission of packet
-		//Remove dims and paste code into RX ISR, remove code in CTC ISR
-// 		if(packetReceiveFlag){
-// 			input_makePacket(&OscPacket, buffer);
-// 			packet_makeSPIPacket(&genPacket, &OscPacket);
-//  			strcpy(buffer, "");
-//  			if(OscPacket.type == GENERATOR){
-//  				if(transmitSPIPacket(&genPacket)){}
-//  			} 
-//  			else if(OscPacket.type == OSCILLOSCOPE){continue;} 
-//  			else if(OscPacket.type == BODEPLOT){continue;}
-// 			packetReceiveFlag = 0;
-// 		}
+//		Make packet for SPI and transmission of packet	FULLY FUNCTIONAL
+		if(packetReceiveFlag){
+			input_makePacket(&OscPacket, buffer);
+			packet_makeSPIPacket(&genPacket, &OscPacket);
+ 			if(OscPacket.type == GENERATOR){
+ 				if(transmitSPIPacket(&genPacket)){continue;}
+ 			} 
+ 			else if(OscPacket.type == OSCILLOSCOPE){continue;} 
+ 			else if(OscPacket.type == BODEPLOT){continue;}
+			packetReceiveFlag = 0;
+		}
 		
 		//Sending ADC data to LabView    Expand makeOscPacket based on type
-// 		if(ADCSampleFlag){
-// 			packet_makeOSCPacket(ADCWriteBuffer, &OscPacket);
-// 			transmitUARTPacket(&OscPacket);
-// 			strcpy(ADCWriteBuffer, "");
-// 			ADCSampleFlag = 0;
-// 		}
+		if(ADCSampleFlag){
+			packet_makeOSCPacket(OSCILLOSCOPE, ADCWriteBuffer, &OscPacket);
+			transmitUARTPacket(&OscPacket);
+			strcpy(ADCWriteBuffer, "");
+			ADCSampleFlag = 0;
+		}
     }
 	free(buffer);
 }

@@ -51,10 +51,16 @@ void checkCarriageReturn(){
 }
 
 void dims(){
+	
+}
+
+ISR(USART0_RX_vect){
+	RX = UDR0;
+	buffer[bufferIndex] = RX;
 	if(bufferIndex == 3){
-		if(buffer[0] == 0x55 && buffer[1] == 0xAA){
+		//if(buffer[0] == 0x55 && buffer[1] == 0xAA){
 			packetLength = (buffer[2]<<8) + buffer[3];
-		}
+		//}
 	}
 	if(bufferIndex == (packetLength - 1) && bufferIndex > 3){
 		packetReceiveFlag = 1;
@@ -62,10 +68,4 @@ void dims(){
 	} else{
 		bufferIndex += 1;
 	}
-}
-
-ISR(USART0_RX_vect){
-	RX = UDR0;
-	//buffer[bufferIndex] = RX;
-	
 };

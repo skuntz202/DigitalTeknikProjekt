@@ -31,6 +31,7 @@ int packet_makeSPIPacket(SPIPacket* packet, UARTPacket* inputPacket){
 	return 1;
 }
 
-void packet_makeOSCPacket(char* DATA, UARTPacket* packet){
+void packet_makeOSCPacket(char type, char* DATA, UARTPacket* packet){
+	packet->type = type;
 	packet->data = DATA;
 }
