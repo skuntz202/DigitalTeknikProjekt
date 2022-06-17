@@ -186,9 +186,9 @@ int main(void){
 			packetReceiveFlag = 0;
 		}
 		
-		//Sending ADC data to LabCView    TEST WITH ADC CONNECTED
+		//Sending ADC data to LabView    TEST WITH ADC CONNECTED, Expand makeOscPacket based on type
 		if(ADCSampleFlag){
-			packet_makeOSCPacket(OSCILLOSCOPE, ADCReadBuffer, &OscPacket);
+			packet_makeOSCPacket(OscPacket.type, ADCReadBuffer, &OscPacket);
 			transmitUARTPacket(&OscPacket);
 			strcpy(ADCReadBuffer, "");
 			ADCSampleFlag = 0;
