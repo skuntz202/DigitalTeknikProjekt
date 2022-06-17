@@ -1,0 +1,16 @@
+AR siggendatapath behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd sub00/vhpl07 1655462219
+EN siggendatapath NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenDatapath.vhd sub00/vhpl06 1655462218
+EN sevenseg5 NULL "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" sub00/vhpl08 1655462220
+AR sevenseg5 sevenseg_arch "C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SevenSeg5 (1).vhd" sub00/vhpl09 1655462221
+EN protokol NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd sub00/vhpl14 1655462224
+EN siggencontrol NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd sub00/vhpl04 1655457821
+EN siggentop NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd sub00/vhpl10 1655462226
+EN shiftreg NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd sub00/vhpl12 1655462222
+AR siggentop behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenTop.vhd sub00/vhpl11 1655462227
+AR shiftreg behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/ShiftReg.vhd sub00/vhpl13 1655462223
+AR protokol behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/Protokol.vhd sub00/vhpl15 1655462225
+AR btndb behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd sub00/vhpl01 1655457818
+AR siggencontrol behavioral C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/SigGenControl.vhd sub00/vhpl05 1655457822
+EN divclk NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd sub00/vhpl02 1655462216
+EN btndb NULL C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/BTNdb.vhd sub00/vhpl00 1655457817
+AR divclk divclk_arch C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SignalGen/DivClk.vhd sub00/vhpl03 1655462217

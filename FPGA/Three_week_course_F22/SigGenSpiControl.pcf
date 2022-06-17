@@ -1,11 +1,26 @@
 //! **************************************************************************
-// Written by: Map P.15xf on Wed Jun 15 11:47:00 2022
+// Written by: Map P.20131013 on Thu Jun 16 14:58:25 2022
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "SCK" LOCATE = SITE "A9" LEVEL 1;
+PIN SCK_pin<0> = BEL "SCK" PINNAME PAD;
+PIN "SCK_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "BTN3" LOCATE = SITE "A7" LEVEL 1;
 COMP "MOSI" LOCATE = SITE "A3" LEVEL 1;
+COMP "MClk" LOCATE = SITE "B8" LEVEL 1;
 COMP "Paritet" LOCATE = SITE "C6" LEVEL 1;
+COMP "An<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "An<1>" LOCATE = SITE "J12" LEVEL 1;
+COMP "An<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "An<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "Cat<0>" LOCATE = SITE "L14" LEVEL 1;
+COMP "Cat<1>" LOCATE = SITE "H12" LEVEL 1;
+COMP "Cat<2>" LOCATE = SITE "N14" LEVEL 1;
+COMP "Cat<3>" LOCATE = SITE "N11" LEVEL 1;
+COMP "Cat<4>" LOCATE = SITE "P12" LEVEL 1;
+COMP "Cat<5>" LOCATE = SITE "L13" LEVEL 1;
+COMP "Cat<6>" LOCATE = SITE "M12" LEVEL 1;
 COMP "SS_not" LOCATE = SITE "B6" LEVEL 1;
 COMP "output" LOCATE = SITE "J3" LEVEL 1;
 NET "MClk_BUFGP/IBUFG" BEL "MClk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;

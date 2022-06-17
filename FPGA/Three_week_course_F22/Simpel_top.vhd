@@ -9,8 +9,11 @@ entity SigGenSpiControl is
 			  MClk : in STD_LOGIC;
            MOSI : in  STD_LOGIC;
 			  SS_not : in STD_LOGIC;
+			  --BTN3 : in STD_LOGIC;
 			  Reset : in STD_LOGIC;
 			  output : out STD_LOGIC;
+			  An : out STD_LOGIC_VECTOR ( 3 downto 0);
+			  Cat : out STD_LOGIC_VECTOR ( 7 downto 0);
 			  Paritet : out STD_LOGIC);
 end SigGenSpiControl;
 
@@ -20,10 +23,10 @@ Signal SPIdat_sig : STD_LOGIC_VECTOR(7 downto 0);
 Signal Shape_sig : STD_LOGIC_VECTOR(7 downto 0);
 Signal Ampl_sig : STD_LOGIC_VECTOR(7 downto 0);
 Signal Freq_sig : STD_LOGIC_VECTOR(7 downto 0);
-Signal Freq_Clk : STD_LOGIC;
+Signal Freq_Clk, DispClk : STD_LOGIC;
 Signal TimePP : Integer;
 Signal Sig_SigEN : STD_LOGIC;
-
+Signal Disp : STD_LOGIC_VECTOR(19 downto 0);
 
 --Skiftregister for at modtage sekventiel data, og konvertere det til Paralel data
 --Aka at få 8 forskellige bits, og lave dem til en liste på 8 bits
@@ -41,10 +44,12 @@ end component ShiftReg;
 Component Protokol is
     Port ( Clk : in  STD_LOGIC;
            Reset : in  STD_LOGIC;
+			  SS_not : in STD_LOGIC;
            SPIdat : in  STD_LOGIC_VECTOR (7 downto 0);
-           Shape : out  STD_LOGIC_VECTOR (7 downto 0);
-           Ampl : out  STD_LOGIC_VECTOR (7 downto 0);
-           Freq : out  STD_LOGIC_VECTOR (7 downto 0);
+           Shape : inout  STD_LOGIC_VECTOR (7 downto 0);
+           Ampl : inout  STD_LOGIC_VECTOR (7 downto 0);
+           Freq : inout  STD_LOGIC_VECTOR (7 downto 0);
+			  Disp : out STD_LOGIC_VECTOR (19 downto 0);
 			  SigEN : out STD_LOGIC;
            Paritet : out  STD_LOGIC);
 end component Protokol;
@@ -76,18 +81,29 @@ component Clock_select is
 			  Freq : in  STD_LOGIC_VECTOR (7 downto 0);
 			  Clk : in STD_LOGIC;
 			  Reset : in STD_LOGIC;
+			  SigEN : in STD_LOGIC;
            Ampl : in  STD_LOGIC_VECTOR (7 downto 0);
 			  Shape : in STD_LOGIC_VECTOR (7 downto 0);
            TimeDiv : out  integer); -- Værdi som ligges i TimeP
 end component Clock_select;
 
+component SevenSeg5 is
+	port ( 
+	Reset, Clk : in STD_LOGIC;
+	Data : in STD_LOGIC_VECTOR(19 downto 0);
+	An : out STD_LOGIC_VECTOR ( 3 downto 0);
+	Cat : out STD_LOGIC_VECTOR( 7 downto 0));
+end component SevenSeg5;
+
 begin
 
 U1: ShiftReg PORT MAP(Clk => SCK, D => Mosi, Reset => Reset, Q => SPIdat_sig, SS_not => SS_not);
-U2: Protokol PORT MAP(Clk => MClk, Reset => Reset, SPIdat => SPIdat_sig, Shape => Shape_sig, Ampl => Ampl_sig, Freq => Freq_sig, Paritet => Paritet, SigEN => Sig_SigEN);
+U2: Protokol PORT MAP(Clk => MClk, Reset => Reset, SPIdat => SPIdat_sig, Shape => Shape_sig, Ampl => Ampl_sig, Freq => Freq_sig, Paritet => Paritet, SigEN => Sig_SigEN, Disp => Disp, SS_not => SS_not);
 U3: PWM PORT MAP(Clk => Freq_Clk, Reset => Reset, Shape => Shape_sig, Ampl => Ampl_sig, Freq => Freq_sig, SigEN => Sig_SigEN, PWMout => Output);
 U4: DivClk PORT MAP(Reset => Reset, Clk => MClk, TimeP => TimePP, Clk1 => Freq_clk);
-U5: Clock_select PORT MAP(Reset => Reset, Clk => MClk, Ampl => Ampl_sig, Freq => Freq_sig, Shape => Shape_sig, TimeDiv => TimePP);
+U5: Clock_select PORT MAP(Reset => Reset, Clk => MClk, Ampl => Ampl_sig, Freq => Freq_sig, Shape => Shape_sig, TimeDiv => TimePP, SigEN => Sig_SigEN);
+U6: SevenSeg5 port map(Reset => Reset, Clk => DispClk, Data => Disp, An => An, Cat => Cat); 
+U7: DivClk PORT MAP(Reset => Reset, Clk => MClk, TimeP => 50e3, Clk1 => DispClk);
 
 end Behavioral;
 

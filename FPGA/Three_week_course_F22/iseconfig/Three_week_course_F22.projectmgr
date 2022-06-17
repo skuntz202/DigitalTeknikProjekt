@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>U5 - Clock_select - Behavioral (C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd)</SelectedItem>
+         <SelectedItem>SigGenSpiControl.ucf (C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/SigGenSpiControl.ucf)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000150000000020000000000000000000000000200000064ffffffff000000810000000300000002000001500000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000016d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000016d0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>U5 - Clock_select - Behavioral (C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Freq_calc.vhd)</CurrentItem>
+      <CurrentItem>SigGenSpiControl.ucf (C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/SigGenSpiControl.ucf)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -60,21 +60,24 @@
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Clock_select_tb1 - behavior C:|Users|tniel|OneDrive - Danmarks Tekniske Universitet|Dokumenter|GitHub|DigitalTeknikProjekt|FPGA|Three_week_course_F22|Clock_select_tb1.vhd</ClosedNode>
          <ClosedNode>/Clock_select_tb1 - behavior C:|Users|tniel|OneDrive|Dokumenter|GitHub|DigitalTeknikProjekt|FPGA|Three_week_course_F22|Clock_select_tb1.vhd</ClosedNode>
+         <ClosedNode>/Freq_calc_tb1 - behavior C:|Users|tniel|OneDrive - Danmarks Tekniske Universitet|Dokumenter|GitHub|DigitalTeknikProjekt|FPGA|Three_week_course_F22|Freq_calc_tb1.vhd</ClosedNode>
          <ClosedNode>/Freq_calc_tb1 - behavior C:|Users|tniel|OneDrive|Dokumenter|GitHub|DigitalTeknikProjekt|FPGA|Three_week_course_F22|Freq_calc_tb1.vhd</ClosedNode>
+         <ClosedNode>/Protokol_tb3 - behavior C:|Users|tniel|OneDrive - Danmarks Tekniske Universitet|Dokumenter|GitHub|DigitalTeknikProjekt|FPGA|Three_week_course_F22|Protokol_tb3.vhd</ClosedNode>
          <ClosedNode>/Protokol_tb3 - behavior C:|Users|tniel|OneDrive|Dokumenter|GitHub|DigitalTeknikProjekt|FPGA|Three_week_course_F22|Protokol_tb3.vhd</ClosedNode>
          <ClosedNode>/protokol_tb1 - behavior C:|Users|tniel|OneDrive|Dokumenter|GitHub|DigitalTeknikProjekt|FPGA|Three_week_course_F22|protokol_tb1.vhd</ClosedNode>
          <ClosedNode>/protokol_tb2 - behavior C:|Users|tniel|OneDrive|Dokumenter|GitHub|DigitalTeknikProjekt|FPGA|Three_week_course_F22|protokol_tb2.vhd</ClosedNode>
          <ClosedNode>/test_protokol_tb1 - behavior C:|Users|tniel|OneDrive|Dokumenter|GitHub|DigitalTeknikProjekt|FPGA|Three_week_course_F22|test_protokol_tb1.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Unassigned User Library Modules</SelectedItem>
+         <SelectedItem>Top_tb1 - behavior (C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Top_tb1.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000171000000020000000000000000000000000200000064ffffffff000000810000000300000002000001710000000100000003000000000000000100000003</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000181000000020000000000000000000000000200000064ffffffff000000810000000300000002000001810000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>Top_tb1 - behavior (C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Top_tb1.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -95,13 +98,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
@@ -109,13 +112,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>

@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Thu Jun 16 01:43:47 2022">
+<application name="pn" timeStamp="Thu Jun 16 12:43:21 2022">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="730FC870052546869F8ECA2F72EBD04F" type="project"/>
 <property name="ProjectIteration" value="5" type="project"/>
-<property name="ProjectFile" value="C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/SigGenSpiControl_knap.xise" type="project"/>
+<property name="ProjectFile" value="C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/SigGenSpiControl_knap/SigGenSpiControl_knap.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2022-06-15T16:44:03" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -40,7 +40,6 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
 <property name="PROP_DevSpeed" value="-4" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
-<property name="FILE_BMM" value="1" type="source"/>
 <property name="FILE_UCF" value="1" type="source"/>
 <property name="FILE_VHDL" value="10" type="source"/>
 </section>

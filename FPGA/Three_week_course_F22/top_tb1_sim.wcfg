@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="C:/Users/tniel/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Top_tb1_isim_beh2.wdb" id="1" type="auto">
+      <db_ref path="C:/Users/tniel/OneDrive/Dokumenter/GitHub/DigitalTeknikProjekt/FPGA/Three_week_course_F22/Top_tb1_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="numeric_std" />
             <top_module name="std_logic_1164" />
@@ -13,25 +13,33 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/top_tb1/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
    <wvobject fp_name="/top_tb1/sck" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">sck</obj_property>
       <obj_property name="ObjectShortName">sck</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb1/reset" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">reset</obj_property>
-      <obj_property name="ObjectShortName">reset</obj_property>
+   <wvobject fp_name="/top_tb1/mclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mclk</obj_property>
+      <obj_property name="ObjectShortName">mclk</obj_property>
    </wvobject>
    <wvobject fp_name="/top_tb1/paritet" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">paritet</obj_property>
       <obj_property name="ObjectShortName">paritet</obj_property>
    </wvobject>
+   <wvobject fp_name="/top_tb1/uut/sig_sigen" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sig_sigen</obj_property>
+      <obj_property name="ObjectShortName">sig_sigen</obj_property>
+   </wvobject>
    <wvobject fp_name="group28" type="group">
       <obj_property name="label">Top_file</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/top_tb1/sigen" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">sigen</obj_property>
-         <obj_property name="ObjectShortName">sigen</obj_property>
+      <wvobject fp_name="/top_tb1/uut/disp" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">disp[19:0]</obj_property>
+         <obj_property name="ObjectShortName">disp[19:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/top_tb1/output" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">output</obj_property>
@@ -66,6 +74,10 @@
          <obj_property name="ElementShortName">spidat[7:0]</obj_property>
          <obj_property name="ObjectShortName">spidat[7:0]</obj_property>
       </wvobject>
+      <wvobject fp_name="/top_tb1/uut/U2/sigen" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">sigen</obj_property>
+         <obj_property name="ObjectShortName">sigen</obj_property>
+      </wvobject>
       <wvobject fp_name="/top_tb1/uut/U2/shape" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">shape[7:0]</obj_property>
          <obj_property name="ObjectShortName">shape[7:0]</obj_property>
@@ -86,6 +98,10 @@
       <wvobject fp_name="/top_tb1/uut/U2/state" type="other" db_ref_id="1">
          <obj_property name="ElementShortName">state</obj_property>
          <obj_property name="ObjectShortName">state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/top_tb1/uut/U2/dispsel" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dispsel[2:0]</obj_property>
+         <obj_property name="ObjectShortName">dispsel[2:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/top_tb1/uut/U2/temp_shape" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">temp_shape[7:0]</obj_property>
@@ -135,6 +151,10 @@
          <obj_property name="ElementShortName">pwmcnt[7:0]</obj_property>
          <obj_property name="ObjectShortName">pwmcnt[7:0]</obj_property>
       </wvobject>
+      <wvobject fp_name="/top_tb1/uut/U3/ampl_sig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ampl_sig[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ampl_sig[7:0]</obj_property>
+      </wvobject>
       <wvobject fp_name="/top_tb1/uut/U3/shape" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">shape[7:0]</obj_property>
          <obj_property name="ObjectShortName">shape[7:0]</obj_property>
@@ -171,10 +191,6 @@
          <obj_property name="ElementShortName">freq_int</obj_property>
          <obj_property name="ObjectShortName">freq_int</obj_property>
       </wvobject>
-      <wvobject fp_name="/top_tb1/uut/U5/timed" type="other" db_ref_id="1">
-         <obj_property name="ElementShortName">timed</obj_property>
-         <obj_property name="ObjectShortName">timed</obj_property>
-      </wvobject>
       <wvobject fp_name="/top_tb1/uut/U5/pulsewidth" type="other" db_ref_id="1">
          <obj_property name="ElementShortName">pulsewidth</obj_property>
          <obj_property name="ObjectShortName">pulsewidth</obj_property>
@@ -186,16 +202,6 @@
       <wvobject fp_name="/top_tb1/uut/U5/timediv" type="other" db_ref_id="1">
          <obj_property name="ElementShortName">timediv</obj_property>
          <obj_property name="ObjectShortName">timediv</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_tb1/uut/U5/two_fifty_five" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">two_fifty_five[7:0]</obj_property>
-         <obj_property name="ObjectShortName">two_fifty_five[7:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/top_tb1/uut/U5/fifty_k" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">fifty_k[15:0]</obj_property>
-         <obj_property name="ObjectShortName">fifty_k[15:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group54" type="group">
