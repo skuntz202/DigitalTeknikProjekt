@@ -45,9 +45,9 @@ Setup/Hold to clock SCK
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-BTN3        |    1.396(R)|    0.296(R)|SCK_BUFGP         |   0.000|
-Mosi        |    0.706(R)|    0.621(R)|SCK_BUFGP         |   0.000|
-SS_not      |    2.090(R)|    0.744(R)|SCK_BUFGP         |   0.000|
+BTN3        |    2.456(R)|   -0.269(R)|SCK_BUFGP         |   0.000|
+Mosi        |    0.140(R)|    1.074(R)|SCK_BUFGP         |   0.000|
+SS_not      |    2.741(R)|    1.280(R)|SCK_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock Clk
@@ -55,7 +55,7 @@ Clock to Setup on destination clock Clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk            |    7.999|         |         |         |
+Clk            |    8.099|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock SCK
@@ -63,11 +63,11 @@ Clock to Setup on destination clock SCK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-SCK            |    2.234|         |         |         |
+SCK            |    2.051|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Jun 17 11:49:40 2022 
+Analysis completed Fri Jun 17 12:37:42 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:

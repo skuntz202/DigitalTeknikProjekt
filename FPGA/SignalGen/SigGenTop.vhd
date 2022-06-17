@@ -30,7 +30,7 @@ signal Ampl, Freq, Shape, SPIdat_sig: std_logic_vector(7 downto 0);
 begin
 
 U0: entity WORK.DivClk 
-    port map(Reset => BTN3, Clk => Clk, TimeP => 4, Clk1 => Mclk);
+    port map(Reset => BTN3, Clk => Clk, TimeP => 8, Clk1 => Mclk);
 
 U4: entity WORK.DivClk 
     port map(Reset => BTN3, Clk => Clk, TimeP => 50e3, Clk1 => DispClk);

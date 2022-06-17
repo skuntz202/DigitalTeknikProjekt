@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Reading design: SigGenTop.prj
 
@@ -97,6 +97,9 @@ BRAM Utilization Ratio             : 100
 Verilog 2001                       : YES
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
 
 =========================================================================
 
@@ -238,7 +241,7 @@ WARNING:Xst:646 - Signal <ACK> is assigned but never used. This unconnected sign
     Found finite state machine <FSM_0> for signal <State>.
     -----------------------------------------------------------------------
     | States             | 7                                              |
-    | Transitions        | 58                                             |
+    | Transitions        | 56                                             |
     | Inputs             | 12                                             |
     | Outputs            | 7                                              |
     | Clock              | Clk                       (rising_edge)        |
@@ -324,15 +327,15 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <U7/State/FSM> on signal <State[1:3]> with sequential encoding.
+Optimizing FSM <U7/State/FSM> on signal <State[1:3]> with user encoding.
 --------------------------
  State        | Encoding
 --------------------------
  choose_state | 000
- shape_state  | 010
- ampl_state   | 011
- freq_state   | 100
- reset_state  | 001
+ shape_state  | 001
+ ampl_state   | 010
+ freq_state   | 011
+ reset_state  | 100
  sync_state   | 101
  run_state    | 110
 --------------------------
@@ -377,8 +380,6 @@ Macro Statistics
 
 Optimizing unit <SigGenTop> ...
 
-Optimizing unit <DivClk> ...
-
 Optimizing unit <SigGenDatapath> ...
 
 Optimizing unit <SevenSeg5> ...
@@ -389,7 +390,10 @@ Optimizing unit <Protokol> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block SigGenTop, actual ratio is 27.
+Found area constraint ratio of 100 (+ 5) on block SigGenTop, actual ratio is 26.
+FlipFlop U7/State_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop U7/State_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop U7/State_FSM_FFd3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -397,8 +401,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 180
- Flip-Flops                                            : 180
+# Registers                                            : 183
+ Flip-Flops                                            : 183
 
 =========================================================================
 
@@ -427,28 +431,29 @@ Design Statistics
 # IOs                              : 31
 
 Cell Usage :
-# BELS                             : 779
+# BELS                             : 763
 #      GND                         : 1
-#      INV                         : 9
-#      LUT1                        : 4
-#      LUT2                        : 86
+#      INV                         : 8
+#      LUT1                        : 5
+#      LUT2                        : 69
 #      LUT2_D                      : 1
-#      LUT3                        : 121
-#      LUT3_D                      : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 124
+#      LUT3_D                      : 1
 #      LUT3_L                      : 2
-#      LUT4                        : 187
-#      LUT4_D                      : 9
+#      LUT4                        : 196
+#      LUT4_D                      : 10
 #      LUT4_L                      : 16
 #      MULT_AND                    : 9
-#      MUXCY                       : 168
+#      MUXCY                       : 156
 #      MUXF5                       : 23
 #      VCC                         : 1
 #      XORCY                       : 140
-# FlipFlops/Latches                : 180
-#      FDC                         : 73
+# FlipFlops/Latches                : 183
+#      FDC                         : 75
 #      FDCE                        : 22
 #      FDE                         : 82
-#      FDP                         : 3
+#      FDP                         : 4
 # Clock Buffers                    : 3
 #      BUFG                        : 1
 #      BUFGP                       : 2
@@ -462,9 +467,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                      235  out of    960    24%  
- Number of Slice Flip Flops:            179  out of   1920     9%  
- Number of 4 input LUTs:                437  out of   1920    22%  
+ Number of Slices:                      233  out of    960    24%  
+ Number of Slice Flip Flops:            182  out of   1920     9%  
+ Number of 4 input LUTs:                433  out of   1920    22%  
  Number of IOs:                          31
  Number of bonded IOBs:                  20  out of     83    24%  
     IOB Flip Flops:                       1
@@ -492,7 +497,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 Clk                                | BUFGP                  | 52    |
-U0/Clk1_D1                         | BUFG                   | 98    |
+U0/Clk1_D1                         | BUFG                   | 101   |
 U4/Clk1_D                          | NONE(U3/DispCount_1)   | 14    |
 SCK                                | BUFGP                  | 16    |
 -----------------------------------+------------------------+-------+
@@ -503,15 +508,15 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-BTN3                               | IBUF                   | 98    |
+BTN3                               | IBUF                   | 101   |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 8.294ns (Maximum Frequency: 120.574MHz)
-   Minimum input arrival time before clock: 5.036ns
+   Minimum period: 8.036ns (Maximum Frequency: 124.440MHz)
+   Minimum input arrival time before clock: 5.037ns
    Maximum output required time after clock: 40.335ns
    Maximum combinational path delay: No path found
 
@@ -521,34 +526,28 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 8.294ns (frequency: 120.574MHz)
+  Clock period: 7.940ns (frequency: 125.950MHz)
   Total number of paths / destination ports: 18202 / 54
 -------------------------------------------------------------------------
-Delay:               8.294ns (Levels of Logic = 40)
-  Source:            U4/Cnt1_0 (FF)
+Delay:               7.940ns (Levels of Logic = 34)
+  Source:            U4/Cnt1_5 (FF)
   Destination:       U4/Cnt1_24 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: U4/Cnt1_0 to U4/Cnt1_24
+  Data Path: U4/Cnt1_5 to U4/Cnt1_24
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q              2   0.591   0.622  U4/Cnt1_0 (U4/Cnt1_0)
-     LUT2:I0->O            1   0.704   0.000  U4/Mcompar_Clear1_cmp_eq0000_lut<0>1 (U4/Mcompar_Clear1_cmp_eq0000_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  U4/Mcompar_Clear1_cmp_eq0000_cy<0> (U4/Mcompar_Clear1_cmp_eq0000_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Mcompar_Clear1_cmp_eq0000_cy<1> (U4/Mcompar_Clear1_cmp_eq0000_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Mcompar_Clear1_cmp_eq0000_cy<2> (U4/Mcompar_Clear1_cmp_eq0000_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Mcompar_Clear1_cmp_eq0000_cy<3> (U4/Mcompar_Clear1_cmp_eq0000_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Mcompar_Clear1_cmp_eq0000_cy<4> (U4/Mcompar_Clear1_cmp_eq0000_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Mcompar_Clear1_cmp_eq0000_cy<5> (U4/Mcompar_Clear1_cmp_eq0000_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Mcompar_Clear1_cmp_eq0000_cy<6> (U4/Mcompar_Clear1_cmp_eq0000_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Mcompar_Clear1_cmp_eq0000_cy<7> (U4/Mcompar_Clear1_cmp_eq0000_cy<7>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Mcompar_Clear1_cmp_eq0000_cy<8> (U4/Mcompar_Clear1_cmp_eq0000_cy<8>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Mcompar_Clear1_cmp_eq0000_cy<9> (U4/Mcompar_Clear1_cmp_eq0000_cy<9>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Mcompar_Clear1_cmp_eq0000_cy<10> (U4/Mcompar_Clear1_cmp_eq0000_cy<10>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Mcompar_Clear1_cmp_eq0000_cy<11> (U4/Mcompar_Clear1_cmp_eq0000_cy<11>)
-     MUXCY:CI->O          27   0.331   1.296  U4/Mcompar_Clear1_cmp_eq0000_cy<12> (U4/Mcompar_Clear1_cmp_eq0000_cy<12>)
+     FDC:C->Q              2   0.591   0.622  U4/Cnt1_5 (U4/Cnt1_5)
+     LUT1:I0->O            1   0.704   0.000  U4/Clear1_wg_cy<0>_rt (U4/Clear1_wg_cy<0>_rt)
+     MUXCY:S->O            1   0.464   0.000  U4/Clear1_wg_cy<0> (U4/Clear1_wg_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Clear1_wg_cy<1> (U4/Clear1_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Clear1_wg_cy<2> (U4/Clear1_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Clear1_wg_cy<3> (U4/Clear1_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Clear1_wg_cy<4> (U4/Clear1_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Clear1_wg_cy<5> (U4/Clear1_wg_cy<5>)
+     MUXCY:CI->O          27   0.331   1.296  U4/Clear1_wg_cy<6> (U4/Clear1)
      LUT3:I2->O            1   0.704   0.000  U4/Mcount_Cnt1_lut<0> (U4/Mcount_Cnt1_lut<0>)
      MUXCY:S->O            1   0.464   0.000  U4/Mcount_Cnt1_cy<0> (U4/Mcount_Cnt1_cy<0>)
      MUXCY:CI->O           1   0.059   0.000  U4/Mcount_Cnt1_cy<1> (U4/Mcount_Cnt1_cy<1>)
@@ -577,34 +576,36 @@ Delay:               8.294ns (Levels of Logic = 40)
      XORCY:CI->O           1   0.804   0.000  U4/Mcount_Cnt1_xor<24> (U4/Mcount_Cnt124)
      FDC:D                     0.308          U4/Cnt1_24
     ----------------------------------------
-    Total                      8.294ns (6.376ns logic, 1.918ns route)
-                                       (76.9% logic, 23.1% route)
+    Total                      7.940ns (6.022ns logic, 1.918ns route)
+                                       (75.8% logic, 24.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U0/Clk1_D1'
-  Clock period: 7.735ns (frequency: 129.282MHz)
-  Total number of paths / destination ports: 1953 / 102
+  Clock period: 8.036ns (frequency: 124.440MHz)
+  Total number of paths / destination ports: 2403 / 105
 -------------------------------------------------------------------------
-Delay:               7.735ns (Levels of Logic = 5)
-  Source:            U7/prev_SPIdat_4 (FF)
-  Destination:       U7/CRC_temp_7 (FF)
+Delay:               8.036ns (Levels of Logic = 7)
+  Source:            U7/temp_freq_6 (FF)
+  Destination:       U7/State_FSM_FFd1 (FF)
   Source Clock:      U0/Clk1_D1 rising
   Destination Clock: U0/Clk1_D1 rising
 
-  Data Path: U7/prev_SPIdat_4 to U7/CRC_temp_7
+  Data Path: U7/temp_freq_6 to U7/State_FSM_FFd1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              1   0.591   0.455  U7/prev_SPIdat_4 (U7/prev_SPIdat_4)
-     LUT4:I2->O            2   0.704   0.526  U7/State_cmp_ne000365 (U7/State_cmp_ne000365)
-     LUT4:I1->O           22   0.704   1.199  U7/State_cmp_ne0003164 (U7/State_cmp_ne0003)
-     LUT3:I2->O            1   0.704   0.424  U7/CRC_temp_mux0000<0>1_SW1 (N110)
-     LUT4_D:I3->O          7   0.704   0.712  U7/CRC_temp_mux0000<0>1 (U7/N01)
-     LUT4:I3->O            1   0.704   0.000  U7/CRC_temp_mux0000<6>24 (U7/CRC_temp_mux0000<6>)
-     FDE:D                     0.308          U7/CRC_temp_1
+     FDE:C->Q              4   0.591   0.762  U7/temp_freq_6 (U7/temp_freq_6)
+     LUT4:I0->O            1   0.704   0.499  U7/State_not00029 (U7/State_not00029)
+     LUT2:I1->O            2   0.704   0.482  U7/State_not000210 (U7/State_not0002)
+     LUT4:I2->O            5   0.704   0.637  U7/State_FSM_FFd2-In33 (U7/State_FSM_N13)
+     LUT4:I3->O            1   0.704   0.000  U7/State_FSM_FFd1-In66_F (N83)
+     MUXF5:I0->O           1   0.321   0.595  U7/State_FSM_FFd1-In66 (U7/State_FSM_FFd1-In66)
+     LUT3:I0->O            1   0.704   0.000  U7/State_FSM_FFd1-In99_F (N143)
+     MUXF5:I0->O           2   0.321   0.000  U7/State_FSM_FFd1-In99 (U7/State_FSM_FFd1-In)
+     FDP:D                     0.308          U7/State_FSM_FFd1
     ----------------------------------------
-    Total                      7.735ns (4.419ns logic, 3.316ns route)
-                                       (57.1% logic, 42.9% route)
+    Total                      8.036ns (5.061ns logic, 2.975ns route)
+                                       (63.0% logic, 37.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U4/Clk1_D'
@@ -624,7 +625,7 @@ Delay:               5.299ns (Levels of Logic = 4)
      FDC:C->Q             15   0.591   1.192  U3/DispCount_0 (U3/DispCount_0)
      LUT3:I0->O            1   0.704   0.000  U3/Mmux_DataN_42 (U3/Mmux_DataN_42)
      MUXF5:I0->O          13   0.321   1.158  U3/Mmux_DataN_2_f5_1 (U3/DataN<2>)
-     LUT4:I0->O            1   0.704   0.000  U3/CatInt<6>_F (N120)
+     LUT4:I0->O            1   0.704   0.000  U3/CatInt<6>_F (N131)
      MUXF5:I0->O           1   0.321   0.000  U3/CatInt<6> (U3/CatInt<6>)
      FDC:D                     0.308          U3/cat_6
     ----------------------------------------
@@ -656,7 +657,7 @@ Delay:               1.346ns (Levels of Logic = 0)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SCK'
   Total number of paths / destination ports: 25 / 17
 -------------------------------------------------------------------------
-Offset:              4.597ns (Levels of Logic = 2)
+Offset:              4.598ns (Levels of Logic = 2)
   Source:            BTN3 (PAD)
   Destination:       U6/Q_7 (FF)
   Destination Clock: SCK rising
@@ -665,18 +666,18 @@ Offset:              4.597ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           100   1.218   1.363  BTN3_IBUF (BTN3_IBUF)
+     IBUF:I->O           103   1.218   1.364  BTN3_IBUF (BTN3_IBUF)
      LUT2:I1->O            8   0.704   0.757  U6/Q_and00001 (U6/Q_and0000)
      FDE:CE                    0.555          U6/Q_0
     ----------------------------------------
-    Total                      4.597ns (2.477ns logic, 2.120ns route)
+    Total                      4.598ns (2.477ns logic, 2.121ns route)
                                        (53.9% logic, 46.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'U0/Clk1_D1'
   Total number of paths / destination ports: 74 / 74
 -------------------------------------------------------------------------
-Offset:              5.036ns (Levels of Logic = 2)
+Offset:              5.037ns (Levels of Logic = 2)
   Source:            BTN3 (PAD)
   Destination:       U7/DispSel_6 (FF)
   Destination Clock: U0/Clk1_D1 rising
@@ -685,11 +686,11 @@ Offset:              5.036ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           100   1.218   1.284  BTN3_IBUF (BTN3_IBUF)
+     IBUF:I->O           103   1.218   1.285  BTN3_IBUF (BTN3_IBUF)
      INV:I->O             74   0.704   1.275  U7/Reset_inv1_INV_0 (U7/Reset_inv)
      FDE:CE                    0.555          U7/prev_SPIdat_0
     ----------------------------------------
-    Total                      5.036ns (2.477ns logic, 2.559ns route)
+    Total                      5.037ns (2.477ns logic, 2.560ns route)
                                        (49.2% logic, 50.8% route)
 
 =========================================================================
@@ -706,7 +707,7 @@ Offset:              40.335ns (Levels of Logic = 42)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q              2   0.591   0.622  U7/Shape_4 (U7/Shape_4)
-     LUT3:I0->O            1   0.704   0.424  U2/Sig_and0000_SW0 (N55)
+     LUT3:I0->O            1   0.704   0.424  U2/Sig_and0000_SW0 (N52)
      LUT4:I3->O           10   0.704   0.961  U2/Sig_and0000 (U2/Sig_and0000)
      LUT4:I1->O            7   0.704   0.883  U2/Sig<0>21 (U2/N11)
      LUT4:I0->O            8   0.704   0.757  U2/Sig<1>1 (U2/MulC_mux0000<1>_mand)
@@ -774,12 +775,12 @@ Offset:              4.283ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.20 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.72 secs
  
 --> 
 
-Total memory usage is 4513248 kilobytes
+Total memory usage is 4513240 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    9 (   0 filtered)

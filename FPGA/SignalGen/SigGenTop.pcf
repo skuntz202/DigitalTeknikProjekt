@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Jun 17 11:49:20 2022
+// Written by: Map P.20131013 on Fri Jun 17 12:37:22 2022
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -13,6 +13,7 @@ COMP "BTN1" LOCATE = SITE "C11" LEVEL 1;
 COMP "BTN2" LOCATE = SITE "M4" LEVEL 1;
 COMP "BTN3" LOCATE = SITE "A7" LEVEL 1;
 COMP "Mosi" LOCATE = SITE "A3" LEVEL 1;
+COMP "Paritet" LOCATE = SITE "C6" LEVEL 1;
 COMP "An<0>" LOCATE = SITE "F12" LEVEL 1;
 COMP "An<1>" LOCATE = SITE "J12" LEVEL 1;
 COMP "An<2>" LOCATE = SITE "M13" LEVEL 1;
