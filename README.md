@@ -56,5 +56,7 @@ Pakke:
 CRC er en relativ simpel redundancy check, det er ikke nøvendigt at bruge specifikt CRC-8.
 
 Frequency maxes out at 115.2kHz
-
+ 
+ 
+ I am Gay
  
